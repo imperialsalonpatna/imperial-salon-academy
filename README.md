@@ -1,1 +1,1 @@
-# imperial-salon-academy
+Imperial Beauty Salon & Academy — 5 page responsive website prototype. Replace temporary remote images with your own salon images later. Pricing/service text is HTML and editable.
