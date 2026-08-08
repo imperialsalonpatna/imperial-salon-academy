@@ -1,1 +1,1 @@
-
+const m=document.querySelector('.menu'),n=document.querySelector('.links');if(m)m.onclick=()=>n.classList.toggle('open');const s=[...document.querySelectorAll('.slide')],d=[...document.querySelectorAll('.dots button')];let i=0;function show(x){i=(x+s.length)%s.length;s.forEach((e,j)=>e.classList.toggle('active',j===i));d.forEach((e,j)=>e.classList.toggle('on',j===i))}d.forEach((e,j)=>e.onclick=()=>show(j));if(s.length){show(0);setInterval(()=>show(i+1),5000)}
