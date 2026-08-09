@@ -1,1 +1,1374 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home | Imperial Beauty Salon & Academy</title><link rel="stylesheet" href="style.css"></head><body><div class="top">Imperial Beauty Salon & Academy • Patna</div><header class="nav"><div class="container navin"><a class="brand" href="index.html"><span class="logo">I</span><span><b>Imperial</b><small>Beauty Salon & Academy</small></span></a><button class="menu">☰</button><nav class="links"><a href="index.html">Home</a><a href="services.html">Our Services</a><a href="makeup-services.html">Makeup Services</a><a href="academy.html">Our Academy</a><a href="contact.html">Contact Us</a></nav></div></header><section class="hero"><div class="slide"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=85"><div class="container copy"><div><div class="eyebrow">Makeup Services</div><h1>Make Every Occasion Beautiful.</h1><p>Bridal, engagement, reception and party makeup with Basic, HD and Luxe options.</p><a class="btn gold" href="makeup-services.html#pricing">Book Your Appointment</a></div></div></div><div class="slide"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1600&q=85"><div class="container copy"><div><div class="eyebrow">Hair Care</div><h1>Healthy Hair. Beautiful You.</h1><p>Explore hair cuts, hair care, colour and advanced hair treatments.</p><a class="btn gold" href="services.html#hair-treatments">Explore Hair Services</a></div></div></div><div class="slide"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=85"><div class="container copy"><div><div class="eyebrow">Skin Rituals & Facials</div><h1>Glow With Confidence.</h1><p>Beauty rituals designed to refresh, nourish and brighten your look.</p><a class="btn gold" href="services.html#skin">Explore Skin Services</a></div></div></div><div class="slide"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1600&q=85"><div class="container copy"><div><div class="eyebrow">Essential Beauty Services</div><h1>Everyday Beauty, Elevated.</h1><p>Thoughtful beauty care for hands, feet, grooming and more.</p><a class="btn gold" href="services.html#essential">Explore Services</a></div></div></div><div class="slide"><img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1600&q=85"><div class="container copy"><div><div class="eyebrow">Imperial Beauty Academy</div><h1>Learn. Practice. Grow.</h1><p>Build practical beauty skills through professional courses and hands-on learning.</p><a class="btn gold" href="academy.html">Explore Our Academy</a></div></div></div><div class="dots"><button></button><button></button><button></button><button></button><button></button></div></section><section class="section"><div class="container"><div class="head"><div class="eyebrow">About Us</div><h2>Beauty, Care & Confidence</h2><p>Imperial Beauty Salon & Academy brings salon services and professional beauty education together under one roof in Patna.</p></div><div class="about"><div class="visual"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=85"></div><div class="panel"><div class="eyebrow">Our Approach</div><h2>Professional service with a personal touch.</h2><p>From everyday beauty care to occasion makeup and advanced hair services, our goal is to create a comfortable, professional experience for every client.</p><div class="features"><div class="feature"><b>Hygiene</b>Clean, comfortable service.</div><div class="feature"><b>Expert Care</b>Attention to detail.</div><div class="feature"><b>Academy</b>Practical beauty learning.</div></div></div></div></div></section><section class="cta"><div class="container"><h2>Ready for your next beauty appointment?</h2><a class="btn gold" href="contact.html">Contact Us</a></div></section><footer class="footer"><div class="container"><div><strong>Imperial Beauty Salon & Academy</strong><br>Beauty • Makeup • Hair • Academy</div><div>Patna, Bihar<br>+91 62999 42455</div></div></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Imperial Beauty Salon & Academy | Patna</title>
+
+  <meta name="description"
+        content="Imperial Beauty Salon & Academy, Patna — professional makeup, hair, skin and beauty services with practical beauty education.">
+
+  <style>
+    :root {
+      --blush: #f3d8d8;
+      --blush-light: #fbefef;
+      --sage: #a9b9a3;
+      --sage-dark: #536653;
+      --gold: #b58a45;
+      --gold-light: #d8b56d;
+      --cream: #fffaf5;
+      --dark: #28352c;
+      --text: #4c504b;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP BAR */
+
+    .top-bar {
+      background: var(--sage-dark);
+      color: white;
+      text-align: center;
+      padding: 7px 15px;
+      font-size: 12px;
+      letter-spacing: .5px;
+    }
+
+    /* HEADER */
+
+    header {
+      background: rgba(255,250,245,.97);
+      border-bottom: 1px solid #eadfd3;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      width: min(1150px, 92%);
+      margin: auto;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Temporary logo mark */
+
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    .brand-name {
+      font-family: Georgia, serif;
+      color: var(--sage-dark);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-button {
+      background: var(--gold);
+      color: white !important;
+      padding: 10px 17px;
+      border-radius: 25px;
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 27px;
+      color: var(--sage-dark);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      height: min(700px, 78vh);
+      min-height: 570px;
+      overflow: hidden;
+      background: var(--sage-dark);
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity .8s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(31,48,38,.78),
+          rgba(31,48,38,.32),
+          rgba(31,48,38,.15)
+        );
+    }
+
+    .slide-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      width: min(1150px, 92%);
+      margin: auto;
+      color: white;
+    }
+
+    .slide-content-inner {
+      max-width: 670px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .slide h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.08;
+      margin: 15px 0;
+      color: white;
+    }
+
+    .slide p {
+      font-size: 18px;
+      max-width: 580px;
+      margin-bottom: 23px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn-gold {
+      background: var(--gold-light);
+      color: var(--dark);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      background: var(--gold);
+      color: white;
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--sage-dark);
+    }
+
+    .slider-controls {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 5;
+    }
+
+    .slider-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1px solid white;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .slider-dot.active {
+      background: white;
+    }
+
+    /* SECTION */
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, serif;
+      color: var(--sage-dark);
+      font-size: clamp(35px, 5vw, 50px);
+      margin: 10px 0 15px;
+    }
+
+    .section-heading p {
+      color: #686862;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+      background:
+        linear-gradient(
+          135deg,
+          var(--blush-light),
+          var(--cream)
+        );
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 440px;
+      border-radius: 4px;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          135deg,
+          #e5c8c8,
+          #c6d0c1
+        );
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      object-fit: cover;
+    }
+
+    .about-content {
+      padding: 15px;
+    }
+
+    .about-content h2 {
+      font-family: Georgia, serif;
+      color: var(--sage-dark);
+      font-size: 43px;
+      line-height: 1.15;
+      margin: 10px 0 20px;
+    }
+
+    .about-content p {
+      margin-bottom: 17px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .feature {
+      background: white;
+      border: 1px solid #eadfd3;
+      padding: 17px 12px;
+      text-align: center;
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--sage-dark);
+      font-family: Georgia, serif;
+      margin-bottom: 5px;
+    }
+
+    /* SERVICES PREVIEW */
+
+    .services-preview {
+      background: white;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .preview-card {
+      border: 1px solid #eadfd3;
+      background: var(--cream);
+      padding: 27px 20px;
+      text-align: center;
+      transition: .25s;
+    }
+
+    .preview-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(80,90,75,.12);
+    }
+
+    .preview-icon {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: var(--blush);
+      color: var(--sage-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, serif;
+      font-size: 23px;
+    }
+
+    .preview-card h3 {
+      font-family: Georgia, serif;
+      color: var(--sage-dark);
+      margin-bottom: 8px;
+    }
+
+    /* ACADEMY CTA */
+
+    .academy-banner {
+      position: relative;
+      overflow: hidden;
+      background: var(--sage-dark);
+      color: white;
+      padding: 75px 0;
+    }
+
+    .academy-content {
+      max-width: 700px;
+    }
+
+    .academy-content h2 {
+      font-family: Georgia, serif;
+      color: white;
+      font-size: clamp(36px,5vw,52px);
+      margin: 10px 0 15px;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      background: var(--blush);
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    .final-cta h2 {
+      font-family: Georgia, serif;
+      color: var(--sage-dark);
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #28352c;
+      color: #eee;
+      padding: 40px 0 25px;
+    }
+
+    .footer-inner {
+      width: min(1150px,92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-title {
+      font-family: Georgia, serif;
+      color: var(--gold-light);
+      font-size: 20px;
+    }
+
+    .footer-bottom {
+      width: min(1150px,92%);
+      margin: 30px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      font-size: 12px;
+      color: #c7c7c7;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 22px;
+        flex-direction: column;
+        align-items: stretch;
+        border-bottom: 1px solid #eadfd3;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero {
+        min-height: 620px;
+        height: 75vh;
+      }
+
+      .slide-content {
+        align-items: flex-end;
+        padding-bottom: 85px;
+      }
+
+      .slide h1 {
+        font-size: 43px;
+      }
+
+      .slide p {
+        font-size: 16px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 320px;
+      }
+
+      .about-image img {
+        min-height: 320px;
+      }
+
+      .preview-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .brand-name {
+        font-size: 17px;
+      }
+
+      .brand-subtitle {
+        font-size: 8px;
+      }
+
+      .logo-mark {
+        width: 42px;
+        height: 42px;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .slide h1 {
+        font-size: 39px;
+      }
+
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .final-cta h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    Imperial Beauty Salon & Academy • Patna
+  </div>
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="navbar">
+
+      <a href="index.html" class="brand">
+
+        <!-- Temporary logo mark -->
+        <div class="logo-mark">I</div>
+
+        <div>
+          <div class="brand-name">
+            Imperial
+          </div>
+
+          <span class="brand-subtitle">
+            Beauty Salon & Academy
+          </span>
+        </div>
+
+      </a>
+
+
+      <button class="mobile-menu"
+              aria-label="Open menu">
+        ☰
+      </button>
+
+
+      <nav class="nav-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="services.html">
+          Our Services
+        </a>
+
+        <a href="makeup-services.html">
+          Makeup Services
+        </a>
+
+        <a href="academy.html">
+          Our Academy
+        </a>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="makeup-services.html"
+           class="nav-button">
+          Book Appointment
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO SLIDESHOW -->
+
+  <section class="hero">
+
+
+    <!-- SLIDE 1 -->
+
+    <div class="slide active">
+
+      <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=85"
+        alt="Professional makeup service">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-content">
+
+        <div class="slide-content-inner">
+
+          <div class="eyebrow">
+            Makeup Services
+          </div>
+
+          <h1>
+            Make Every Occasion Beautiful.
+          </h1>
+
+          <p>
+            Professional makeup for bridal, engagement,
+            reception and special occasions.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="makeup-services.html"
+              class="btn btn-gold">
+              Book Your Makeup
+            </a>
+
+            <a
+              href="makeup-services.html#pricing"
+              class="btn btn-outline">
+              View Makeup Menu
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SLIDE 2 -->
+
+    <div class="slide">
+
+      <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1800&q=85"
+        alt="Professional hair service">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-content">
+
+        <div class="slide-content-inner">
+
+          <div class="eyebrow">
+            Hair Care
+          </div>
+
+          <h1>
+            Healthy Hair. Beautiful You.
+          </h1>
+
+          <p>
+            Hair cuts, hair care, colour and
+            advanced hair treatments.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="services.html#hair-cuts"
+              class="btn btn-gold">
+              Explore Hair Services
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SLIDE 3 -->
+
+    <div class="slide">
+
+      <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=85"
+        alt="Facial and skin care">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-content">
+
+        <div class="slide-content-inner">
+
+          <div class="eyebrow">
+            Skin Rituals & Facials
+          </div>
+
+          <h1>
+            Glow With Confidence.
+          </h1>
+
+          <p>
+            Refreshing skin rituals and facial care
+            designed for a healthy, beautiful glow.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="services.html#skin"
+              class="btn btn-gold">
+              Explore Skin Care
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SLIDE 4 -->
+
+    <div class="slide">
+
+      <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=85"
+        alt="Beauty and manicure service">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-content">
+
+        <div class="slide-content-inner">
+
+          <div class="eyebrow">
+            Essential Beauty Services
+          </div>
+
+          <h1>
+            Everyday Beauty, Elevated.
+          </h1>
+
+          <p>
+            Grooming, manicure, pedicure, waxing
+            and beauty essentials for every occasion.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="services.html#essential"
+              class="btn btn-gold">
+              Explore Beauty Services
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SLIDE 5 -->
+
+    <div class="slide">
+
+      <img
+        class="slide-image"
+        src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1800&q=85"
+        alt="Beauty academy training">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-content">
+
+        <div class="slide-content-inner">
+
+          <div class="eyebrow">
+            Imperial Beauty Academy
+          </div>
+
+          <h1>
+            Learn. Practice. Grow.
+          </h1>
+
+          <p>
+            Build practical beauty skills with
+            professional courses and hands-on learning.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="academy.html"
+              class="btn btn-gold">
+              Explore Our Academy
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SLIDER DOTS -->
+
+    <div class="slider-controls">
+
+      <button class="slider-dot active"
+              aria-label="Slide 1"></button>
+
+      <button class="slider-dot"
+              aria-label="Slide 2"></button>
+
+      <button class="slider-dot"
+              aria-label="Slide 3"></button>
+
+      <button class="slider-dot"
+              aria-label="Slide 4"></button>
+
+      <button class="slider-dot"
+              aria-label="Slide 5"></button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT US -->
+
+  <section class="section about-section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          About Imperial
+        </div>
+
+        <h2>
+          Beauty, Confidence & Elegance
+        </h2>
+
+        <p>
+          A professional beauty destination in Patna
+          bringing salon services and beauty education
+          together under one roof.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+
+        <!-- Temporary visual -->
+
+        <div class="about-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85"
+            alt="Beauty salon interior">
+
+        </div>
+
+
+        <div class="about-content">
+
+          <div class="eyebrow">
+            Our Story
+          </div>
+
+          <h2>
+            Where professional beauty meets personal care.
+          </h2>
+
+          <p>
+            At Imperial Beauty Salon & Academy, we believe
+            beauty is not only about looking good — it is
+            about feeling confident, comfortable and
+            beautifully yourself.
+          </p>
+
+          <p>
+            From makeup and hair to skin care and essential
+            beauty services, we aim to provide thoughtful,
+            professional care for every client.
+          </p>
+
+          <p>
+            Alongside our salon services, Imperial Beauty
+            Academy provides practical beauty education
+            for those who want to learn, practice and build
+            a career in the beauty industry.
+          </p>
+
+
+          <div class="about-features">
+
+            <div class="feature">
+
+              <strong>
+                Professional Care
+              </strong>
+
+              Personal attention at every visit.
+
+            </div>
+
+
+            <div class="feature">
+
+              <strong>
+                Beauty Expertise
+              </strong>
+
+              Services for everyday and special occasions.
+
+            </div>
+
+
+            <div class="feature">
+
+              <strong>
+                Practical Academy
+              </strong>
+
+              Learn through hands-on beauty education.
+
+            </div>
+
+          </div>
+
+
+          <a
+            href="services.html"
+            class="btn btn-gold">
+            Explore Our Services
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES PREVIEW -->
+
+  <section class="section services-preview">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Explore
+        </div>
+
+        <h2>
+          Something Beautiful Awaits
+        </h2>
+
+        <p>
+          Discover our core beauty services,
+          designed around your needs and occasion.
+        </p>
+
+      </div>
+
+
+      <div class="preview-grid">
+
+
+        <a href="services.html#essential"
+           class="preview-card">
+
+          <div class="preview-icon">
+            ✦
+          </div>
+
+          <h3>
+            Essential Beauty
+          </h3>
+
+          <p>
+            Everyday grooming and beauty essentials.
+          </p>
+
+        </a>
+
+
+        <a href="services.html#skin"
+           class="preview-card">
+
+          <div class="preview-icon">
+            ✧
+          </div>
+
+          <h3>
+            Skin Rituals
+          </h3>
+
+          <p>
+            Facials and skin care for a healthy glow.
+          </p>
+
+        </a>
+
+
+        <a href="services.html#hair-treatments"
+           class="preview-card">
+
+          <div class="preview-icon">
+            ♢
+          </div>
+
+          <h3>
+            Hair Treatments
+          </h3>
+
+          <p>
+            Professional care for beautiful hair.
+          </p>
+
+        </a>
+
+
+        <a href="makeup-services.html"
+           class="preview-card">
+
+          <div class="preview-icon">
+            ♡
+          </div>
+
+          <h3>
+            Makeup Services
+          </h3>
+
+          <p>
+            Makeup for your most memorable occasions.
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACADEMY CTA -->
+
+  <section class="academy-banner">
+
+    <div class="container">
+
+      <div class="academy-content">
+
+        <div class="eyebrow">
+          Imperial Beauty Academy
+        </div>
+
+        <h2>
+          Turn Your Passion for Beauty Into a Skill.
+        </h2>
+
+        <p>
+          Explore our professional beauty courses and
+          learn practical techniques with hands-on training.
+        </p>
+
+        <br>
+
+        <a
+          href="academy.html"
+          class="btn btn-gold">
+          Explore Our Academy
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section class="final-cta">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Your Beauty Appointment
+      </div>
+
+      <h2>
+        Ready to Feel Your Best?
+      </h2>
+
+      <p>
+        Choose your service and book your appointment
+        with Imperial Beauty Salon & Academy.
+      </p>
+
+      <br>
+
+      <a
+        href="makeup-services.html"
+        class="btn btn-gold">
+        Book Your Appointment
+      </a>
+
+      &nbsp;
+
+      <a
+        href="contact.html"
+        class="btn"
+        style="border:1px solid var(--sage-dark);color:var(--sage-dark);">
+        Contact Us
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div>
+
+        <div class="footer-title">
+          Imperial Beauty Salon & Academy
+        </div>
+
+        <p>
+          Beauty • Makeup • Hair • Academy
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          Patna, Bihar
+        </strong>
+
+        <br>
+
+        <a href="tel:+916299942455">
+          +91 62999 42455
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <a href="services.html">
+          Our Services
+        </a>
+
+        <br>
+
+        <a href="academy.html">
+          Our Academy
+        </a>
+
+        <br>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © Imperial Beauty Salon & Academy.
+      All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- SLIDESHOW + MOBILE MENU -->
+
+  <script>
+
+    const menuButton =
+      document.querySelector(".mobile-menu");
+
+    const navigation =
+      document.querySelector(".nav-links");
+
+    if (menuButton) {
+
+      menuButton.addEventListener("click", () => {
+
+        navigation.classList.toggle("open");
+
+      });
+
+    }
+
+
+    const slides =
+      document.querySelectorAll(".slide");
+
+    const dots =
+      document.querySelectorAll(".slider-dot");
+
+    let currentSlide = 0;
+
+
+    function showSlide(index) {
+
+      currentSlide =
+        (index + slides.length) % slides.length;
+
+
+      slides.forEach((slide, i) => {
+
+        slide.classList.toggle(
+          "active",
+          i === currentSlide
+        );
+
+      });
+
+
+      dots.forEach((dot, i) => {
+
+        dot.classList.toggle(
+          "active",
+          i === currentSlide
+        );
+
+      });
+
+    }
+
+
+    dots.forEach((dot, index) => {
+
+      dot.addEventListener(
+        "click",
+        () => showSlide(index)
+      );
+
+    });
+
+
+    showSlide(0);
+
+
+    setInterval(() => {
+
+      showSlide(currentSlide + 1);
+
+    }, 5000);
+
+  </script>
+
+</body>
+</html>
