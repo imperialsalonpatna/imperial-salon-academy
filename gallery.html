@@ -83,6 +83,21 @@
 .gallery-form{grid-template-columns:1fr}
 .gallery-form .full,.gallery-form button{grid-column:auto}
 }
+
+/* Enhanced center-focused gallery carousel */
+.gallery-slider{max-width:1200px;margin:auto;position:relative;overflow:hidden;padding:10px 0 22px}
+.gallery-track{display:flex;align-items:center;gap:18px;will-change:transform;transition:transform .55s cubic-bezier(.22,.61,.36,1);touch-action:pan-y}
+.gallery-slide{flex:0 0 min(72vw,760px);aspect-ratio:4/3;background:#e9e1d9;border-radius:18px;overflow:hidden;opacity:.48;transform:scale(.84);transition:transform .55s cubic-bezier(.22,.61,.36,1),opacity .55s ease,filter .55s ease;box-shadow:0 10px 28px rgba(55,67,55,.10);filter:saturate(.82);cursor:pointer}
+.gallery-slide.active{opacity:1;transform:scale(1);filter:saturate(1);box-shadow:0 22px 55px rgba(55,67,55,.20);z-index:2}
+.gallery-slide img{width:100%;height:100%;display:block;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.gallery-arrow{z-index:5}
+.lightbox-stage{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;touch-action:pan-y}
+.lightbox img{max-width:calc(100vw - 120px);max-height:88vh;width:auto;height:auto;object-fit:contain}
+.lightbox-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border:0;border-radius:50%;background:rgba(255,255,255,.95);color:#536653;font-size:30px;cursor:pointer;z-index:10;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.lightbox-prev{left:22px}.lightbox-next{right:22px}
+@media(max-width:900px){.gallery-slide{flex-basis:78vw}.gallery-arrow{width:46px;height:46px}}
+@media(max-width:700px){.gallery-slider{padding:8px 0 18px}.gallery-track{gap:10px}.gallery-slide{flex-basis:82vw;border-radius:13px}.lightbox{padding:10px}.lightbox img{max-width:calc(100vw - 70px);max-height:82vh}.lightbox-arrow{width:42px;height:42px;font-size:24px}.lightbox-prev{left:8px}.lightbox-next{right:8px}}
+
 </style>
 </head>
 
@@ -124,19 +139,11 @@
 <p>Elegant bridal looks created to complement every bride's personality, outfit and special moment.</p>
 </div>
 
-<div class="gallery-slider"
-data-gallery="Bridal Looks"
-data-images='["images/gallery/bridal-4.jpg","images/gallery/bridal-5.jpg","images/gallery/bridal-6.jpg","images/gallery/bridal-7.jpg","images/gallery/bridal-8.jpg","images/gallery/bridal-9.jpg","images/gallery/bridal-10.jpg","images/gallery/bridal-11.jpg","images/gallery/bridal-12.jpg"]'>
-
-<div class="gallery-frame">
-<img class="gallery-image" src="images/gallery/bridal-4.jpg" alt="Bridal makeup look 1" loading="eager">
-</div>
-<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous bridal image">‹</button>
-<button class="gallery-arrow gallery-next" type="button" aria-label="Next bridal image">›</button>
-<div class="gallery-controls">
-<div class="gallery-dots"></div>
-<div class="gallery-counter">1 / 9</div>
-</div>
+<div class="gallery-slider" data-gallery="Bridal Looks" data-images='["images/gallery/bridal-4.jpg","images/gallery/bridal-5.jpg","images/gallery/bridal-6.jpg","images/gallery/bridal-7.jpg","images/gallery/bridal-8.jpg","images/gallery/bridal-9.jpg","images/gallery/bridal-10.jpg","images/gallery/bridal-11.jpg","images/gallery/bridal-12.jpg"]'>
+<div class="gallery-track"></div>
+<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">‹</button>
+<button class="gallery-arrow gallery-next" type="button" aria-label="Next image">›</button>
+<div class="gallery-controls"><div class="gallery-dots"></div><div class="gallery-counter">1 / 1</div></div>
 <p class="gallery-note">Swipe on mobile or use the arrows to explore the looks.</p>
 </div>
 </div>
@@ -151,19 +158,11 @@ data-images='["images/gallery/bridal-4.jpg","images/gallery/bridal-5.jpg","image
 <p>Refined and elegant makeup looks for your engagement and pre-wedding celebrations.</p>
 </div>
 
-<div class="gallery-slider"
-data-gallery="Engagement Looks"
-data-images='["images/gallery/engagement-1.jpg","images/gallery/engagement-2.jpg","images/gallery/engagement-3.jpg","images/gallery/engagement-4.jpg","images/gallery/engagement-5.jpg","images/gallery/engagement-6.jpg"]'>
-
-<div class="gallery-frame">
-<img class="gallery-image" src="images/gallery/engagement-1.jpg" alt="Engagement makeup look 1" loading="lazy">
-</div>
-<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous engagement image">‹</button>
-<button class="gallery-arrow gallery-next" type="button" aria-label="Next engagement image">›</button>
-<div class="gallery-controls">
-<div class="gallery-dots"></div>
-<div class="gallery-counter">1 / 6</div>
-</div>
+<div class="gallery-slider" data-gallery="Engagement Looks" data-images='["images/gallery/engagement-1.jpg","images/gallery/engagement-2.jpg","images/gallery/engagement-3.jpg","images/gallery/engagement-4.jpg","images/gallery/engagement-5.jpg","images/gallery/engagement-6.jpg"]'>
+<div class="gallery-track"></div>
+<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">‹</button>
+<button class="gallery-arrow gallery-next" type="button" aria-label="Next image">›</button>
+<div class="gallery-controls"><div class="gallery-dots"></div><div class="gallery-counter">1 / 1</div></div>
 <p class="gallery-note">Swipe on mobile or use the arrows to explore the looks.</p>
 </div>
 </div>
@@ -178,19 +177,11 @@ data-images='["images/gallery/engagement-1.jpg","images/gallery/engagement-2.jpg
 <p>Glamorous, polished and personalised looks for parties and special occasions.</p>
 </div>
 
-<div class="gallery-slider"
-data-gallery="Party Looks"
-data-images='["images/gallery/party-1.jpg","images/gallery/party-2.jpg","images/gallery/party-3.jpg","images/gallery/party-4.jpg","images/gallery/party-5.jpg","images/gallery/party-6.jpg"]'>
-
-<div class="gallery-frame">
-<img class="gallery-image" src="images/gallery/party-1.jpg" alt="Party makeup look 1" loading="lazy">
-</div>
-<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous party image">‹</button>
-<button class="gallery-arrow gallery-next" type="button" aria-label="Next party image">›</button>
-<div class="gallery-controls">
-<div class="gallery-dots"></div>
-<div class="gallery-counter">1 / 6</div>
-</div>
+<div class="gallery-slider" data-gallery="Party Looks" data-images='["images/gallery/party-1.jpg","images/gallery/party-2.jpg","images/gallery/party-3.jpg","images/gallery/party-4.jpg","images/gallery/party-5.jpg","images/gallery/party-6.jpg"]'>
+<div class="gallery-track"></div>
+<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">‹</button>
+<button class="gallery-arrow gallery-next" type="button" aria-label="Next image">›</button>
+<div class="gallery-controls"><div class="gallery-dots"></div><div class="gallery-counter">1 / 1</div></div>
 <p class="gallery-note">Swipe on mobile or use the arrows to explore the looks.</p>
 </div>
 </div>
@@ -205,20 +196,12 @@ data-images='["images/gallery/party-1.jpg","images/gallery/party-2.jpg","images/
 <p>A look at our hair styling, colour and transformation work.</p>
 </div>
 
-<div class="gallery-slider"
-data-gallery="Hair Transformations"
-data-images='["images/gallery/hair-1.jpg","images/gallery/hair-2.jpg","images/gallery/hair-3.jpg","images/gallery/hair-4.jpg","images/gallery/hair-5.jpg","images/gallery/hair-6.jpg"]'>
-
-<div class="gallery-frame">
-<img class="gallery-image" src="images/gallery/hair-1.jpg" alt="Hair transformation 1" loading="lazy">
-</div>
-<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous hair image">‹</button>
-<button class="gallery-arrow gallery-next" type="button" aria-label="Next hair image">›</button>
-<div class="gallery-controls">
-<div class="gallery-dots"></div>
-<div class="gallery-counter">1 / 6</div>
-</div>
-<p class="gallery-note">Swipe on mobile or use the arrows to explore the transformations.</p>
+<div class="gallery-slider" data-gallery="Hair Transformations" data-images='["images/gallery/hair-1.jpg","images/gallery/hair-2.jpg","images/gallery/hair-3.jpg","images/gallery/hair-4.jpg","images/gallery/hair-5.jpg","images/gallery/hair-6.jpg"]'>
+<div class="gallery-track"></div>
+<button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">‹</button>
+<button class="gallery-arrow gallery-next" type="button" aria-label="Next image">›</button>
+<div class="gallery-controls"><div class="gallery-dots"></div><div class="gallery-counter">1 / 1</div></div>
+<p class="gallery-note">Swipe on mobile or use the arrows to explore the looks.</p>
 </div>
 </div>
 </section>
@@ -312,114 +295,42 @@ India
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" aria-hidden="true">
 <button class="lightbox-close" type="button" aria-label="Close image">×</button>
-<img id="lightboxImage" src="" alt="">
+<button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">‹</button>
+<div class="lightbox-stage"><img id="lightboxImage" src="" alt=""></div>
+<button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">›</button>
 <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
-
 <script src="script.js"></script>
 <script>
+const galleryStates=new Map();
 document.querySelectorAll(".gallery-slider").forEach(function(slider){
-  const images = JSON.parse(slider.dataset.images);
-  const image = slider.querySelector(".gallery-image");
-  const counter = slider.querySelector(".gallery-counter");
-  const dotsWrap = slider.querySelector(".gallery-dots");
-  const prev = slider.querySelector(".gallery-prev");
-  const next = slider.querySelector(".gallery-next");
-  let index = 0;
-
-  images.forEach(function(src,i){
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.className = "gallery-dot" + (i === 0 ? " active" : "");
-    dot.setAttribute("aria-label","Show image " + (i+1));
-    dot.addEventListener("click",function(){ show(i); });
-    dotsWrap.appendChild(dot);
-  });
-
-  function show(i){
-    index = (i + images.length) % images.length;
-    image.src = images[index];
-    image.alt = slider.dataset.gallery + " " + (index+1);
-    counter.textContent = (index+1) + " / " + images.length;
-    dotsWrap.querySelectorAll(".gallery-dot").forEach(function(dot,n){
-      dot.classList.toggle("active",n === index);
-    });
-  }
-
-  prev.addEventListener("click",function(){ show(index-1); });
-  next.addEventListener("click",function(){ show(index+1); });
-
-  let startX = 0;
-  const frame = slider.querySelector(".gallery-frame");
-
-  frame.addEventListener("touchstart",function(e){
-    startX = e.changedTouches[0].screenX;
-  },{passive:true});
-
-  frame.addEventListener("touchend",function(e){
-    const distance = e.changedTouches[0].screenX - startX;
-    if(Math.abs(distance) > 45){
-      show(index + (distance < 0 ? 1 : -1));
-    }
-  },{passive:true});
-
-  image.addEventListener("click",function(){
-    const lightbox = document.getElementById("lightbox");
-    document.getElementById("lightboxImage").src = images[index];
-    document.getElementById("lightboxImage").alt = image.alt;
-    document.getElementById("lightboxCaption").textContent =
-      slider.dataset.gallery + " • " + (index+1) + " / " + images.length;
-    lightbox.classList.add("open");
-    lightbox.setAttribute("aria-hidden","false");
-  });
+ const images=JSON.parse(slider.dataset.images),title=slider.dataset.gallery,track=slider.querySelector(".gallery-track"),counter=slider.querySelector(".gallery-counter"),dots=slider.querySelector(".gallery-dots"),prev=slider.querySelector(".gallery-prev"),next=slider.querySelector(".gallery-next"); let index=0,startX=0,dragging=false;
+ images.forEach(function(src,i){
+  const slide=document.createElement("div"); slide.className="gallery-slide"; slide.innerHTML='<img src="'+src+'" alt="'+title+' '+(i+1)+'" loading="'+(i<2?'eager':'lazy')+'">'; track.appendChild(slide);
+  const dot=document.createElement("button"); dot.type="button"; dot.className="gallery-dot"+(i===0?" active":""); dot.setAttribute("aria-label","Show image "+(i+1)); dot.addEventListener("click",function(){show(i)}); dots.appendChild(dot);
+  slide.addEventListener("click",function(){if(!dragging)openLightbox(title,images,index)});
+ });
+ function center(){const a=track.children[index];if(!a)return;track.style.transform="translateX("+(slider.clientWidth/2-(a.offsetLeft+a.offsetWidth/2))+"px)"}
+ function show(i){index=(i+images.length)%images.length;Array.from(track.children).forEach((x,n)=>x.classList.toggle("active",n===index));counter.textContent=(index+1)+" / "+images.length;dots.querySelectorAll(".gallery-dot").forEach((x,n)=>x.classList.toggle("active",n===index));center()}
+ prev.addEventListener("click",()=>show(index-1)); next.addEventListener("click",()=>show(index+1));
+ track.addEventListener("touchstart",e=>{startX=e.changedTouches[0].screenX;dragging=false},{passive:true});
+ track.addEventListener("touchmove",e=>{if(Math.abs(e.changedTouches[0].screenX-startX)>8)dragging=true},{passive:true});
+ track.addEventListener("touchend",e=>{const d=e.changedTouches[0].screenX-startX;if(Math.abs(d)>45)show(index+(d<0?1:-1));setTimeout(()=>dragging=false,50)},{passive:true});
+ window.addEventListener("resize",center);galleryStates.set(title,{show:show});requestAnimationFrame(()=>show(0));
 });
-
-const lightbox = document.getElementById("lightbox");
-
-function closeLightbox(){
-  lightbox.classList.remove("open");
-  lightbox.setAttribute("aria-hidden","true");
-}
-
-lightbox.addEventListener("click",function(e){
-  if(e.target === lightbox || e.target.classList.contains("lightbox-close")){
-    closeLightbox();
-  }
-});
-
-document.addEventListener("keydown",function(e){
-  if(e.key === "Escape") closeLightbox();
-});
-
+const lightbox=document.getElementById("lightbox"),lightboxImage=document.getElementById("lightboxImage"),lightboxCaption=document.getElementById("lightboxCaption");let lbImages=[],lbTitle="",lbIndex=0,lbStartX=0;
+function openLightbox(title,images,index){lbTitle=title;lbImages=images;lbIndex=index;updateLightbox();lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
+function updateLightbox(){lightboxImage.src=lbImages[lbIndex];lightboxImage.alt=lbTitle+" "+(lbIndex+1);lightboxCaption.textContent=lbTitle+" • "+(lbIndex+1)+" / "+lbImages.length}
+function moveLightbox(d){if(!lbImages.length)return;lbIndex=(lbIndex+d+lbImages.length)%lbImages.length;updateLightbox();const state=galleryStates.get(lbTitle);if(state)state.show(lbIndex)}
+function closeLightbox(){lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true");document.body.style.overflow=""}
+document.querySelector(".lightbox-prev").addEventListener("click",e=>{e.stopPropagation();moveLightbox(-1)});
+document.querySelector(".lightbox-next").addEventListener("click",e=>{e.stopPropagation();moveLightbox(1)});
+document.querySelector(".lightbox-close").addEventListener("click",e=>{e.stopPropagation();closeLightbox()});
+lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox()});
+document.querySelector(".lightbox-stage").addEventListener("touchstart",e=>{lbStartX=e.changedTouches[0].screenX},{passive:true});
+document.querySelector(".lightbox-stage").addEventListener("touchend",e=>{const d=e.changedTouches[0].screenX-lbStartX;if(Math.abs(d)>45)moveLightbox(d<0?1:-1)},{passive:true});
+document.addEventListener("keydown",e=>{if(!lightbox.classList.contains("open"))return;if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")moveLightbox(-1);if(e.key==="ArrowRight")moveLightbox(1)});
 document.getElementById("galleryForm").addEventListener("submit",function(e){
   e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const service = document.getElementById("service").value;
-  const date = document.getElementById("date").value;
-  const message = document.getElementById("message").value.trim();
-
-  const formattedDate = date
-    ? new Date(date + "T00:00:00").toLocaleDateString("en-IN",{day:"2-digit",month:"long",year:"numeric"})
-    : "Not specified";
-
-  const text =
-`Hello Imperial Beauty Salon & Academy,
-
-I would like to make an enquiry.
-
-Name: ${name}
-Phone: ${phone}
-Service: ${service}
-Preferred Date: ${formattedDate}
-Message: ${message || "No additional message."}`;
-
-  window.open(
-    "https://wa.me/916299942455?text=" + encodeURIComponent(text),
-    "_blank"
-  );
-});
-</script>
-</body>
-</html>
+  const name = document
