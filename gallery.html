@@ -63,46 +63,50 @@
   line-height:1.7;
 }
 
-/* Center-focused manual carousel:
-   active image is larger; previous and next images remain partially visible. */
+/* ===== SUBTLE ORBITAL / 3D GALLERY ===== */
 .gallery-slider{
-  max-width:1200px;
+  max-width:1240px;
   margin:auto;
   position:relative;
   overflow:hidden;
-  padding:12px 0 22px;
+  padding:28px 0 22px;
+  perspective:1200px;
 }
 .gallery-track{
   display:flex;
   align-items:center;
-  gap:18px;
-  will-change:transform;
-  transition:transform .55s cubic-bezier(.22,.61,.36,1);
+  gap:0;
+  height:clamp(330px,42vw,540px);
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform .65s cubic-bezier(.22,.61,.36,1);
   touch-action:pan-y;
 }
 .gallery-slide{
-  flex:0 0 min(72vw,760px);
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:min(54vw,650px);
   aspect-ratio:4/3;
+  margin:0;
   background:#e9e1d9;
-  border-radius:18px;
+  border-radius:20px;
   overflow:hidden;
-  opacity:.46;
-  transform:scale(.84);
-  filter:saturate(.82);
+  cursor:pointer;
+  opacity:0;
+  transform:
+    translate3d(-50%,-50%,0)
+    rotateY(0deg)
+    scale(.72);
+  transform-origin:center center;
+  filter:saturate(.78) brightness(.9);
+  box-shadow:0 12px 30px rgba(55,67,55,.10);
   transition:
-    transform .55s cubic-bezier(.22,.61,.36,1),
+    transform .65s cubic-bezier(.22,.61,.36,1),
     opacity .55s ease,
     filter .55s ease,
     box-shadow .55s ease;
-  cursor:pointer;
-  box-shadow:0 10px 28px rgba(55,67,55,.10);
-}
-.gallery-slide.active{
-  opacity:1;
-  transform:scale(1);
-  filter:saturate(1);
-  box-shadow:0 22px 55px rgba(55,67,55,.20);
-  z-index:2;
+  will-change:transform,opacity;
 }
 .gallery-slide img{
   width:100%;
@@ -112,6 +116,50 @@
   user-select:none;
   -webkit-user-drag:none;
 }
+.gallery-slide.is-center{
+  opacity:1;
+  z-index:5;
+  transform:
+    translate3d(-50%,-50%,55px)
+    rotateY(0deg)
+    scale(1);
+  filter:saturate(1) brightness(1);
+  box-shadow:0 28px 65px rgba(55,67,55,.24);
+}
+.gallery-slide.is-left{
+  opacity:.78;
+  z-index:3;
+  transform:
+    translate3d(calc(-50% - 39vw),-50%,-75px)
+    rotateY(34deg)
+    scale(.70);
+  filter:saturate(.78) brightness(.88);
+}
+.gallery-slide.is-right{
+  opacity:.78;
+  z-index:3;
+  transform:
+    translate3d(calc(-50% + 39vw),-50%,-75px)
+    rotateY(-34deg)
+    scale(.70);
+  filter:saturate(.78) brightness(.88);
+}
+.gallery-slide.is-far-left{
+  opacity:.18;
+  z-index:1;
+  transform:
+    translate3d(calc(-50% - 67vw),-50%,-150px)
+    rotateY(48deg)
+    scale(.55);
+}
+.gallery-slide.is-far-right{
+  opacity:.18;
+  z-index:1;
+  transform:
+    translate3d(calc(-50% + 67vw),-50%,-150px)
+    rotateY(-48deg)
+    scale(.55);
+}
 .gallery-arrow{
   position:absolute;
   top:50%;
@@ -120,12 +168,12 @@
   height:52px;
   border:0;
   border-radius:50%;
-  background:rgba(255,253,249,.95);
+  background:rgba(255,253,249,.96);
   color:#536653;
-  box-shadow:0 6px 20px rgba(0,0,0,.16);
+  box-shadow:0 8px 24px rgba(0,0,0,.16);
   font-size:30px;
   cursor:pointer;
-  z-index:5;
+  z-index:20;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -136,7 +184,6 @@
 }
 .gallery-prev{left:18px}
 .gallery-next{right:18px}
-
 .gallery-controls{
   display:flex;
   align-items:center;
@@ -175,6 +222,65 @@
   color:#77756e;
   font-size:13px;
   margin:12px 0 0;
+}
+
+@media(max-width:900px){
+  .gallery-track{height:clamp(290px,48vw,430px)}
+  .gallery-slide{width:min(61vw,560px)}
+  .gallery-slide.is-left{
+    transform:
+      translate3d(calc(-50% - 43vw),-50%,-70px)
+      rotateY(31deg)
+      scale(.66);
+  }
+  .gallery-slide.is-right{
+    transform:
+      translate3d(calc(-50% + 43vw),-50%,-70px)
+      rotateY(-31deg)
+      scale(.66);
+  }
+  .gallery-arrow{width:46px;height:46px}
+  .contact-columns{grid-template-columns:1fr}
+  .contact-column{padding:25px 20px;min-height:auto}
+  .contact-column+.contact-column{
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.2);
+  }
+}
+@media(max-width:700px){
+  .gallery-slider{padding:16px 0 18px}
+  .gallery-track{height:clamp(260px,68vw,360px)}
+  .gallery-slide{width:67vw;border-radius:15px}
+  .gallery-slide.is-left{
+    transform:
+      translate3d(calc(-50% - 49vw),-50%,-65px)
+      rotateY(28deg)
+      scale(.60);
+    opacity:.7;
+  }
+  .gallery-slide.is-right{
+    transform:
+      translate3d(calc(-50% + 49vw),-50%,-65px)
+      rotateY(-28deg)
+      scale(.60);
+    opacity:.7;
+  }
+  .gallery-slide.is-far-left,
+  .gallery-slide.is-far-right{opacity:0}
+  .gallery-arrow{width:42px;height:42px;font-size:24px}
+  .gallery-prev{left:7px}
+  .gallery-next{right:7px}
+  .inquiry-card{padding:28px 20px}
+  .gallery-form{grid-template-columns:1fr}
+  .gallery-form .full,
+  .gallery-form button{grid-column:auto}
+  .lightbox{padding:10px}
+  .lightbox img{
+    max-width:calc(100vw - 70px);
+    max-height:82vh;
+  }
+  .lightbox-prev{left:8px}
+  .lightbox-next{right:8px}
 }
 
 /* ===== INQUIRY ===== */
@@ -728,9 +834,8 @@ document.querySelectorAll(".gallery-slider").forEach(function(slider){
 
   let index = 0;
   let startX = 0;
-  let dragging = false;
+  let moved = false;
 
-  /* Create every slide from the exact image path above. */
   images.forEach(function(src, i){
 
     const slide = document.createElement("div");
@@ -739,7 +844,7 @@ document.querySelectorAll(".gallery-slider").forEach(function(slider){
     const img = document.createElement("img");
     img.src = src;
     img.alt = title + " " + (i + 1);
-    img.loading = i < 2 ? "eager" : "lazy";
+    img.loading = i < 3 ? "eager" : "lazy";
 
     slide.appendChild(img);
     track.appendChild(slide);
@@ -753,62 +858,74 @@ document.querySelectorAll(".gallery-slider").forEach(function(slider){
     });
     dots.appendChild(dot);
 
-    /* Clicking ANY visible slide opens that exact image. */
     slide.addEventListener("click", function(){
-      if(!dragging){
+      if(!moved){
         openLightbox(title, images, i);
       }
     });
   });
 
-  function centerActive(){
-    const active = track.children[index];
-    if(!active) return;
+  function applyPositions(){
 
-    const offset =
-      slider.clientWidth / 2 -
-      (active.offsetLeft + active.offsetWidth / 2);
+    const slides = Array.from(track.children);
+    const total = slides.length;
 
-    track.style.transform = "translateX(" + offset + "px)";
+    slides.forEach(function(slide, i){
+
+      slide.classList.remove(
+        "is-center",
+        "is-left",
+        "is-right",
+        "is-far-left",
+        "is-far-right"
+      );
+
+      let diff = i - index;
+
+      /* Wrap the indexes so the carousel behaves like a circular track. */
+      if(diff > total / 2) diff -= total;
+      if(diff < -total / 2) diff += total;
+
+      if(diff === 0) slide.classList.add("is-center");
+      else if(diff === -1) slide.classList.add("is-left");
+      else if(diff === 1) slide.classList.add("is-right");
+      else if(diff === -2) slide.classList.add("is-far-left");
+      else if(diff === 2) slide.classList.add("is-far-right");
+    });
+
+    counter.textContent = (index + 1) + " / " + total;
+
+    dots.querySelectorAll(".gallery-dot").forEach(function(dot,n){
+      dot.classList.toggle("active",n === index);
+    });
   }
 
   function show(i){
     index = (i + images.length) % images.length;
-
-    Array.from(track.children).forEach(function(slide, n){
-      slide.classList.toggle("active", n === index);
-    });
-
-    counter.textContent = (index + 1) + " / " + images.length;
-
-    dots.querySelectorAll(".gallery-dot").forEach(function(dot, n){
-      dot.classList.toggle("active", n === index);
-    });
-
-    requestAnimationFrame(centerActive);
+    applyPositions();
   }
 
-  prev.addEventListener("click", function(){
+  prev.addEventListener("click",function(){
     show(index - 1);
   });
 
-  next.addEventListener("click", function(){
+  next.addEventListener("click",function(){
     show(index + 1);
   });
 
-  /* Mobile swipe */
-  track.addEventListener("touchstart", function(e){
+  /* Swipe: one controlled step per gesture. */
+  track.addEventListener("touchstart",function(e){
     startX = e.changedTouches[0].screenX;
-    dragging = false;
-  }, {passive:true});
+    moved = false;
+  },{passive:true});
 
-  track.addEventListener("touchmove", function(e){
-    if(Math.abs(e.changedTouches[0].screenX - startX) > 8){
-      dragging = true;
+  track.addEventListener("touchmove",function(e){
+    if(Math.abs(e.changedTouches[0].screenX - startX) > 10){
+      moved = true;
     }
-  }, {passive:true});
+  },{passive:true});
 
-  track.addEventListener("touchend", function(e){
+  track.addEventListener("touchend",function(e){
     const distance = e.changedTouches[0].screenX - startX;
 
     if(Math.abs(distance) > 45){
@@ -816,21 +933,13 @@ document.querySelectorAll(".gallery-slider").forEach(function(slider){
     }
 
     setTimeout(function(){
-      dragging = false;
-    }, 80);
-  }, {passive:true});
+      moved = false;
+    },100);
+  },{passive:true});
 
-  window.addEventListener("resize", function(){
-    centerActive();
-  });
-
-  galleryStates.set(title, {show: show});
-
-  requestAnimationFrame(function(){
-    show(0);
-  });
+  galleryStates.set(title,{show:show});
+  show(0);
 });
-
 
 /* =========================================================
    FULL-SCREEN LIGHTBOX
