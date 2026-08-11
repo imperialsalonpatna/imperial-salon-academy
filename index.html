@@ -548,4 +548,2018 @@ header{
   color:var(--sage-dark);
   font-size:clamp(35px,5vw,50px);
   margin:10px 0 15px;
- 
+  line-height:1.15;
+}
+
+.section-heading p{
+  color:#686862;
+}
+
+.preview-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.preview-card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  padding:30px 20px;
+  text-align:center;
+  transition:.25s ease;
+  box-shadow:0 7px 20px rgba(80,90,75,.05);
+}
+
+.preview-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 30px rgba(80,90,75,.12);
+}
+
+.preview-icon{
+  width:58px;
+  height:58px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:var(--blush-light);
+  border:1px solid rgba(181,138,69,.3);
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Georgia,serif;
+  font-size:23px;
+}
+
+.preview-card h3{
+  font-family:Georgia,serif;
+  color:var(--sage-dark);
+  margin-bottom:8px;
+  font-size:19px;
+}
+
+.preview-card p{
+  font-size:14px;
+  color:#666961;
+}
+
+/* =====================================================
+   ACADEMY
+===================================================== */
+
+.academy-banner{
+  position:relative;
+  overflow:hidden;
+  background:var(--sage-dark);
+  color:#fff;
+  padding:68px 0;
+}
+
+.academy-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.academy-content{
+  max-width:650px;
+}
+
+.academy-content h2{
+  font-family:Georgia,serif;
+  color:#fff;
+  font-size:clamp(36px,5vw,52px);
+  margin:10px 0 15px;
+  line-height:1.12;
+}
+
+.academy-content p{
+  color:#f3f3f0;
+}
+
+.academy-video{
+  border-radius:16px;
+  overflow:hidden;
+  min-height:330px;
+  box-shadow:0 16px 38px rgba(0,0,0,.16);
+  background:#304435;
+}
+
+.academy-video video{
+  width:100%;
+  height:100%;
+  min-height:330px;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  display:block;
+}
+
+/* =====================================================
+   TESTIMONIALS
+===================================================== */
+
+.testimonials-section{
+  background:
+    linear-gradient(
+      135deg,
+      #edf3eb,
+      #f8f2e9
+    );
+  padding:68px 0 72px;
+  overflow:hidden;
+}
+
+.testimonials-heading{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 35px;
+}
+
+.testimonials-heading h2{
+  font-family:Georgia,serif;
+  color:var(--sage-dark);
+  font-size:clamp(29px,4vw,42px);
+  line-height:1.2;
+  margin-top:8px;
+}
+
+/* Continuous slider */
+
+.testimonial-viewport{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+
+  mask-image:linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+
+  -webkit-mask-image:linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+}
+
+.testimonial-track{
+  display:flex;
+  width:max-content;
+  animation:testimonialMove 80s linear infinite;
+}
+
+.testimonial-track:hover{
+  animation-play-state:paused;
+}
+
+/*
+  HORIZONTAL testimonial cards:
+  wider than tall, as requested.
+*/
+
+.testimonial-slide{
+  width:min(620px,84vw);
+  min-height:235px;
+  margin:0 12px;
+  padding:27px 30px 25px;
+  border:1px solid rgba(181,138,69,.25);
+  border-radius:18px;
+  background:rgba(255,255,255,.88);
+  box-shadow:0 9px 25px rgba(80,90,75,.07);
+  flex-shrink:0;
+}
+
+.quote-mark{
+  font-family:Georgia,serif;
+  font-size:42px;
+  line-height:.7;
+  color:var(--gold);
+  margin-bottom:12px;
+}
+
+.testimonial-stars{
+  color:#d49b2e;
+  letter-spacing:2px;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.testimonial-text{
+  font-size:14px;
+  line-height:1.65;
+  color:#50534f;
+  margin-bottom:14px;
+}
+
+.testimonial-author{
+  color:var(--sage-dark);
+  font-weight:bold;
+  font-size:14px;
+}
+
+@keyframes testimonialMove{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-footer{
+  background:var(--sage-dark);
+  color:#fff;
+  padding:48px 0 28px;
+  position:relative;
+  overflow:hidden;
+}
+
+.contact-heading{
+  text-align:center;
+  color:var(--gold-light);
+  font-family:Georgia,serif;
+  font-size:30px;
+  letter-spacing:2px;
+  margin-bottom:35px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.contact-item{
+  text-align:center;
+  padding:10px 25px;
+  min-height:130px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-item + .contact-item{
+  border-left:1px solid rgba(255,255,255,.18);
+}
+
+.contact-icon{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#fff;
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  margin-bottom:10px;
+}
+
+.contact-label{
+  color:var(--gold-light);
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.contact-value{
+  font-family:Georgia,serif;
+  font-size:18px;
+}
+
+.social-title{
+  font-family:cursive;
+  color:var(--gold-light);
+  font-size:31px;
+  margin-bottom:12px;
+}
+
+.social-links{
+  display:flex;
+  gap:13px;
+  justify-content:center;
+}
+
+.social-link{
+  width:48px;
+  height:48px;
+  border:1px solid var(--gold-light);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.08);
+  font-weight:bold;
+}
+
+.social-link:hover{
+  background:#fff;
+  color:var(--sage-dark);
+}
+
+.footer-bottom{
+  width:min(1150px,92%);
+  margin:35px auto 0;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.15);
+  font-size:12px;
+  color:#c7c7c7;
+  text-align:center;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:850px){
+
+  .brand-logo{
+    width:175px;
+    height:60px;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:var(--cream);
+    padding:22px;
+    flex-direction:column;
+    align-items:stretch;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 12px 25px rgba(0,0,0,.07);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .mobile-menu{
+    display:block;
+  }
+
+  .hero{
+    min-height:620px;
+    height:75vh;
+  }
+
+  .slide-content{
+    align-items:flex-end;
+    padding-bottom:85px;
+  }
+
+  .slide h1{
+    font-size:43px;
+  }
+
+  .slide p{
+    font-size:16px;
+  }
+
+  .specialisation-heading p{
+    font-size:15px;
+  }
+
+  .highlights-grid{
+    grid-template-columns:1fr;
+    max-width:520px;
+  }
+
+  .preview-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .academy-grid{
+    grid-template-columns:1fr;
+  }
+
+  .academy-video{
+    min-height:280px;
+  }
+
+  .academy-video video{
+    min-height:280px;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-item + .contact-item{
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.18);
+  }
+
+  .testimonial-slide{
+    width:82vw;
+    min-height:230px;
+  }
+}
+
+@media(max-width:520px){
+
+  .brand-logo{
+    width:155px;
+    height:55px;
+  }
+
+  .hero{
+    min-height:600px;
+  }
+
+  .slide h1{
+    font-size:39px;
+  }
+
+  .specialisation{
+    padding-top:58px;
+  }
+
+  .specialisation-item{
+    font-size:25px;
+    padding:14px 8px;
+  }
+
+  .specialisation-item:before{
+    width:7px;
+    height:7px;
+    margin-right:9px;
+  }
+
+  .about-section{
+    padding:58px 0 65px;
+  }
+
+  .about-video{
+    border-radius:12px;
+    margin-bottom:28px;
+  }
+
+  .about-video video{
+    aspect-ratio:16/9;
+  }
+
+  .about-content .established{
+    font-size:16px;
+  }
+
+  .about-content p{
+    font-size:14px;
+  }
+
+  .preview-grid{
+    grid-template-columns:1fr;
+  }
+
+  .testimonial-slide{
+    width:88vw;
+    min-height:245px;
+    padding:24px 21px;
+  }
+
+  .testimonial-text{
+    font-size:13.5px;
+  }
+
+  .contact-heading{
+    font-size:25px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .slide{
+    transition:none;
+  }
+
+  .testimonial-track{
+    animation:none;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+  Imperial Beauty Salon & Academy • Patna
+</div>
+
+
+<!-- =====================================================
+     HEADER / LOGO
+===================================================== -->
+
+<header>
+
+  <div class="navbar">
+
+    <a href="index.html" class="brand">
+
+      <img
+        class="brand-logo"
+        src="images/imperial-logo.png"
+        alt="Imperial Beauty Salon & Academy"
+      >
+
+    </a>
+
+
+    <button
+      class="mobile-menu"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+
+    <nav class="nav-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="services.html">
+        Our Services
+      </a>
+
+      <a href="makeup-services.html">
+        Makeup Services
+      </a>
+
+      <a href="academy.html">
+        Our Academy
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a href="contact.html">
+        Contact Us
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO SLIDES
+===================================================== -->
+
+<section class="hero" aria-label="Imperial Beauty services">
+
+
+  <!-- SLIDE 1 : MAKEUP -->
+
+  <div class="slide active">
+
+    <video
+      class="slide-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+
+      <source
+        src="videos/slide-makeup.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+    <div class="slide-overlay"></div>
+
+
+    <div class="slide-content">
+
+      <div class="slide-content-inner">
+
+        <div class="eyebrow">
+          Customized Makeup for Every Occasion
+        </div>
+
+        <h1>
+          Make Every Occasion Beautiful.
+        </h1>
+
+        <p>
+          Professional makeup for bridal, engagement,
+          reception and special occasions.
+        </p>
+
+        <a
+          href="makeup-services.html"
+          class="btn btn-gold"
+        >
+          Explore our Makeup Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SLIDE 2 : HAIR -->
+
+  <div class="slide">
+
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+
+      <source
+        src="videos/slide-hair.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+    <div class="slide-overlay"></div>
+
+
+    <div class="slide-content">
+
+      <div class="slide-content-inner">
+
+        <div class="eyebrow">
+          Professional Hair Care & Treatments
+        </div>
+
+        <h1>
+          Healthy Hair. Beautiful You.
+        </h1>
+
+        <p>
+          Hair cuts, hair care, colour and advanced
+          hair treatments.
+        </p>
+
+        <a
+          href="services.html#hair-cuts"
+          class="btn btn-gold"
+        >
+          Explore our Hair Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SLIDE 3 : SKIN -->
+
+  <div class="slide">
+
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+
+      <source
+        src="videos/slide-skin.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+    <div class="slide-overlay"></div>
+
+
+    <div class="slide-content">
+
+      <div class="slide-content-inner">
+
+        <div class="eyebrow">
+          Skin Rituals & Facials
+        </div>
+
+        <h1>
+          Glow With Confidence.
+        </h1>
+
+        <p>
+          Refreshing skin rituals and facial care
+          designed for a healthy, beautiful glow.
+        </p>
+
+        <a
+          href="services.html#skin"
+          class="btn btn-gold"
+        >
+          Explore our Skin Care Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SLIDE 4 : RELAXING -->
+
+  <div class="slide">
+
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+
+      <source
+        src="videos/slide-relaxing.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+    <div class="slide-overlay"></div>
+
+
+    <div class="slide-content">
+
+      <div class="slide-content-inner">
+
+        <div class="eyebrow">
+          Relaxing Beauty Services
+        </div>
+
+        <h1>
+          Get Rid of All Your Stress.
+        </h1>
+
+        <p>
+          Take a relaxing break with thoughtful beauty
+          and self-care services.
+        </p>
+
+        <a
+          href="services.html#relaxing"
+          class="btn btn-gold"
+        >
+          Explore our Relaxing Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SLIDE 5 : ACADEMY -->
+
+  <div class="slide">
+
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+
+      <source
+        src="videos/slide-academy.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+    <div class="slide-overlay"></div>
+
+
+    <div class="slide-content">
+
+      <div class="slide-content-inner">
+
+        <div class="eyebrow">
+          Imperial Beauty Academy
+        </div>
+
+        <h1>
+          Professional Beauty Courses & Training
+        </h1>
+
+        <p>
+          Build practical beauty skills with
+          professional courses and hands-on learning.
+        </p>
+
+        <a
+          href="academy.html"
+          class="btn btn-gold"
+        >
+          Explore our Academy
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SLIDER DOTS -->
+
+  <div class="slider-controls">
+
+    <button
+      class="slider-dot active"
+      aria-label="Slide 1"
+    ></button>
+
+    <button
+      class="slider-dot"
+      aria-label="Slide 2"
+    ></button>
+
+    <button
+      class="slider-dot"
+      aria-label="Slide 3"
+    ></button>
+
+    <button
+      class="slider-dot"
+      aria-label="Slide 4"
+    ></button>
+
+    <button
+      class="slider-dot"
+      aria-label="Slide 5"
+    ></button>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     OUR AREAS OF EXPERTISE
+===================================================== -->
+
+<section class="specialisation">
+
+  <div class="container">
+
+    <div class="specialisation-heading">
+
+      <div class="eyebrow">
+        Our Expertise
+      </div>
+
+      <h2>
+        Our Areas of Expertise
+      </h2>
+
+      <p>
+        From essential beauty services to luxury facials,
+        from basic hair care to advanced hair treatments
+        and makeup for every occasion, we are committed
+        to serving you with utmost care and precision.
+      </p>
+
+    </div>
+
+
+    <div class="specialisation-list">
+
+      <div class="specialisation-item">
+        Expert Bridal Makeup
+      </div>
+
+      <div class="specialisation-item">
+        Professional Skin & Hair Care
+      </div>
+
+      <div class="specialisation-item">
+        Premium Salon Services
+      </div>
+
+      <div class="specialisation-item">
+        Professional Beauty Courses
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT IMPERIAL
+===================================================== -->
+
+<section class="about-section">
+
+  <div class="container">
+
+
+    <div class="about-heading">
+
+      <div class="eyebrow">
+        About Us
+      </div>
+
+      <h2>
+        About Imperial
+      </h2>
+
+    </div>
+
+
+    <!-- AMBIENCE VIDEO -->
+
+    <div class="about-video">
+
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        preload="metadata"
+      >
+
+        <source
+          src="videos/about-ambience.mp4"
+          type="video/mp4"
+        >
+
+      </video>
+
+    </div>
+
+
+    <!-- ABOUT CONTENT -->
+
+    <div class="about-content">
+
+      <p class="established">
+
+        <strong>
+          Established in 2021
+        </strong>,
+        with a vision to provide high-quality beauty
+        services with exceptional care in the city.
+
+      </p>
+
+
+      <p>
+
+        At Imperial Beauty Salon & Academy,
+        we believe beauty is not only about looking good —
+        it is about feeling confident, comfortable
+        and beautifully yourself.
+
+      </p>
+
+
+      <p>
+
+        From makeup and hair to skincare, relaxing
+        services and everyday beauty essentials,
+        we aim to provide thoughtful, professional
+        care for every client.
+
+      </p>
+
+
+      <p>
+
+        Alongside our salon services,
+        Imperial Beauty Academy provides practical
+        beauty education for those who want to learn,
+        practice and build a career in the beauty industry.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     HIGHLIGHTS
+===================================================== -->
+
+<section class="highlights-section">
+
+  <div class="container">
+
+
+    <div class="highlights-heading">
+
+      <div class="eyebrow">
+        Why Imperial
+      </div>
+
+      <h2>
+        Highlights
+      </h2>
+
+    </div>
+
+
+    <div class="highlights-grid">
+
+
+      <!-- HIGHLIGHT 1 -->
+
+      <article class="highlight-card">
+
+        <div class="highlight-number">
+          01
+        </div>
+
+        <h3>
+          Experienced Stylists & Artists
+        </h3>
+
+        <p>
+          Skilled professionals focused on detail,
+          technique and beautiful results.
+        </p>
+
+      </article>
+
+
+      <!-- HIGHLIGHT 2 -->
+
+      <article class="highlight-card">
+
+        <div class="highlight-number">
+          02
+        </div>
+
+        <h3>
+          Premium & Stress-Free Experience
+        </h3>
+
+        <p>
+          Thoughtful care, comfort and attention
+          from consultation to finish.
+        </p>
+
+      </article>
+
+
+      <!-- HIGHLIGHT 3 -->
+
+      <article class="highlight-card">
+
+        <div class="highlight-number">
+          03
+        </div>
+
+        <h3>
+          Transparent & Affordable Pricing
+        </h3>
+
+        <p>
+          Clear pricing with quality services
+          designed to offer genuine value.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     OUR SERVICES
+===================================================== -->
+
+<section class="services-preview">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        Explore
+      </div>
+
+      <h2>
+        Our Services
+      </h2>
+
+      <p>
+        Explore our core beauty services, designed
+        around your needs and occasion.
+      </p>
+
+    </div>
+
+
+    <div class="preview-grid">
+
+
+      <!-- SERVICE 1 -->
+
+      <a
+        href="services.html#essential"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ✦
+        </div>
+
+        <h3>
+          Beauty Essential Services
+        </h3>
+
+        <p>
+          Everyday grooming and beauty essentials.
+        </p>
+
+      </a>
+
+
+      <!-- SERVICE 2 -->
+
+      <a
+        href="services.html#skin"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ✧
+        </div>
+
+        <h3>
+          Skin Rituals & Facials
+        </h3>
+
+        <p>
+          Facials and skin care for a healthy glow.
+        </p>
+
+      </a>
+
+
+      <!-- SERVICE 3 -->
+
+      <a
+        href="services.html#hair-treatments"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ♢
+        </div>
+
+        <h3>
+          Hair Treatments
+        </h3>
+
+        <p>
+          Professional care for beautiful,
+          healthy hair.
+        </p>
+
+      </a>
+
+
+      <!-- SERVICE 4 -->
+
+      <a
+        href="makeup-services.html"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ♡
+        </div>
+
+        <h3>
+          Makeup Services
+        </h3>
+
+        <p>
+          Makeup for your most memorable occasions.
+        </p>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MINI ACADEMY
+===================================================== -->
+
+<section class="academy-banner">
+
+  <div class="container">
+
+    <div class="academy-grid">
+
+
+      <div class="academy-content">
+
+        <div class="eyebrow">
+          Imperial Beauty Academy
+        </div>
+
+        <h2>
+          Turn Your Passion for Beauty Into a Skill.
+        </h2>
+
+        <p>
+          Explore our professional beauty courses and
+          learn practical techniques with hands-on training.
+        </p>
+
+        <br>
+
+        <a
+          href="academy.html"
+          class="btn btn-gold"
+        >
+          Explore Our Academy
+        </a>
+
+      </div>
+
+
+      <div class="academy-video">
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+
+          <source
+            src="videos/academy-training.mp4"
+            type="video/mp4"
+          >
+
+        </video>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     TESTIMONIALS
+===================================================== -->
+
+<section class="testimonials-section">
+
+  <div class="container">
+
+
+    <div class="testimonials-heading">
+
+      <div class="eyebrow">
+        Client Experiences
+      </div>
+
+      <h2>
+        What Our Clients Say About Us
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="testimonial-viewport">
+
+    <div class="testimonial-track">
+
+
+      <!-- REVIEW 1 -->
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          Very excellent work👏🏻 It was my first time for permanent
+          hair straightening. i was so concern for my hair,
+          whether it's gonna be good Or what? But Sunita Di is
+          very experienced and she does her job really well and
+          i am happy with the outcome. I would strongly recommend
+          imperial beauty salon for everyone.
+        </p>
+
+        <div class="testimonial-author">
+          — Shalvie Jamuar
+        </div>
+
+      </article>
+
+
+      <!-- REVIEW 2 -->
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          Service is sooo good, amazing 😍 & all services staff
+          behaviour is a great... 😌❤️ I was very very happy &
+          satisfied for u'r makeup mam .. I had an absolutely
+          wonderful experience.😍.. & I recommend imperial salon
+          service for all...✨👍😊
+        </p>
+
+        <div class="testimonial-author">
+          — Simran Swami
+        </div>
+
+      </article>
+
+
+      <!-- REVIEW 3 -->
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I had a great experience at imperial for my engagement
+          makeup! The beautician was incredibly talented and
+          created a stunning look that perfectly complemented my
+          features. The staff was also friendly and helpful and
+          price were really affordable.
+        </p>
+
+        <div class="testimonial-author">
+          — Apurva Sinha
+        </div>
+
+      </article>
+
+
+      <!-- REVIEW 4 -->
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I had got my Pre bridal, Bridal makeup and reception
+          makeup done by Sunita ji and akanksha ji. I'm personally
+          very happy with their service and have received
+          compliments for the makeup and hair style.
+          Thank you 😊
+        </p>
+
+        <div class="testimonial-author">
+          — Priya Gupta
+        </div>
+
+      </article>
+
+
+      <!-- REVIEW 5 -->
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I had got my Pre bridal, Bridal makeup and reception
+          makeup done by Soni Di. I'm personally very happy with
+          her service and have received compliments for the makeup
+          and hair style. My family members also got their party
+          makeup done and they also liked it. 🙂
+        </p>
+
+        <div class="testimonial-author">
+          — Twinkle Mehta
+        </div>
+
+      </article>
+
+
+      <!-- REVIEW 6 -->
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I have visited this Palour at the last min when it was
+          about to be closed but still they agreed to give me
+          service. I have took services like Bleach+Lotus Facial
+          with Eyebrows. They did so good with lots of patience.
+          It went till late night 10pm but still they were not
+          taking it in hurry and giving full satisfied service.
+          I highly recommend this Palour as staff and owner is
+          very polite and experienced. I personally recommend
+          Mrs. Priyanka as she did facial so good. Thank you guys
+          giving me such an awesome service.
+        </p>
+
+        <div class="testimonial-author">
+          — Padmini Kumari
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           DUPLICATE SET FOR CONTINUOUS LOOP
+      ================================================= -->
+
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          Very excellent work👏🏻 It was my first time for permanent
+          hair straightening. i was so concern for my hair,
+          whether it's gonna be good Or what? But Sunita Di is
+          very experienced and she does her job really well and
+          i am happy with the outcome. I would strongly recommend
+          imperial beauty salon for everyone.
+        </p>
+
+        <div class="testimonial-author">
+          — Shalvie Jamuar
+        </div>
+
+      </article>
+
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          Service is sooo good, amazing 😍 & all services staff
+          behaviour is a great... 😌❤️ I was very very happy &
+          satisfied for u'r makeup mam .. I had an absolutely
+          wonderful experience.😍.. & I recommend imperial salon
+          service for all...✨👍😊
+        </p>
+
+        <div class="testimonial-author">
+          — Simran Swami
+        </div>
+
+      </article>
+
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I had a great experience at imperial for my engagement
+          makeup! The beautician was incredibly talented and
+          created a stunning look that perfectly complemented my
+          features. The staff was also friendly and helpful and
+          price were really affordable.
+        </p>
+
+        <div class="testimonial-author">
+          — Apurva Sinha
+        </div>
+
+      </article>
+
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I had got my Pre bridal, Bridal makeup and reception
+          makeup done by Sunita ji and akanksha ji. I'm personally
+          very happy with their service and have received
+          compliments for the makeup and hair style.
+          Thank you 😊
+        </p>
+
+        <div class="testimonial-author">
+          — Priya Gupta
+        </div>
+
+      </article>
+
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I had got my Pre bridal, Bridal makeup and reception
+          makeup done by Soni Di. I'm personally very happy with
+          her service and have received compliments for the makeup
+          and hair style. My family members also got their party
+          makeup done and they also liked it. 🙂
+        </p>
+
+        <div class="testimonial-author">
+          — Twinkle Mehta
+        </div>
+
+      </article>
+
+
+      <article class="testimonial-slide">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+
+        <p class="testimonial-text">
+          I have visited this Palour at the last min when it was
+          about to be closed but still they agreed to give me
+          service. I have took services like Bleach+Lotus Facial
+          with Eyebrows. They did so good with lots of patience.
+          It went till late night 10pm but still they were not
+          taking it in hurry and giving full satisfied service.
+          I highly recommend this Palour as staff and owner is
+          very polite and experienced. I personally recommend
+          Mrs. Priyanka as she did facial so good. Thank you guys
+          giving me such an awesome service.
+        </p>
+
+        <div class="testimonial-author">
+          — Padmini Kumari
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT US
+===================================================== -->
+
+<section class="contact-footer">
+
+  <div class="container">
+
+
+    <div class="contact-heading">
+      CONTACT US
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <!-- PHONE -->
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <div class="contact-label">
+          PHONE NUMBER
+        </div>
+
+        <div class="contact-value">
+
+          <a href="tel:+916299942455">
+            +91 62999 42455
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ADDRESS -->
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          ●
+        </div>
+
+        <div class="contact-label">
+          ADDRESS
+        </div>
+
+        <div class="contact-value">
+          Tamtam Paraw, Sadikpur,<br>
+          Patna City - 800008
+        </div>
+
+      </div>
+
+
+      <!-- SOCIAL -->
+
+      <div class="contact-item">
+
+        <div class="social-title">
+          Let's Connect
+        </div>
+
+        <div class="social-links">
+
+
+          <a
+            class="social-link"
+            href="https://www.instagram.com/imperialsalonpatna/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+
+
+          <a
+            class="social-link"
+            href="https://www.facebook.com/share/1FQazRDXDj/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+          >
+            f
+          </a>
+
+
+          <a
+            class="social-link"
+            href="https://youtube.com/@imperialsalonpatna"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube"
+          >
+            ▶
+          </a>
+
+
+          <a
+            class="social-link"
+            href="https://maps.app.goo.gl/DVqceEvLo6ozHAay7"
+            target="_blank"
+            rel="noopener"
+            aria-label="Google Profile"
+          >
+            G
+          </a>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © Imperial Beauty Salon & Academy.
+      All rights reserved.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuButton =
+  document.querySelector('.mobile-menu');
+
+const navigation =
+  document.querySelector('.nav-links');
+
+if(menuButton && navigation){
+
+  menuButton.addEventListener('click', () => {
+
+    const isOpen =
+      navigation.classList.toggle('open');
+
+    menuButton.setAttribute(
+      'aria-expanded',
+      isOpen ? 'true' : 'false'
+    );
+
+  });
+
+
+  navigation
+    .querySelectorAll('a')
+    .forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        navigation.classList.remove('open');
+
+        menuButton.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+      });
+
+    });
+
+}
+
+
+/* =====================================================
+   HERO SLIDER
+===================================================== */
+
+const slides =
+  document.querySelectorAll('.slide');
+
+const dots =
+  document.querySelectorAll('.slider-dot');
+
+let currentSlide = 0;
+
+let slideTimer;
+
+
+function showSlide(index){
+
+  currentSlide =
+    (index + slides.length) % slides.length;
+
+
+  slides.forEach((slide, i) => {
+
+    const video =
+      slide.querySelector('video');
+
+    slide.classList.toggle(
+      'active',
+      i === currentSlide
+    );
+
+
+    if(video){
+
+      if(i === currentSlide){
+
+        video.currentTime = 0;
+
+        const playPromise =
+          video.play();
+
+        if(playPromise !== undefined){
+
+          playPromise.catch(() => {});
+
+        }
+
+      }else{
+
+        video.pause();
+
+      }
+
+    }
+
+  });
+
+
+  dots.forEach((dot, i) => {
+
+    dot.classList.toggle(
+      'active',
+      i === currentSlide
+    );
+
+  });
+
+}
+
+
+function restartHeroTimer(){
+
+  clearInterval(slideTimer);
+
+  slideTimer =
+    setInterval(
+      () => showSlide(currentSlide + 1),
+      5000
+    );
+
+}
+
+
+dots.forEach((dot, index) => {
+
+  dot.addEventListener('click', () => {
+
+    showSlide(index);
+
+    restartHeroTimer();
+
+  });
+
+});
+
+
+showSlide(0);
+
+restartHeroTimer();
+
+
+/* =====================================================
+   TESTIMONIAL ACCESSIBILITY
+===================================================== */
+
+const testimonialTrack =
+  document.querySelector('.testimonial-track');
+
+if(testimonialTrack){
+
+  testimonialTrack.addEventListener(
+    'mouseenter',
+    () => {
+
+      testimonialTrack.style.animationPlayState =
+        'paused';
+
+    }
+  );
+
+
+  testimonialTrack.addEventListener(
+    'mouseleave',
+    () => {
+
+      testimonialTrack.style.animationPlayState =
+        'running';
+
+    }
+  );
+
+}
+
+</script>
+
+</body>
+</html>
