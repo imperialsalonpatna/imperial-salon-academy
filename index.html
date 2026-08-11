@@ -51,7 +51,7 @@ button{
 }
 
 /* =========================================================
-   HEADER & NAVBAR (RESTORED)
+   HEADER & NAVIGATION
 ========================================================= */
 header{
   background:#fffaf5;
@@ -389,7 +389,7 @@ header{
 }
 
 /* =========================================================
-   OUR SERVICES (IMAGE REFERENCE MATCHED)
+   OUR SERVICES
 ========================================================= */
 .services-preview{
   background:linear-gradient(135deg, #fffaf5, #fbefef);
@@ -523,7 +523,7 @@ header{
 }
 
 /* =========================================================
-   TESTIMONIALS (RESTORED SECTION)
+   TESTIMONIALS
 ========================================================= */
 .testimonials-section{
   background:linear-gradient(135deg, #fbefef, #f8f4ec);
@@ -614,19 +614,22 @@ header{
 }
 
 /* =========================================================
-   CONTACT
+   CONTACT US (RESTORED SECTION)
 ========================================================= */
 .contact-footer{
   background:#536653;
   color:#ffffff;
   padding:48px 0 28px;
-  text-align:center;
+  position:relative;
+  overflow:hidden;
 }
 
 .contact-heading{
+  text-align:center;
   color:#d8b56d;
   font-family:Georgia,serif;
   font-size:30px;
+  letter-spacing:2px;
   margin-bottom:35px;
 }
 
@@ -634,14 +637,89 @@ header{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:30px;
+  align-items:center;
+  max-width:1050px;
+  margin:auto;
+}
+
+.contact-item{
+  text-align:center;
+  padding:10px 25px;
+  min-height:130px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-item + .contact-item{
+  border-left:1px solid rgba(255,255,255,.18);
+}
+
+.contact-icon{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#ffffff;
+  color:#b58a45;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  margin-bottom:10px;
+}
+
+.contact-label{
+  color:#d8b56d;
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.contact-value{
+  font-family:Georgia,serif;
+  font-size:18px;
+}
+
+.social-title{
+  font-family:cursive;
+  color:#d8b56d;
+  font-size:31px;
+  margin-bottom:12px;
+}
+
+.social-links{
+  display:flex;
+  gap:13px;
+  justify-content:center;
+}
+
+.social-link{
+  width:48px;
+  height:48px;
+  border:1px solid #d8b56d;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.08);
+  font-weight:bold;
+}
+
+.social-link:hover{
+  background:#ffffff;
+  color:#536653;
 }
 
 .footer-bottom{
-  margin-top:35px;
+  width:min(1150px,92%);
+  margin:35px auto 0;
   padding-top:18px;
   border-top:1px solid rgba(255,255,255,.15);
   font-size:12px;
   color:#c7c7c7;
+  text-align:center;
 }
 
 /* =========================================================
@@ -674,6 +752,11 @@ header{
     grid-template-columns:1fr;
   }
 
+  .contact-item + .contact-item{
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.18);
+  }
+
   .preview-card{
     grid-template-columns:68px 1fr 46px;
   }
@@ -700,7 +783,7 @@ header{
   Imperial Beauty Salon & Academy • Patna
 </div>
 
-<!-- HEADER (RESTORED NAVBAR) -->
+<!-- HEADER & NAVBAR -->
 <header>
   <div class="navbar">
     <a href="index.html" class="brand">
@@ -720,8 +803,10 @@ header{
   </div>
 </header>
 
-<!-- HERO SLIDER -->
-<section class="hero">
+<!-- HERO SLIDER (ALL 5 VIDEOS RESTORED) -->
+<section class="hero" aria-label="Imperial Beauty services">
+
+  <!-- SLIDE 1: MAKEUP -->
   <div class="slide active">
     <video class="slide-video" autoplay muted loop playsinline preload="metadata">
       <source src="videos/slide-makeup.mp4" type="video/mp4">
@@ -735,6 +820,76 @@ header{
       </div>
     </div>
   </div>
+
+  <!-- SLIDE 2: HAIR -->
+  <div class="slide">
+    <video class="slide-video" muted loop playsinline preload="metadata">
+      <source src="videos/slide-hair.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Healthy Hair. Beautiful You.</h1>
+        <p>Hair cuts, hair care, colour and advanced hair treatments.</p>
+        <a href="services.html#hair-cuts" class="btn btn-gold">Explore our Hair Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: SKIN -->
+  <div class="slide">
+    <video class="slide-video" muted loop playsinline preload="metadata">
+      <source src="videos/slide-skin.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Glow With Confidence.</h1>
+        <p>Refreshing skin rituals and facial care designed for a healthy, beautiful glow.</p>
+        <a href="services.html#skin" class="btn btn-gold">Explore our Skin Care Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: RELAXING -->
+  <div class="slide">
+    <video class="slide-video" muted loop playsinline preload="metadata">
+      <source src="videos/slide-relaxing.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Get Rid of All Your Stress.</h1>
+        <p>Take a relaxing break with thoughtful beauty and self-care services.</p>
+        <a href="services.html#relaxing" class="btn btn-gold">Explore our Relaxing Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: ACADEMY -->
+  <div class="slide">
+    <video class="slide-video" muted loop playsinline preload="metadata">
+      <source src="videos/slide-academy.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Professional Beauty Courses</h1>
+        <p>Build practical beauty skills with professional courses and hands-on learning.</p>
+        <a href="academy.html" class="btn btn-gold">Explore Our Courses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDER CONTROLS -->
+  <div class="slider-controls">
+    <button class="slider-dot active" aria-label="Slide 1"></button>
+    <button class="slider-dot" aria-label="Slide 2"></button>
+    <button class="slider-dot" aria-label="Slide 3"></button>
+    <button class="slider-dot" aria-label="Slide 4"></button>
+    <button class="slider-dot" aria-label="Slide 5"></button>
+  </div>
+
 </section>
 
 <!-- OUR AREAS OF EXPERTISE -->
@@ -766,7 +921,7 @@ header{
         </video>
       </div>
       <article class="about-article">
-        <p><strong>Established in 2021</strong>, Imperial Beauty Salon & Academy was founded with a vision to provide high-quality beauty services with exceptional care.</p>
+        <p><strong>Established in 2021</strong>, Imperial Beauty Salon & Academy was founded with a vision to provide high-quality beauty services with exceptional care in the city.</p>
         <p>We believe beauty is about feeling confident, comfortable and beautifully yourself.</p>
       </article>
     </div>
@@ -783,113 +938,4 @@ header{
       <article class="highlight-card">
         <div class="highlight-icon">✦</div>
         <strong>Experienced Stylists & Artists</strong>
-        <p>Skilled professionals focused on detail, technique and beautiful results.</p>
-      </article>
-      <article class="highlight-card">
-        <div class="highlight-icon">♡</div>
-        <strong>Premium & Stress-Free Experience</strong>
-        <p>Thoughtful care, comfort and attention from consultation to finish.</p>
-      </article>
-      <article class="highlight-card">
-        <div class="highlight-icon">◇</div>
-        <strong>Transparent & Affordable Pricing</strong>
-        <p>Clear pricing with quality services designed to offer genuine value.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- OUR SERVICES (RESTORED LOOK) -->
-<section class="services-preview">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Our Services</h2>
-      <p>Explore our core beauty services, designed around your needs and occasion.</p>
-    </div>
-
-    <div class="preview-grid">
-      <a href="services.html#essential" class="preview-card">
-        <div class="preview-icon">✦</div>
-        <div>
-          <h3>Beauty Essential Services</h3>
-          <p>Everyday grooming and essential beauty upkeep designed to enhance your natural look.</p>
-        </div>
-        <div class="preview-arrow">➔</div>
-      </a>
-
-      <a href="services.html#skin" class="preview-card">
-        <div class="preview-icon">✧</div>
-        <div>
-          <h3>Skin Rituals & Facials</h3>
-          <p>Customized luxury facials and skincare routines for a radiant and healthy glow.</p>
-        </div>
-        <div class="preview-arrow">➔</div>
-      </a>
-
-      <a href="services.html#hair-treatments" class="preview-card">
-        <div class="preview-icon">♢</div>
-        <div>
-          <h3>Hair Treatments & Styling</h3>
-          <p>Advanced keratin, smoothing, deep care, and professional hair solutions.</p>
-        </div>
-        <div class="preview-arrow">➔</div>
-      </a>
-
-      <a href="makeup-services.html" class="preview-card">
-        <div class="preview-icon">♡</div>
-        <div>
-          <h3>Makeup Services</h3>
-          <p>Glamorous, elegant, or natural makeup created for every special moment and occasion.</p>
-        </div>
-        <div class="preview-arrow">➔</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ACADEMY BANNER -->
-<section class="academy-banner">
-  <div class="container">
-    <div class="academy-grid">
-      <div class="academy-content">
-        <h2>Professional Beauty Courses</h2>
-        <p>Turn your passion for beauty into a professional skill through hands-on training.</p>
-        <a href="academy.html" class="btn btn-gold">Explore Our Courses</a>
-      </div>
-      <div class="academy-video">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="videos/academy-training.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS SECTION (RESTORED) -->
-<section class="testimonials-section">
-  <div class="container">
-    <div class="testimonials-heading">
-      <h2>What Our Clients Say About Us</h2>
-    </div>
-  </div>
-
-  <div class="testimonial-viewport">
-    <div class="testimonial-track">
-      <article class="testimonial-slide">
-        <div class="quote-mark">“</div>
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">Very excellent work👏🏻 It was my first time for permanent hair straightening. Sunita Di is very experienced and I am happy with the outcome.</p>
-        <div class="testimonial-author">— Shalvie Jamuar</div>
-      </article>
-
-      <article class="testimonial-slide">
-        <div class="quote-mark">“</div>
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">Service is sooo good, amazing 😍 & all services staff behaviour is great... Satisfied for u'r makeup mam ..😍</p>
-        <div class="testimonial-author">— Simran Swami</div>
-      </article>
-
-      <article class="testimonial-slide">
-        <div class="quote-mark">“</div>
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">I had a great experience at Imperial for my engagement makeup! P
+        <p>Skilled professionals focused on detail, technique and beautiful result
