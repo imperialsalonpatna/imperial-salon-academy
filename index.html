@@ -10,69 +10,57 @@
 >
 <style>
 /* =========================================================
-   ROOT
-========================================================= */
-:root{
-  --blush:#f3d8d8;
-  --blush-light:#fbefef;
-  --sage:#a9b9a3;
-  --sage-dark:#536653;
-  --sage-deep:#35483a;
-  --gold:#b58a45;
-  --gold-light:#d8b56d;
-  --cream:#fffaf5;
-  --white:#ffffff;
-  --dark:#28352c;
-  --text:#4c504b;
-  --muted:#6a6a64;
-  --line:#eadfd3;
-}
-/* =========================================================
-   RESET
+   RESET & BASE STYLES (Fail-Safe Colors)
 ========================================================= */
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
+
 html{
   scroll-behavior:smooth;
 }
+
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:var(--cream);
-  color:var(--text);
+  background-color:#fffaf5;
+  color:#4c504b;
   line-height:1.6;
 }
+
 a{
   text-decoration:none;
   color:inherit;
 }
+
 button{
   font:inherit;
 }
+
 /* =========================================================
    TOP BAR
 ========================================================= */
 .top-bar{
-  background:var(--sage-dark);
-  color:#fff;
+  background:#536653;
+  color:#ffffff;
   text-align:center;
   padding:7px 15px;
   font-size:12px;
   letter-spacing:.5px;
 }
+
 /* =========================================================
    HEADER
 ========================================================= */
 header{
-  background:rgba(255,250,245,.97);
-  border-bottom:1px solid var(--line);
+  background:#fffaf5;
+  border-bottom:1px solid #eadfd3;
   position:sticky;
   top:0;
   z-index:1000;
-  backdrop-filter:blur(8px);
 }
+
 .navbar{
   width:min(1150px,92%);
   margin:auto;
@@ -81,14 +69,14 @@ header{
   align-items:center;
   justify-content:space-between;
   gap:25px;
-  position:relative;
 }
-/* Main logo file */
+
 .brand{
   display:flex;
   align-items:center;
   flex-shrink:0;
 }
+
 .brand-logo{
   width:205px;
   height:64px;
@@ -96,38 +84,34 @@ header{
   object-position:left center;
   display:block;
 }
+
 .nav-links{
   display:flex;
   align-items:center;
   gap:23px;
   font-size:14px;
   font-weight:600;
-  color:var(--dark);
+  color:#28352c;
 }
-.nav-links a{
-  transition:.2s ease;
-}
+
 .nav-links a:hover{
-  color:var(--gold);
+  color:#b58a45;
 }
+
 .mobile-menu{
   display:none;
   border:0;
   background:none;
   font-size:27px;
-  color:var(--sage-dark);
+  color:#536653;
   cursor:pointer;
 }
-/* =========================================================
-   COMMON
-========================================================= */
+
 .container{
   width:min(1150px,92%);
   margin:auto;
 }
-.section{
-  padding:72px 0;
-}
+
 .btn{
   display:inline-block;
   padding:12px 22px;
@@ -135,15 +119,17 @@ header{
   font-weight:bold;
   transition:.2s ease;
 }
+
 .btn-gold{
-  background:var(--gold-light);
-  color:var(--dark);
+  background:#d8b56d;
+  color:#28352c;
 }
+
 .btn-gold:hover{
-  transform:translateY(-2px);
-  background:var(--gold);
-  color:#fff;
+  background:#b58a45;
+  color:#ffffff;
 }
+
 /* =========================================================
    HERO SLIDER
 ========================================================= */
@@ -152,8 +138,9 @@ header{
   height:min(700px,78vh);
   min-height:570px;
   overflow:hidden;
-  background:var(--sage-dark);
+  background:#536653;
 }
+
 .slide{
   position:absolute;
   inset:0;
@@ -161,27 +148,25 @@ header{
   pointer-events:none;
   transition:opacity .8s ease;
 }
+
 .slide.active{
   opacity:1;
   pointer-events:auto;
 }
+
 .slide-video{
   width:100%;
   height:100%;
   object-fit:cover;
   display:block;
 }
+
 .slide-overlay{
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(31,48,38,.78),
-      rgba(31,48,38,.32),
-      rgba(31,48,38,.15)
-    );
+  background:linear-gradient(90deg, rgba(31,48,38,.85), rgba(31,48,38,.4));
 }
+
 .slide-content{
   position:absolute;
   inset:0;
@@ -189,23 +174,27 @@ header{
   align-items:center;
   width:min(1150px,92%);
   margin:auto;
-  color:#fff;
+  color:#ffffff;
 }
+
 .slide-content-inner{
   max-width:670px;
 }
+
 .slide h1{
   font-family:Georgia,serif;
   font-size:clamp(42px,6vw,72px);
   line-height:1.08;
   margin:15px 0;
-  color:#fff;
+  color:#ffffff;
 }
+
 .slide p{
   font-size:18px;
   max-width:580px;
   margin-bottom:23px;
 }
+
 .slider-controls{
   position:absolute;
   bottom:28px;
@@ -215,49 +204,47 @@ header{
   gap:8px;
   z-index:5;
 }
+
 .slider-dot{
   width:9px;
   height:9px;
   border-radius:50%;
-  border:1px solid #fff;
+  border:1px solid #ffffff;
   background:transparent;
   cursor:pointer;
   padding:0;
 }
+
 .slider-dot.active{
-  background:#fff;
+  background:#ffffff;
 }
+
 /* =========================================================
    AREAS OF EXPERTISE
 ========================================================= */
 .specialisation{
-  background:
-    linear-gradient(
-      135deg,
-      var(--blush-light),
-      var(--cream)
-    );
+  background:linear-gradient(135deg, #fbefef, #fffaf5);
   padding:72px 0 70px;
 }
+
 .specialisation-heading{
   max-width:850px;
   text-align:center;
   margin:0 auto 38px;
 }
+
 .specialisation-heading h2{
   font-family:Georgia,serif;
-  color:var(--sage-dark);
+  color:#536653;
   font-size:clamp(34px,5vw,50px);
-  line-height:1.15;
   margin-bottom:14px;
 }
+
 .specialisation-heading p{
-  max-width:780px;
-  margin:auto;
   color:#62645f;
   font-size:16px;
-  line-height:1.7;
 }
+
 .specialisation-list{
   max-width:1050px;
   margin:auto;
@@ -265,8 +252,8 @@ header{
   grid-template-columns:repeat(2,1fr);
   gap:20px;
 }
+
 .specialisation-item{
-  position:relative;
   min-height:105px;
   padding:25px 28px;
   border-radius:16px;
@@ -275,63 +262,35 @@ header{
   font-family:Georgia,serif;
   font-size:clamp(21px,2.5vw,29px);
   font-weight:700;
-  background:#fff;
-  box-shadow:
-    0 8px 24px rgba(80,90,75,.08);
+  background:#ffffff;
+  box-shadow:0 8px 24px rgba(80,90,75,.08);
   border:1px solid rgba(181,138,69,.18);
-  transition:.25s ease;
 }
-.specialisation-item:hover{
-  transform:translateY(-4px);
-  box-shadow:
-    0 15px 32px rgba(80,90,75,.13);
-}
-.specialisation-item:nth-child(1){
-  color:#536653;
-  border-left:5px solid #536653;
-  background:linear-gradient(135deg,#ffffff,#f2f7f0);
-}
-.specialisation-item:nth-child(2){
-  color:#8d6740;
-  border-left:5px solid #b58a45;
-  background:linear-gradient(135deg,#ffffff,#fbf5e9);
-}
-.specialisation-item:nth-child(3){
-  color:#725f72;
-  border-left:5px solid #8e7890;
-  background:linear-gradient(135deg,#ffffff,#f8f2f8);
-}
-.specialisation-item:nth-child(4){
-  color:#53747b;
-  border-left:5px solid #6c9399;
-  background:linear-gradient(135deg,#ffffff,#eef7f8);
-}
-.specialisation-item:before{
-  content:"";
-  width:11px;
-  height:11px;
-  border-radius:50%;
-  margin-right:17px;
-  flex-shrink:0;
-  border:2px solid currentColor;
-}
+
+.specialisation-item:nth-child(1){ color:#536653; border-left:5px solid #536653; background:#f2f7f0; }
+.specialisation-item:nth-child(2){ color:#8d6740; border-left:5px solid #b58a45; background:#fbf5e9; }
+.specialisation-item:nth-child(3){ color:#725f72; border-left:5px solid #8e7890; background:#f8f2f8; }
+.specialisation-item:nth-child(4){ color:#53747b; border-left:5px solid #6c9399; background:#eef7f8; }
+
 /* =========================================================
    ABOUT IMPERIAL
 ========================================================= */
 .about-section{
-  background:var(--cream);
+  background:#fffaf5;
   padding:72px 0 76px;
 }
+
 .about-heading{
   text-align:center;
   margin-bottom:32px;
 }
+
 .about-heading h2{
   font-family:Georgia,serif;
-  color:var(--sage-dark);
+  color:#536653;
   font-size:clamp(34px,5vw,50px);
-  line-height:1.15;
 }
+
 .about-layout{
   max-width:1050px;
   margin:auto;
@@ -340,52 +299,52 @@ header{
   gap:48px;
   align-items:center;
 }
+
 .about-video-frame{
   width:100%;
   max-width:430px;
   margin:auto;
   border-radius:18px;
   overflow:hidden;
-  background:#ddd;
-  box-shadow:
-    0 18px 45px rgba(80,90,75,.14);
+  background:#dddddd;
+  box-shadow:0 18px 45px rgba(80,90,75,.14);
 }
+
 .about-video-frame video{
   width:100%;
   aspect-ratio:4/5;
   object-fit:cover;
   display:block;
 }
+
 .about-article{
   font-size:16px;
-  line-height:1.75;
   color:#555952;
 }
+
 .about-article p{
   margin-bottom:16px;
 }
-.about-article p:last-child{
-  margin-bottom:0;
-}
-.about-article strong{
-  color:var(--sage-dark);
-}
+
 /* =========================================================
    HIGHLIGHTS
 ========================================================= */
 .highlights-section{
-  background:#fff;
-  padding:12px 0 60px;
+  background:#ffffff;
+  padding:60px 0;
 }
+
 .highlights-heading{
   text-align:center;
   margin-bottom:28px;
 }
+
 .highlights-heading h2{
   font-family:Georgia,serif;
-  color:var(--sage-dark);
+  color:#536653;
   font-size:clamp(30px,4.5vw,42px);
 }
+
 .highlights-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -393,27 +352,16 @@ header{
   max-width:1050px;
   margin:auto;
 }
+
 .highlight-card{
-  min-height:205px;
   padding:28px 24px;
   border-radius:18px;
   text-align:center;
-  background:
-    linear-gradient(
-      145deg,
-      #fffdf9,
-      #f6f0e8
-    );
+  background:#fffdf9;
   border:1px solid #e5d9cc;
-  box-shadow:
-    0 8px 24px rgba(80,90,75,.07);
-  transition:.25s ease;
+  box-shadow:0 8px 24px rgba(80,90,75,.07);
 }
-.highlight-card:hover{
-  transform:translateY(-5px);
-  box-shadow:
-    0 16px 34px rgba(80,90,75,.12);
-}
+
 .highlight-icon{
   width:54px;
   height:54px;
@@ -422,56 +370,41 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
-  background:var(--blush-light);
+  background:#fbefef;
   border:1px solid rgba(181,138,69,.35);
-  color:var(--gold);
-  font-family:Georgia,serif;
+  color:#b58a45;
   font-size:24px;
 }
+
 .highlight-card strong{
   display:block;
-  color:var(--sage-dark);
+  color:#536653;
   font-family:Georgia,serif;
   font-size:19px;
   margin-bottom:9px;
 }
-.highlight-card p{
-  max-width:285px;
-  margin:auto;
-  font-size:14px;
-  color:#686862;
-  line-height:1.55;
-}
+
 /* =========================================================
    OUR SERVICES
 ========================================================= */
 .services-preview{
-  background:
-    linear-gradient(
-      135deg,
-      #fffaf5,
-      #fbefef
-    );
+  background:linear-gradient(135deg, #fffaf5, #fbefef);
   padding:72px 0 82px;
-  overflow:hidden;
 }
+
 .services-preview .section-heading{
   text-align:center;
   max-width:760px;
   margin:0 auto 40px;
 }
+
 .services-preview .section-heading h2{
   font-family:Georgia,serif;
-  color:var(--sage-dark);
+  color:#536653;
   font-size:clamp(35px,5vw,50px);
-  margin:0 0 15px;
-  line-height:1.15;
+  margin-bottom:15px;
 }
-.services-preview .section-heading p{
-  color:#686862;
-  font-size:16px;
-  line-height:1.7;
-}
+
 .preview-grid{
   max-width:1050px;
   margin:auto;
@@ -479,6 +412,7 @@ header{
   grid-template-columns:1fr;
   gap:16px;
 }
+
 .preview-card{
   width:100%;
   min-height:135px;
@@ -488,22 +422,18 @@ header{
   align-items:center;
   gap:22px;
   border-radius:20px;
-  border:1px solid var(--line);
-  background:#fff;
-  box-shadow:
-    0 7px 22px rgba(80,90,75,.06);
+  border:1px solid #eadfd3;
+  background:#ffffff;
+  box-shadow:0 7px 22px rgba(80,90,75,.06);
   text-align:left;
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
+  transition:.25s ease;
 }
+
 .preview-card:hover{
   transform:translateY(-4px);
-  box-shadow:
-    0 15px 34px rgba(80,90,75,.12);
-  border-color:rgba(181,138,69,.35);
+  box-shadow:0 15px 34px rgba(80,90,75,.12);
 }
+
 .preview-icon{
   width:68px;
   height:68px;
@@ -511,95 +441,32 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
-  flex-shrink:0;
-  position:relative;
-  margin:0;
+  font-size:28px;
 }
-.preview-icon svg{
-  width:38px;
-  height:38px;
-  display:block;
-  fill:none;
-  stroke:currentColor;
-  stroke-width:1.7;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
-.preview-card:nth-child(1){
-  background:
-    linear-gradient(
-      100deg,
-      #fff1f1,
-      #fffaf7
-    );
-}
-.preview-card:nth-child(1) .preview-icon{
-  background:#c98591;
-  color:#fff;
-}
-.preview-card:nth-child(1) h3{
-  color:#8e5c68;
-}
-.preview-card:nth-child(2){
-  background:
-    linear-gradient(
-      100deg,
-      #f0f6ee,
-      #fffdf9
-    );
-}
-.preview-card:nth-child(2) .preview-icon{
-  background:#809678;
-  color:#fff;
-}
-.preview-card:nth-child(2) h3{
-  color:#536653;
-}
-.preview-card:nth-child(3){
-  background:
-    linear-gradient(
-      100deg,
-      #fbf4e5,
-      #fffdf9
-    );
-}
-.preview-card:nth-child(3) .preview-icon{
-  background:#b58a45;
-  color:#fff;
-}
-.preview-card:nth-child(3) h3{
-  color:#8d6740;
-}
-.preview-card:nth-child(4){
-  background:
-    linear-gradient(
-      100deg,
-      #f7eff8,
-      #fffdfb
-    );
-}
-.preview-card:nth-child(4) .preview-icon{
-  background:#947994;
-  color:#fff;
-}
-.preview-card:nth-child(4) h3{
-  color:#725f72;
-}
-.preview-content{
-  min-width:0;
-}
+
+.preview-card:nth-child(1) .preview-icon{ background:#c98591; color:#ffffff; }
+.preview-card:nth-child(1) h3{ color:#8e5c68; }
+
+.preview-card:nth-child(2) .preview-icon{ background:#809678; color:#ffffff; }
+.preview-card:nth-child(2) h3{ color:#536653; }
+
+.preview-card:nth-child(3) .preview-icon{ background:#b58a45; color:#ffffff; }
+.preview-card:nth-child(3) h3{ color:#8d6740; }
+
+.preview-card:nth-child(4) .preview-icon{ background:#947994; color:#ffffff; }
+.preview-card:nth-child(4) h3{ color:#725f72; }
+
 .preview-card h3{
   font-family:Georgia,serif;
   font-size:clamp(19px,2.2vw,25px);
-  line-height:1.2;
   margin-bottom:7px;
 }
+
 .preview-card p{
   font-size:14px;
-  line-height:1.55;
   color:#666861;
-  max-width:650px;
 }
+
 .preview-arrow{
   width:46px;
   height:46px;
@@ -608,38 +475,19 @@ header{
   align-items:center;
   justify-content:center;
   font-size:23px;
-  font-weight:400;
-  transition:.25s ease;
-}
-.preview-card:nth-child(1) .preview-arrow{
   background:#f2d7dc;
   color:#8e5c68;
 }
-.preview-card:nth-child(2) .preview-arrow{
-  background:#dce8d8;
-  color:#536653;
-}
-.preview-card:nth-child(3) .preview-arrow{
-  background:#f0dfba;
-  color:#8d6740;
-}
-.preview-card:nth-child(4) .preview-arrow{
-  background:#e7d8e9;
-  color:#725f72;
-}
-.preview-card:hover .preview-arrow{
-  transform:translateX(4px);
-}
+
 /* =========================================================
-   ACADEMY
+   ACADEMY & CONTACT
 ========================================================= */
 .academy-banner{
-  position:relative;
-  overflow:hidden;
-  background:var(--sage-dark);
-  color:#fff;
+  background:#536653;
+  color:#ffffff;
   padding:70px 0;
 }
+
 .academy-grid{
   display:grid;
   grid-template-columns:1.05fr .95fr;
@@ -648,399 +496,69 @@ header{
   max-width:1050px;
   margin:auto;
 }
-.academy-content{
-  max-width:650px;
-}
+
 .academy-content h2{
   font-family:Georgia,serif;
-  color:#fff;
   font-size:clamp(36px,5vw,52px);
-  margin:0 0 17px;
-  line-height:1.12;
+  margin-bottom:17px;
 }
-.academy-content p{
-  color:#f3f3f0;
-  font-size:16px;
-  line-height:1.7;
-  margin-bottom:25px;
-}
+
 .academy-video{
   width:100%;
   max-width:430px;
   margin:auto;
   border-radius:18px;
   overflow:hidden;
-  box-shadow:
-    0 18px 40px rgba(0,0,0,.18);
-  background:#304238;
 }
+
 .academy-video video{
   width:100%;
   aspect-ratio:4/5;
   object-fit:cover;
   display:block;
 }
-/* =========================================================
-   TESTIMONIALS
-========================================================= */
-.testimonials-section{
-  background:
-    linear-gradient(
-      135deg,
-      #fbefef,
-      #f8f4ec
-    );
-  padding:70px 0 72px;
-  overflow:hidden;
-}
-.testimonials-heading{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 36px;
-}
-.testimonials-heading h2{
-  font-family:Georgia,serif;
-  color:var(--sage-dark);
-  font-size:clamp(30px,4.5vw,44px);
-  line-height:1.15;
-}
-.testimonial-viewport{
-  width:100%;
-  overflow:hidden;
-  position:relative;
-  mask-image:
-    linear-gradient(
-      to right,
-      transparent,
-      black 6%,
-      black 94%,
-      transparent
-    );
-  -webkit-mask-image:
-    linear-gradient(
-      to right,
-      transparent,
-      black 6%,
-      black 94%,
-      transparent
-    );
-}
-.testimonial-track{
-  display:flex;
-  width:max-content;
-  animation:
-    testimonialMove 75s linear infinite;
-}
-.testimonial-track:hover{
-  animation-play-state:paused;
-}
-.testimonial-slide{
-  width:min(650px,82vw);
-  min-height:190px;
-  margin:0 12px;
-  padding:25px 30px;
-  border:1px solid #e3d7ca;
-  border-radius:16px;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.95),
-      rgba(255,250,245,.95)
-    );
-  box-shadow:
-    0 8px 25px rgba(80,90,75,.08);
-  flex-shrink:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.quote-mark{
-  font-family:Georgia,serif;
-  font-size:38px;
-  line-height:.6;
-  color:var(--gold);
-  margin-bottom:10px;
-}
-.testimonial-stars{
-  color:#d49b2e;
-  letter-spacing:2px;
-  font-size:13px;
-  margin-bottom:9px;
-}
-.testimonial-text{
-  font-size:14px;
-  line-height:1.55;
-  color:#50534f;
-  margin-bottom:12px;
-}
-.testimonial-author{
-  color:var(--sage-dark);
-  font-weight:bold;
-  font-size:13px;
-}
-@keyframes testimonialMove{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-50%);
-  }
-}
-.google-cta{
-  text-align:center;
-  margin-top:34px;
-}
-.google-cta .btn{
-  border:1px solid var(--gold);
-}
-/* =========================================================
-   CONTACT
-========================================================= */
+
 .contact-footer{
-  background:var(--sage-dark);
-  color:#fff;
+  background:#536653;
+  color:#ffffff;
   padding:48px 0 28px;
-  position:relative;
-  overflow:hidden;
-}
-.contact-heading{
   text-align:center;
-  color:var(--gold-light);
+}
+
+.contact-heading{
+  color:#d8b56d;
   font-family:Georgia,serif;
   font-size:30px;
-  letter-spacing:2px;
   margin-bottom:35px;
 }
+
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:30px;
-  align-items:center;
 }
-.contact-item{
-  text-align:center;
-  padding:10px 25px;
-  min-height:130px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-.contact-item + .contact-item{
-  border-left:1px solid rgba(255,255,255,.18);
-}
-.contact-icon{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#fff;
-  color:var(--gold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  margin-bottom:10px;
-}
-.contact-label{
-  color:var(--gold-light);
-  font-size:13px;
-  letter-spacing:2px;
-  font-weight:700;
-  margin-bottom:6px;
-}
-.contact-value{
-  font-family:Georgia,serif;
-  font-size:18px;
-}
-.social-title{
-  font-family:cursive;
-  color:var(--gold-light);
-  font-size:31px;
-  margin-bottom:12px;
-}
-.social-links{
-  display:flex;
-  gap:13px;
-  justify-content:center;
-}
-.social-link{
-  width:48px;
-  height:48px;
-  border:1px solid var(--gold-light);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,255,255,.08);
-  font-weight:bold;
-}
-.social-link:hover{
-  background:#fff;
-  color:var(--sage-dark);
-}
+
 .footer-bottom{
-  width:min(1150px,92%);
-  margin:35px auto 0;
+  margin-top:35px;
   padding-top:18px;
   border-top:1px solid rgba(255,255,255,.15);
   font-size:12px;
   color:#c7c7c7;
-  text-align:center;
 }
+
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 @media(max-width:850px){
-  .brand-logo{
-    width:175px;
-    height:60px;
-  }
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:78px;
-    left:0;
-    right:0;
-    background:var(--cream);
-    padding:22px;
-    flex-direction:column;
-    align-items:stretch;
-    border-bottom:1px solid var(--line);
-    box-shadow:
-      0 12px 25px rgba(0,0,0,.07);
-  }
-  .nav-links.open{
-    display:flex;
-  }
-  .mobile-menu{
-    display:block;
-  }
-  .hero{
-    min-height:620px;
-    height:75vh;
-  }
-  .slide-content{
-    align-items:flex-end;
-    padding-bottom:85px;
-  }
-  .slide h1{
-    font-size:43px;
-  }
-  .slide p{
-    font-size:16px;
-  }
-  .specialisation-list{
-    grid-template-columns:1fr;
-  }
-  .about-layout{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-  .about-video-frame{
-    max-width:390px;
-  }
-  .highlights-grid{
-    grid-template-columns:1fr;
-  }
-  .preview-grid{
-    grid-template-columns:1fr;
-  }
-  .preview-card{
-    grid-template-columns:68px 1fr 46px;
-    gap:18px;
-    min-height:125px;
-  }
-  .preview-icon{
-    width:62px;
-    height:62px;
-  }
-  .preview-icon svg{
-    width:35px;
-    height:35px;
-  }
-  .academy-grid{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-  .academy-video{
-    max-width:390px;
-  }
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-  .contact-item + .contact-item{
-    border-left:0;
-    border-top:1px solid rgba(255,255,255,.18);
-  }
-  .testimonial-slide{
-    width:82vw;
-    min-height:190px;
-  }
+  .nav-links{ display:none; }
+  .mobile-menu{ display:block; }
+  .specialisation-list, .about-layout, .highlights-grid, .academy-grid, .contact-grid{ grid-template-columns:1fr; }
+  .preview-card{ grid-template-columns:68px 1fr 46px; }
 }
+
 @media(max-width:520px){
-  .brand-logo{
-    width:155px;
-    height:55px;
-  }
-  .hero{
-    min-height:600px;
-  }
-  .slide h1{
-    font-size:39px;
-  }
-  .specialisation{
-    padding-top:58px;
-  }
-  .specialisation-item{
-    min-height:92px;
-    font-size:23px;
-    padding:20px;
-  }
-  .about-section{
-    padding:58px 0 62px;
-  }
-  .about-article{
-    font-size:15px;
-  }
-  .about-video-frame{
-    max-width:100%;
-  }
-  .preview-card{
-    grid-template-columns:1fr;
-    text-align:center;
-    justify-items:center;
-  }
-  .preview-arrow{
-    display:none;
-  }
-  .academy-banner{
-    padding:58px 0;
-  }
-  .academy-video{
-    max-width:100%;
-  }
-  .testimonial-slide{
-    width:86vw;
-    min-height:205px;
-    padding:23px 21px;
-  }
-  .testimonial-text{
-    font-size:13.5px;
-  }
-  .contact-heading{
-    font-size:25px;
-  }
-}
-@media(prefers-reduced-motion:reduce){
-  html{
-    scroll-behavior:auto;
-  }
-  .slide{
-    transition:none;
-  }
-  .testimonial-track{
-    animation:none;
-  }
+  .preview-card{ grid-template-columns:1fr; text-align:center; justify-items:center; }
+  .preview-arrow{ display:none; }
 }
 </style>
 </head>
@@ -1056,9 +574,189 @@ header{
 <header>
   <div class="navbar">
     <a href="index.html" class="brand">
-      <img
-        class="brand-logo"
-        src="images/logo.png"
-        alt="Imperial Beauty Salon & Academy"
-      >
-   
+      <img class="brand-logo" src="images/logo.png" alt="Imperial Beauty Salon & Academy">
+    </a>
+    <button class="mobile-menu" type="button" aria-label="Open menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="makeup-services.html">Makeup Services</a>
+      <a href="academy.html">Our Academy</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="slide active">
+    <video class="slide-video" autoplay muted loop playsinline preload="metadata">
+      <source src="videos/slide-makeup.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Make Every Occasion Beautiful.</h1>
+        <p>Professional makeup for bridal, engagement, reception and special occasions.</p>
+        <a href="makeup-services.html" class="btn btn-gold">Explore our Makeup Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR AREAS OF EXPERTISE -->
+<section class="specialisation">
+  <div class="container">
+    <div class="specialisation-heading">
+      <h2>Our Areas of Expertise</h2>
+      <p>From essential beauty services to luxury facials, we are committed to serving you with utmost care.</p>
+    </div>
+    <div class="specialisation-list">
+      <div class="specialisation-item">Expert Bridal Makeup</div>
+      <div class="specialisation-item">Professional Skin & Hair Care</div>
+      <div class="specialisation-item">Premium Salon Services</div>
+      <div class="specialisation-item">Professional Beauty Courses</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT IMPERIAL -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-heading">
+      <h2>About Imperial</h2>
+    </div>
+    <div class="about-layout">
+      <div class="about-video-frame">
+        <video autoplay muted loop playsinline controls preload="metadata">
+          <source src="videos/about-ambience.mp4" type="video/mp4">
+        </video>
+      </div>
+      <article class="about-article">
+        <p><strong>Established in 2021</strong>, Imperial Beauty Salon & Academy was founded with a vision to provide high-quality beauty services with exceptional care.</p>
+        <p>We believe beauty is about feeling confident, comfortable and beautifully yourself.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights-section">
+  <div class="container">
+    <div class="highlights-heading">
+      <h2>Highlights</h2>
+    </div>
+    <div class="highlights-grid">
+      <article class="highlight-card">
+        <div class="highlight-icon">✦</div>
+        <strong>Experienced Stylists & Artists</strong>
+        <p>Skilled professionals focused on detail, technique and beautiful results.</p>
+      </article>
+      <article class="highlight-card">
+        <div class="highlight-icon">♡</div>
+        <strong>Premium & Stress-Free Experience</strong>
+        <p>Thoughtful care, comfort and attention from consultation to finish.</p>
+      </article>
+      <article class="highlight-card">
+        <div class="highlight-icon">◇</div>
+        <strong>Transparent & Affordable Pricing</strong>
+        <p>Clear pricing with quality services designed to offer genuine value.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES -->
+<section class="services-preview">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our Services</h2>
+      <p>Explore our core beauty services, designed around your needs and occasion.</p>
+    </div>
+
+    <div class="preview-grid">
+      <a href="services.html#essential" class="preview-card">
+        <div class="preview-icon">✦</div>
+        <div>
+          <h3>Beauty Essential Services</h3>
+          <p>Everyday grooming and essential beauty upkeep designed to enhance your natural look.</p>
+        </div>
+        <div class="preview-arrow">➔</div>
+      </a>
+
+      <a href="services.html#skin" class="preview-card">
+        <div class="preview-icon">✧</div>
+        <div>
+          <h3>Skin Rituals & Facials</h3>
+          <p>Customized luxury facials and skincare routines for a radiant and healthy glow.</p>
+        </div>
+        <div class="preview-arrow">➔</div>
+      </a>
+
+      <a href="services.html#hair-treatments" class="preview-card">
+        <div class="preview-icon">♢</div>
+        <div>
+          <h3>Hair Treatments & Styling</h3>
+          <p>Advanced keratin, smoothing, deep care, and professional hair solutions.</p>
+        </div>
+        <div class="preview-arrow">➔</div>
+      </a>
+
+      <a href="makeup-services.html" class="preview-card">
+        <div class="preview-icon">♡</div>
+        <div>
+          <h3>Makeup Services</h3>
+          <p>Glamorous, elegant, or natural makeup created for every special moment and occasion.</p>
+        </div>
+        <div class="preview-arrow">➔</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMY BANNER -->
+<section class="academy-banner">
+  <div class="container">
+    <div class="academy-grid">
+      <div class="academy-content">
+        <h2>Professional Beauty Courses</h2>
+        <p>Turn your passion for beauty into a professional skill through hands-on training.</p>
+        <a href="academy.html" class="btn btn-gold">Explore Our Courses</a>
+      </div>
+      <div class="academy-video">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="videos/academy-training.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT US -->
+<section class="contact-footer">
+  <div class="container">
+    <div class="contact-heading">CONTACT US</div>
+    <div class="contact-grid">
+      <div>
+        <strong>PHONE NUMBER</strong><br>
+        <a href="tel:+916299942455" style="color:#d8b56d;">+91 62999 42455</a>
+      </div>
+      <div>
+        <strong>ADDRESS</strong><br>
+        Tamtam Paraw, Sadikpur, Patna City - 800008
+      </div>
+      <div>
+        <strong>Let's Connect</strong><br>
+        Instagram • Facebook • YouTube
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © Imperial Beauty Salon & Academy. All rights reserved.
+    </div>
+  </div>
+</section>
+
+</body>
+        </html>
+        
