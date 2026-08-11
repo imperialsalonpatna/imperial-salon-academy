@@ -1,48 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Imperial Beauty Salon & Academy | Patna</title>
 
-<meta
-  name="description"
-  content="Imperial Beauty Salon & Academy, Patna — professional makeup, hair, skin and beauty services with practical beauty education."
->
+<meta name="description"
+content="Imperial Beauty Salon & Academy, Patna — professional makeup, hair, skin and beauty services with practical beauty education.">
 
 <style>
-
-/* =========================================================
-   ROOT
-========================================================= */
-
 :root{
   --blush:#f3d8d8;
   --blush-light:#fbefef;
-
   --sage:#a9b9a3;
   --sage-dark:#536653;
   --sage-deep:#35483a;
-
   --gold:#b58a45;
   --gold-light:#d8b56d;
-
   --cream:#fffaf5;
-  --white:#ffffff;
-
+  --white:#fff;
   --dark:#28352c;
   --text:#4c504b;
   --muted:#6a6a64;
-
   --line:#eadfd3;
 }
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *{
   box-sizing:border-box;
@@ -70,10 +52,17 @@ button{
   font:inherit;
 }
 
+img,
+video{
+  max-width:100%;
+}
 
-/* =========================================================
-   TOP BAR
-========================================================= */
+.container{
+  width:min(1150px,92%);
+  margin:auto;
+}
+
+/* ================= TOP BAR ================= */
 
 .top-bar{
   background:var(--sage-dark);
@@ -84,34 +73,25 @@ button{
   letter-spacing:.5px;
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
+/* ================= HEADER ================= */
 
 header{
-  background:rgba(255,250,245,.97);
+  background:rgba(255,250,245,.98);
   border-bottom:1px solid var(--line);
-
   position:sticky;
   top:0;
   z-index:1000;
-
   backdrop-filter:blur(8px);
 }
 
 .navbar{
   width:min(1150px,92%);
-  margin:auto;
-
   min-height:78px;
-
+  margin:auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
-
   gap:25px;
-  position:relative;
 }
 
 .brand{
@@ -123,10 +103,8 @@ header{
 .brand-logo{
   width:205px;
   height:64px;
-
   object-fit:contain;
   object-position:left center;
-
   display:block;
 }
 
@@ -134,10 +112,8 @@ header{
   display:flex;
   align-items:center;
   gap:23px;
-
   font-size:14px;
   font-weight:600;
-
   color:var(--dark);
 }
 
@@ -151,40 +127,20 @@ header{
 
 .mobile-menu{
   display:none;
-
   border:0;
   background:none;
-
   font-size:27px;
-
   color:var(--sage-dark);
-
   cursor:pointer;
 }
 
-
-/* =========================================================
-   COMMON
-========================================================= */
-
-.container{
-  width:min(1150px,92%);
-  margin:auto;
-}
-
-.section{
-  padding:72px 0;
-}
+/* ================= BUTTON ================= */
 
 .btn{
   display:inline-block;
-
   padding:12px 22px;
-
   border-radius:30px;
-
   font-weight:bold;
-
   transition:.2s ease;
 }
 
@@ -195,34 +151,25 @@ header{
 
 .btn-gold:hover{
   transform:translateY(-2px);
-
   background:var(--gold);
   color:#fff;
 }
 
-
-/* =========================================================
-   HERO SLIDER
-========================================================= */
+/* ================= HERO ================= */
 
 .hero{
   position:relative;
-
   height:min(700px,78vh);
   min-height:570px;
-
   overflow:hidden;
-
   background:var(--sage-dark);
 }
 
 .slide{
   position:absolute;
   inset:0;
-
   opacity:0;
   pointer-events:none;
-
   transition:opacity .8s ease;
 }
 
@@ -234,35 +181,28 @@ header{
 .slide-video{
   width:100%;
   height:100%;
-
   object-fit:cover;
-
   display:block;
 }
 
 .slide-overlay{
   position:absolute;
   inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(31,48,38,.78),
-      rgba(31,48,38,.32),
-      rgba(31,48,38,.15)
-    );
+  background:linear-gradient(
+    90deg,
+    rgba(31,48,38,.78),
+    rgba(31,48,38,.32),
+    rgba(31,48,38,.15)
+  );
 }
 
 .slide-content{
   position:absolute;
   inset:0;
-
   display:flex;
   align-items:center;
-
   width:min(1150px,92%);
   margin:auto;
-
   color:#fff;
 }
 
@@ -272,50 +212,35 @@ header{
 
 .slide h1{
   font-family:Georgia,serif;
-
   font-size:clamp(42px,6vw,72px);
-
   line-height:1.08;
-
   margin:15px 0;
-
   color:#fff;
 }
 
 .slide p{
   font-size:18px;
-
   max-width:580px;
-
   margin-bottom:23px;
 }
 
 .slider-controls{
   position:absolute;
-
   bottom:28px;
   left:50%;
-
   transform:translateX(-50%);
-
   display:flex;
   gap:8px;
-
   z-index:5;
 }
 
 .slider-dot{
   width:9px;
   height:9px;
-
   border-radius:50%;
-
   border:1px solid #fff;
-
   background:transparent;
-
   cursor:pointer;
-
   padding:0;
 }
 
@@ -323,213 +248,147 @@ header{
   background:#fff;
 }
 
-
-/* =========================================================
-   AREAS OF EXPERTISE
-========================================================= */
+/* ================= EXPERTISE ================= */
 
 .specialisation{
-  background:
-    linear-gradient(
-      135deg,
-      var(--blush-light),
-      var(--cream)
-    );
-
+  background:linear-gradient(
+    135deg,
+    var(--blush-light),
+    var(--cream)
+  );
   padding:72px 0 70px;
 }
 
 .specialisation-heading{
   max-width:850px;
-
   text-align:center;
-
   margin:0 auto 38px;
 }
 
 .specialisation-heading h2{
   font-family:Georgia,serif;
-
   color:var(--sage-dark);
-
   font-size:clamp(34px,5vw,50px);
-
   line-height:1.15;
-
   margin-bottom:14px;
 }
 
 .specialisation-heading p{
   max-width:780px;
-
   margin:auto;
-
   color:#62645f;
-
   font-size:16px;
-
   line-height:1.7;
 }
 
 .specialisation-list{
   max-width:1050px;
-
   margin:auto;
-
   display:grid;
-
   grid-template-columns:repeat(2,1fr);
-
   gap:20px;
 }
 
 .specialisation-item{
-  position:relative;
-
   min-height:105px;
-
   padding:25px 28px;
-
   border-radius:16px;
-
   display:flex;
   align-items:center;
-
   font-family:Georgia,serif;
-
   font-size:clamp(21px,2.5vw,29px);
-
   font-weight:700;
-
   background:#fff;
-
-  box-shadow:
-    0 8px 24px rgba(80,90,75,.08);
-
-  border:1px solid rgba(181,138,69,.18);
-
+  box-shadow:0 8px 24px rgba(80,90,75,.08);
   transition:.25s ease;
 }
 
 .specialisation-item:hover{
   transform:translateY(-4px);
-
-  box-shadow:
-    0 15px 32px rgba(80,90,75,.13);
 }
 
 .specialisation-item:nth-child(1){
   color:#536653;
   border-left:5px solid #536653;
-  background:linear-gradient(135deg,#ffffff,#f2f7f0);
+  background:linear-gradient(135deg,#fff,#f2f7f0);
 }
 
 .specialisation-item:nth-child(2){
   color:#8d6740;
   border-left:5px solid #b58a45;
-  background:linear-gradient(135deg,#ffffff,#fbf5e9);
+  background:linear-gradient(135deg,#fff,#fbf5e9);
 }
 
 .specialisation-item:nth-child(3){
   color:#725f72;
   border-left:5px solid #8e7890;
-  background:linear-gradient(135deg,#ffffff,#f8f2f8);
+  background:linear-gradient(135deg,#fff,#f8f2f8);
 }
 
 .specialisation-item:nth-child(4){
   color:#53747b;
   border-left:5px solid #6c9399;
-  background:linear-gradient(135deg,#ffffff,#eef7f8);
+  background:linear-gradient(135deg,#fff,#eef7f8);
 }
 
 .specialisation-item:before{
   content:"";
-
   width:11px;
   height:11px;
-
   border-radius:50%;
-
   margin-right:17px;
-
   flex-shrink:0;
-
   border:2px solid currentColor;
 }
 
-
-/* =========================================================
-   ABOUT IMPERIAL
-========================================================= */
+/* ================= ABOUT ================= */
 
 .about-section{
   background:var(--cream);
-
   padding:72px 0 76px;
 }
 
 .about-heading{
   text-align:center;
-
   margin-bottom:32px;
 }
 
 .about-heading h2{
   font-family:Georgia,serif;
-
   color:var(--sage-dark);
-
   font-size:clamp(34px,5vw,50px);
-
   line-height:1.15;
 }
 
 .about-layout{
   max-width:1050px;
-
   margin:auto;
-
   display:grid;
-
   grid-template-columns:.9fr 1.1fr;
-
   gap:48px;
-
   align-items:center;
 }
 
 .about-video-frame{
   width:100%;
-
   max-width:430px;
-
   margin:auto;
-
   border-radius:18px;
-
   overflow:hidden;
-
   background:#ddd;
-
-  box-shadow:
-    0 18px 45px rgba(80,90,75,.14);
+  box-shadow:0 18px 45px rgba(80,90,75,.14);
 }
 
 .about-video-frame video{
   width:100%;
-
   aspect-ratio:4/5;
-
   object-fit:cover;
-
   display:block;
 }
 
 .about-article{
   font-size:16px;
-
   line-height:1.75;
-
   color:#555952;
 }
 
@@ -545,484 +404,285 @@ header{
   color:var(--sage-dark);
 }
 
-
-/* =========================================================
-   HIGHLIGHTS
-========================================================= */
+/* ================= HIGHLIGHTS ================= */
 
 .highlights-section{
   background:#fff;
-
   padding:12px 0 60px;
 }
 
 .highlights-heading{
   text-align:center;
-
   margin-bottom:28px;
 }
 
 .highlights-heading h2{
   font-family:Georgia,serif;
-
   color:var(--sage-dark);
-
   font-size:clamp(30px,4.5vw,42px);
 }
 
 .highlights-grid{
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:20px;
-
   max-width:1050px;
-
   margin:auto;
 }
 
 .highlight-card{
   min-height:205px;
-
   padding:28px 24px;
-
   border-radius:18px;
-
   text-align:center;
-
-  background:
-    linear-gradient(
-      145deg,
-      #fffdf9,
-      #f6f0e8
-    );
-
+  background:linear-gradient(145deg,#fffdf9,#f6f0e8);
   border:1px solid #e5d9cc;
-
-  box-shadow:
-    0 8px 24px rgba(80,90,75,.07);
-
+  box-shadow:0 8px 24px rgba(80,90,75,.07);
   transition:.25s ease;
 }
 
 .highlight-card:hover{
   transform:translateY(-5px);
-
-  box-shadow:
-    0 16px 34px rgba(80,90,75,.12);
 }
 
 .highlight-icon{
   width:54px;
   height:54px;
-
   margin:0 auto 14px;
-
   border-radius:50%;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   background:var(--blush-light);
-
   border:1px solid rgba(181,138,69,.35);
-
   color:var(--gold);
-
   font-family:Georgia,serif;
-
   font-size:24px;
 }
 
 .highlight-card strong{
   display:block;
-
   color:var(--sage-dark);
-
   font-family:Georgia,serif;
-
   font-size:19px;
-
   margin-bottom:9px;
 }
 
 .highlight-card p{
   max-width:285px;
-
   margin:auto;
-
   font-size:14px;
-
   color:#686862;
-
   line-height:1.55;
 }
 
-
-/* =========================================================
-   OUR SERVICES — REFERENCE STYLE
-========================================================= */
+/* ================= OUR SERVICES ================= */
 
 .services-preview{
-  background:
-    linear-gradient(
-      135deg,
-      #fffaf5 0%,
-      #f7f1e9 100%
-    );
-
+  background:linear-gradient(
+    135deg,
+    #fffaf5 0%,
+    #f7f1e9 100%
+  );
   padding:74px 0 82px;
-
   border-top:1px solid rgba(234,223,211,.7);
 }
 
-.services-preview .section-heading{
+.section-heading{
   text-align:center;
-
   max-width:720px;
-
   margin:0 auto 42px;
 }
 
-.services-preview .section-heading h2{
+.section-heading h2{
   font-family:Georgia,serif;
-
   color:var(--sage-dark);
-
   font-size:clamp(35px,5vw,50px);
-
   margin:0 0 15px;
-
   line-height:1.15;
 }
 
-.services-preview .section-heading p{
+.section-heading p{
   color:#686862;
-
   font-size:15px;
 }
 
-
-/* Main service list */
-
 .preview-grid{
   max-width:1050px;
-
   margin:auto;
-
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   gap:18px;
 }
 
-
-/*
-   Each service is now horizontal:
-   ICON | TITLE + DESCRIPTION
-*/
-
 .preview-card{
   min-height:128px;
-
   display:flex;
-
   align-items:center;
-
   gap:22px;
-
   padding:24px 26px;
-
   border:1px solid #e5d9cc;
-
   border-radius:18px;
-
-  background:rgba(255,255,255,.82);
-
-  box-shadow:
-    0 8px 24px rgba(80,90,75,.06);
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
-
+  background:rgba(255,255,255,.88);
+  box-shadow:0 8px 24px rgba(80,90,75,.06);
+  transition:.25s ease;
   text-align:left;
-
   position:relative;
-
   overflow:hidden;
 }
 
 .preview-card:before{
   content:"";
-
   position:absolute;
-
   left:0;
   top:0;
   bottom:0;
-
   width:4px;
-
   background:var(--gold);
-
   opacity:.75;
 }
 
 .preview-card:hover{
   transform:translateY(-4px);
-
   border-color:rgba(181,138,69,.45);
-
-  box-shadow:
-    0 15px 32px rgba(80,90,75,.11);
+  box-shadow:0 15px 32px rgba(80,90,75,.11);
 }
 
-
-/* Related service icons */
+/* RELATED PROFESSIONAL ICON */
 
 .preview-icon{
   width:64px;
   height:64px;
-
   min-width:64px;
-
-  margin:0;
-
   border-radius:16px;
-
   display:flex;
-
   align-items:center;
   justify-content:center;
-
   background:#f8eeee;
-
   border:1px solid rgba(181,138,69,.28);
-
   color:var(--sage-dark);
-
   transition:.25s ease;
 }
 
 .preview-card:hover .preview-icon{
   background:var(--sage-dark);
-
   color:#fff;
-
   transform:scale(1.04);
 }
 
-
-/* SVG icon itself */
-
 .preview-icon svg{
-  width:31px;
-  height:31px;
-
+  width:32px;
+  height:32px;
   display:block;
-
   stroke:currentColor;
-
   fill:none;
-
   stroke-width:1.7;
-
   stroke-linecap:round;
-
   stroke-linejoin:round;
 }
 
-
-/* Service text */
-
 .preview-card-content{
   flex:1;
-
   min-width:0;
 }
 
 .preview-card h3{
   font-family:Georgia,serif;
-
   color:var(--sage-dark);
-
   font-size:20px;
-
   line-height:1.25;
-
   margin:0 0 7px;
 }
 
 .preview-card p{
   font-size:14px;
-
   color:#686862;
-
   line-height:1.5;
-
   margin:0;
-
   max-width:420px;
 }
 
-
-/* =========================================================
-   ACADEMY
-========================================================= */
+/* ================= ACADEMY ================= */
 
 .academy-banner{
-  position:relative;
-
   overflow:hidden;
-
   background:var(--sage-dark);
-
   color:#fff;
-
   padding:70px 0;
 }
 
 .academy-grid{
   display:grid;
-
   grid-template-columns:1.05fr .95fr;
-
   gap:50px;
-
   align-items:center;
-
   max-width:1050px;
-
   margin:auto;
-}
-
-.academy-content{
-  max-width:650px;
 }
 
 .academy-content h2{
   font-family:Georgia,serif;
-
   color:#fff;
-
   font-size:clamp(36px,5vw,52px);
-
   margin:0 0 17px;
-
   line-height:1.12;
 }
 
 .academy-content p{
   color:#f3f3f0;
-
   font-size:16px;
-
   line-height:1.7;
-
   margin-bottom:25px;
 }
 
 .academy-video{
   width:100%;
-
   max-width:430px;
-
   margin:auto;
-
   border-radius:18px;
-
   overflow:hidden;
-
-  box-shadow:
-    0 18px 40px rgba(0,0,0,.18);
-
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
   background:#304238;
 }
 
 .academy-video video{
   width:100%;
-
   aspect-ratio:4/5;
-
   object-fit:cover;
-
   display:block;
 }
 
-
-/* =========================================================
-   TESTIMONIALS
-========================================================= */
+/* ================= TESTIMONIALS ================= */
 
 .testimonials-section{
-  background:
-    linear-gradient(
-      135deg,
-      #fbefef,
-      #f8f4ec
-    );
-
+  background:linear-gradient(135deg,#fbefef,#f8f4ec);
   padding:70px 0 72px;
-
   overflow:hidden;
 }
 
 .testimonials-heading{
   text-align:center;
-
   max-width:760px;
-
   margin:0 auto 36px;
 }
 
 .testimonials-heading h2{
   font-family:Georgia,serif;
-
   color:var(--sage-dark);
-
   font-size:clamp(30px,4.5vw,44px);
-
   line-height:1.15;
 }
 
 .testimonial-viewport{
   width:100%;
-
   overflow:hidden;
-
   position:relative;
-
-  mask-image:
-    linear-gradient(
-      to right,
-      transparent,
-      black 6%,
-      black 94%,
-      transparent
-    );
-
-  -webkit-mask-image:
-    linear-gradient(
-      to right,
-      transparent,
-      black 6%,
-      black 94%,
-      transparent
-    );
 }
 
 .testimonial-track{
   display:flex;
-
   width:max-content;
-
-  animation:
-    testimonialMove 75s linear infinite;
+  animation:testimonialMove 75s linear infinite;
 }
 
 .testimonial-track:hover{
@@ -1031,152 +691,96 @@ header{
 
 .testimonial-slide{
   width:min(650px,82vw);
-
   min-height:190px;
-
   margin:0 12px;
-
   padding:25px 30px;
-
   border:1px solid #e3d7ca;
-
   border-radius:16px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.95),
-      rgba(255,250,245,.95)
-    );
-
-  box-shadow:
-    0 8px 25px rgba(80,90,75,.08);
-
+  background:linear-gradient(
+    135deg,
+    rgba(255,255,255,.96),
+    rgba(255,250,245,.96)
+  );
+  box-shadow:0 8px 25px rgba(80,90,75,.08);
   flex-shrink:0;
-
   display:flex;
-
   flex-direction:column;
-
   justify-content:center;
 }
 
 .quote-mark{
   font-family:Georgia,serif;
-
   font-size:38px;
-
   line-height:.6;
-
   color:var(--gold);
-
   margin-bottom:10px;
 }
 
 .testimonial-stars{
   color:#d49b2e;
-
   letter-spacing:2px;
-
   font-size:13px;
-
   margin-bottom:9px;
 }
 
 .testimonial-text{
   font-size:14px;
-
   line-height:1.55;
-
   color:#50534f;
-
   margin-bottom:12px;
 }
 
 .testimonial-author{
   color:var(--sage-dark);
-
   font-weight:bold;
-
   font-size:13px;
 }
 
 @keyframes testimonialMove{
-
   from{
     transform:translateX(0);
   }
-
   to{
     transform:translateX(-50%);
   }
-
 }
 
 .google-cta{
   text-align:center;
-
   margin-top:34px;
 }
 
-.google-cta .btn{
-  border:1px solid var(--gold);
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
+/* ================= CONTACT ================= */
 
 .contact-footer{
   background:var(--sage-dark);
-
   color:#fff;
-
   padding:48px 0 28px;
-
-  position:relative;
-
-  overflow:hidden;
 }
 
 .contact-heading{
   text-align:center;
-
   color:var(--gold-light);
-
   font-family:Georgia,serif;
-
   font-size:30px;
-
   letter-spacing:2px;
-
   margin-bottom:35px;
 }
 
 .contact-grid{
   display:grid;
-
   grid-template-columns:1fr 1fr 1fr;
-
   gap:30px;
-
   align-items:center;
 }
 
 .contact-item{
   text-align:center;
-
   padding:10px 25px;
-
   min-height:130px;
-
   display:flex;
-
   flex-direction:column;
-
   align-items:center;
-
   justify-content:center;
 }
 
@@ -1187,105 +791,70 @@ header{
 .contact-icon{
   width:58px;
   height:58px;
-
   border-radius:50%;
-
   background:#fff;
-
   color:var(--gold);
-
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   font-size:25px;
-
   margin-bottom:10px;
 }
 
 .contact-label{
   color:var(--gold-light);
-
   font-size:13px;
-
   letter-spacing:2px;
-
   font-weight:700;
-
   margin-bottom:6px;
 }
 
 .contact-value{
   font-family:Georgia,serif;
-
   font-size:18px;
 }
 
 .social-title{
   font-family:cursive;
-
   color:var(--gold-light);
-
   font-size:31px;
-
   margin-bottom:12px;
 }
 
 .social-links{
   display:flex;
-
   gap:13px;
-
   justify-content:center;
 }
 
 .social-link{
   width:48px;
   height:48px;
-
   border:1px solid var(--gold-light);
-
   border-radius:50%;
-
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   background:rgba(255,255,255,.08);
-
   font-weight:bold;
 }
 
 .social-link:hover{
   background:#fff;
-
   color:var(--sage-dark);
 }
 
 .footer-bottom{
   width:min(1150px,92%);
-
   margin:35px auto 0;
-
   padding-top:18px;
-
   border-top:1px solid rgba(255,255,255,.15);
-
   font-size:12px;
-
   color:#c7c7c7;
-
   text-align:center;
 }
 
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:850px){
 
@@ -1296,26 +865,16 @@ header{
 
   .nav-links{
     display:none;
-
     position:absolute;
-
     top:78px;
-
     left:0;
     right:0;
-
     background:var(--cream);
-
     padding:22px;
-
     flex-direction:column;
-
     align-items:stretch;
-
     border-bottom:1px solid var(--line);
-
-    box-shadow:
-      0 12px 25px rgba(0,0,0,.07);
+    box-shadow:0 12px 25px rgba(0,0,0,.07);
   }
 
   .nav-links.open{
@@ -1326,18 +885,13 @@ header{
     display:block;
   }
 
-
-  /* HERO */
-
   .hero{
     min-height:620px;
-
     height:75vh;
   }
 
   .slide-content{
     align-items:flex-end;
-
     padding-bottom:85px;
   }
 
@@ -1349,19 +903,12 @@ header{
     font-size:16px;
   }
 
-
-  /* EXPERTISE */
-
   .specialisation-list{
     grid-template-columns:1fr;
   }
 
-
-  /* ABOUT */
-
   .about-layout{
     grid-template-columns:1fr;
-
     gap:35px;
   }
 
@@ -1369,26 +916,16 @@ header{
     max-width:390px;
   }
 
-
-  /* HIGHLIGHTS */
-
   .highlights-grid{
     grid-template-columns:1fr;
   }
-
-
-  /* SERVICES */
 
   .preview-grid{
     grid-template-columns:1fr;
   }
 
-
-  /* ACADEMY */
-
   .academy-grid{
     grid-template-columns:1fr;
-
     gap:35px;
   }
 
@@ -1396,30 +933,20 @@ header{
     max-width:390px;
   }
 
-
-  /* CONTACT */
-
   .contact-grid{
     grid-template-columns:1fr;
   }
 
   .contact-item + .contact-item{
     border-left:0;
-
     border-top:1px solid rgba(255,255,255,.18);
   }
 
-
-  /* TESTIMONIALS */
-
   .testimonial-slide{
     width:82vw;
-
     min-height:190px;
   }
-
 }
-
 
 @media(max-width:520px){
 
@@ -1427,9 +954,6 @@ header{
     width:155px;
     height:55px;
   }
-
-
-  /* HERO */
 
   .hero{
     min-height:600px;
@@ -1439,23 +963,15 @@ header{
     font-size:39px;
   }
 
-
-  /* EXPERTISE */
-
   .specialisation{
     padding-top:58px;
   }
 
   .specialisation-item{
     min-height:92px;
-
     font-size:23px;
-
     padding:20px;
   }
-
-
-  /* ABOUT */
 
   .about-section{
     padding:58px 0 62px;
@@ -1469,29 +985,21 @@ header{
     max-width:100%;
   }
 
-
-  /* SERVICES */
-
   .services-preview{
     padding:58px 0 65px;
   }
 
   .preview-card{
     min-height:116px;
-
     padding:20px 18px;
-
     gap:16px;
-
     border-radius:16px;
   }
 
   .preview-icon{
     width:55px;
     height:55px;
-
     min-width:55px;
-
     border-radius:14px;
   }
 
@@ -1506,12 +1014,8 @@ header{
 
   .preview-card p{
     font-size:13px;
-
     line-height:1.45;
   }
-
-
-  /* ACADEMY */
 
   .academy-banner{
     padding:58px 0;
@@ -1521,14 +1025,9 @@ header{
     max-width:100%;
   }
 
-
-  /* TESTIMONIALS */
-
   .testimonial-slide{
     width:86vw;
-
     min-height:205px;
-
     padding:23px 21px;
   }
 
@@ -1536,52 +1035,182 @@ header{
     font-size:13.5px;
   }
 
-
-  /* CONTACT */
-
   .contact-heading{
     font-size:25px;
   }
-
 }
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  .slide{
-    transition:none;
-  }
-
-  .testimonial-track{
-    animation:none;
-  }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =======================================================
-     TOP BAR
-======================================================= -->
-
+<!-- TOP BAR -->
 <div class="top-bar">
   Imperial Beauty Salon & Academy • Patna
 </div>
 
+<!-- HEADER -->
+<header>
+  <div class="navbar">
 
-<!-- =======================================================
-     HEADER
-=================
+    <a href="index.html" class="brand">
+      <img
+        class="brand-logo"
+        src="images/logo.png"
+        alt="Imperial Beauty Salon & Academy"
+      >
+    </a>
+
+    <button
+      class="mobile-menu"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="makeup-services.html">Makeup Services</a>
+      <a href="academy.html">Our Academy</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" aria-label="Imperial Beauty services">
+
+  <div class="slide active">
+    <video
+      class="slide-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+      <source src="videos/slide-makeup.mp4" type="video/mp4">
+    </video>
+
+    <div class="slide-overlay"></div>
+
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Make Every Occasion Beautiful.</h1>
+
+        <p>
+          Professional makeup for bridal,
+          engagement, reception and special occasions.
+        </p>
+
+        <a href="makeup-services.html" class="btn btn-gold">
+          Explore our Makeup Services
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+      <source src="videos/slide-hair.mp4" type="video/mp4">
+    </video>
+
+    <div class="slide-overlay"></div>
+
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Healthy Hair. Beautiful You.</h1>
+
+        <p>
+          Hair cuts, hair care, colour and
+          advanced hair treatments.
+        </p>
+
+        <a href="services.html#hair-cuts" class="btn btn-gold">
+          Explore our Hair Services
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+      <source src="videos/slide-skin.mp4" type="video/mp4">
+    </video>
+
+    <div class="slide-overlay"></div>
+
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Glow With Confidence.</h1>
+
+        <p>
+          Refreshing skin rituals and facial care
+          designed for a healthy, beautiful glow.
+        </p>
+
+        <a href="services.html#skin" class="btn btn-gold">
+          Explore our Skin Care Services
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+      <source src="videos/slide-relaxing.mp4" type="video/mp4">
+    </video>
+
+    <div class="slide-overlay"></div>
+
+    <div class="slide-content">
+      <div class="slide-content-inner">
+        <h1>Get Rid of All Your Stress.</h1>
+
+        <p>
+          Take a relaxing break with thoughtful
+          beauty and self-care services.
+        </p>
+
+        <a href="services.html#relaxing" class="btn btn-gold">
+          Explore our Relaxing Services
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <video
+      class="slide-video"
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+      <source src="videos/slide-academy.mp4" type="video/mp4">
+    </video>
+    
