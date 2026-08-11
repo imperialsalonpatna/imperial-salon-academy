@@ -662,21 +662,20 @@ header{
 
 
 /* =========================================================
-   OUR SERVICES
-   NEW PREMIUM STYLE
+   OUR SERVICES — REFERENCE STYLE
 ========================================================= */
 
 .services-preview{
   background:
     linear-gradient(
-      180deg,
+      135deg,
       #fffaf5 0%,
-      #f8f1e9 100%
+      #f7f1e9 100%
     );
 
-  padding:78px 0 82px;
+  padding:74px 0 82px;
 
-  border-top:1px solid #eee3d8;
+  border-top:1px solid rgba(234,223,211,.7);
 }
 
 .services-preview .section-heading{
@@ -684,7 +683,7 @@ header{
 
   max-width:720px;
 
-  margin:0 auto 45px;
+  margin:0 auto 42px;
 }
 
 .services-preview .section-heading h2{
@@ -694,306 +693,181 @@ header{
 
   font-size:clamp(35px,5vw,50px);
 
-  line-height:1.15;
-
   margin:0 0 15px;
+
+  line-height:1.15;
 }
 
 .services-preview .section-heading p{
   color:#686862;
 
-  font-size:16px;
-
-  line-height:1.7;
+  font-size:15px;
 }
 
 
-/* =========================================================
-   SERVICE GRID
-========================================================= */
+/* Main service list */
 
 .preview-grid{
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:20px;
-
-  max-width:1080px;
+  max-width:1050px;
 
   margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:18px;
 }
 
 
-/* =========================================================
-   SERVICE CARD
-========================================================= */
+/*
+   Each service is now horizontal:
+   ICON | TITLE + DESCRIPTION
+*/
 
 .preview-card{
-  position:relative;
-
-  min-height:285px;
-
-  padding:34px 23px 30px;
-
-  border-radius:22px;
-
-  background:#fff;
-
-  border:1px solid #eadfd3;
-
-  text-align:center;
+  min-height:128px;
 
   display:flex;
 
-  flex-direction:column;
-
   align-items:center;
 
-  justify-content:flex-start;
+  gap:22px;
 
-  overflow:hidden;
+  padding:24px 26px;
 
-  transition:
-    transform .28s ease,
-    box-shadow .28s ease,
-    border-color .28s ease;
+  border:1px solid #e5d9cc;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,.82);
 
   box-shadow:
     0 8px 24px rgba(80,90,75,.06);
-}
 
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
 
-/* Elegant top accent */
+  text-align:left;
 
-.preview-card::before{
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:18%;
-
-  width:64%;
-  height:3px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold-light),
-      transparent
-    );
-
-  opacity:.85;
-}
-
-
-/* Decorative soft circle */
-
-.preview-card::after{
-  content:"";
-
-  position:absolute;
-
-  width:145px;
-  height:145px;
-
-  border-radius:50%;
-
-  right:-72px;
-  bottom:-72px;
-
-  background:rgba(243,216,216,.25);
-
-  pointer-events:none;
-}
-
-
-.preview-card:hover{
-  transform:translateY(-7px);
-
-  border-color:
-    rgba(181,138,69,.38);
-
-  box-shadow:
-    0 18px 38px rgba(80,90,75,.13);
-}
-
-
-/* =========================================================
-   RELATED SERVICE ICONS
-========================================================= */
-
-.preview-icon{
   position:relative;
 
-  width:76px;
-  height:76px;
+  overflow:hidden;
+}
 
-  margin:0 auto 21px;
+.preview-card:before{
+  content:"";
 
-  border-radius:50%;
+  position:absolute;
+
+  left:0;
+  top:0;
+  bottom:0;
+
+  width:4px;
+
+  background:var(--gold);
+
+  opacity:.75;
+}
+
+.preview-card:hover{
+  transform:translateY(-4px);
+
+  border-color:rgba(181,138,69,.45);
+
+  box-shadow:
+    0 15px 32px rgba(80,90,75,.11);
+}
+
+
+/* Related service icons */
+
+.preview-icon{
+  width:64px;
+  height:64px;
+
+  min-width:64px;
+
+  margin:0;
+
+  border-radius:16px;
 
   display:flex;
 
   align-items:center;
   justify-content:center;
 
+  background:#f8eeee;
+
+  border:1px solid rgba(181,138,69,.28);
+
   color:var(--sage-dark);
 
-  border:1px solid rgba(181,138,69,.3);
-
-  box-shadow:
-    0 7px 18px rgba(80,90,75,.08);
-
-  z-index:1;
-
-  transition:
-    transform .28s ease,
-    box-shadow .28s ease;
+  transition:.25s ease;
 }
 
+.preview-card:hover .preview-icon{
+  background:var(--sage-dark);
+
+  color:#fff;
+
+  transform:scale(1.04);
+}
+
+
+/* SVG icon itself */
+
 .preview-icon svg{
-  width:37px;
-  height:37px;
+  width:31px;
+  height:31px;
+
+  display:block;
 
   stroke:currentColor;
 
   fill:none;
 
-  stroke-width:1.6;
+  stroke-width:1.7;
 
   stroke-linecap:round;
 
   stroke-linejoin:round;
 }
 
-.preview-card:hover .preview-icon{
-  transform:scale(1.08);
 
-  box-shadow:
-    0 10px 24px rgba(80,90,75,.13);
+/* Service text */
+
+.preview-card-content{
+  flex:1;
+
+  min-width:0;
 }
-
-
-/* Individual icon backgrounds */
-
-.preview-card:nth-child(1) .preview-icon{
-  background:#f5e8dd;
-
-  color:#9a7044;
-}
-
-.preview-card:nth-child(2) .preview-icon{
-  background:#f7e8ed;
-
-  color:#8c6173;
-}
-
-.preview-card:nth-child(3) .preview-icon{
-  background:#eaf1e8;
-
-  color:#536653;
-}
-
-.preview-card:nth-child(4) .preview-icon{
-  background:#eee8f3;
-
-  color:#74627e;
-}
-
-
-/* =========================================================
-   SERVICE CARD TEXT
-========================================================= */
 
 .preview-card h3{
-  position:relative;
-
-  z-index:1;
-
   font-family:Georgia,serif;
 
   color:var(--sage-dark);
 
   font-size:20px;
 
-  line-height:1.3;
+  line-height:1.25;
 
-  margin-bottom:11px;
+  margin:0 0 7px;
 }
 
 .preview-card p{
-  position:relative;
-
-  z-index:1;
-
-  max-width:220px;
-
-  margin:auto;
-
   font-size:14px;
 
-  line-height:1.6;
-
   color:#686862;
-}
 
+  line-height:1.5;
 
-/* =========================================================
-   SERVICE CARD RESPONSIVE
-========================================================= */
+  margin:0;
 
-@media(max-width:1000px){
-
-  .preview-grid{
-    grid-template-columns:repeat(2,1fr);
-
-    max-width:720px;
-  }
-
-}
-
-
-@media(max-width:520px){
-
-  .services-preview{
-    padding:60px 0 65px;
-  }
-
-  .services-preview .section-heading{
-    margin-bottom:32px;
-  }
-
-  .preview-grid{
-    grid-template-columns:1fr;
-
-    gap:16px;
-  }
-
-  .preview-card{
-    min-height:245px;
-
-    padding:30px 22px 27px;
-  }
-
-  .preview-icon{
-    width:68px;
-    height:68px;
-
-    margin-bottom:18px;
-  }
-
-  .preview-icon svg{
-    width:34px;
-    height:34px;
-  }
-
-  .preview-card h3{
-    font-size:19px;
-  }
-
+  max-width:420px;
 }
 
 
@@ -1506,7 +1380,7 @@ header{
   /* SERVICES */
 
   .preview-grid{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
   }
 
 
@@ -1531,3 +1405,183 @@ header{
 
   .contact-item + .contact-item{
     border-left:0;
+
+    border-top:1px solid rgba(255,255,255,.18);
+  }
+
+
+  /* TESTIMONIALS */
+
+  .testimonial-slide{
+    width:82vw;
+
+    min-height:190px;
+  }
+
+}
+
+
+@media(max-width:520px){
+
+  .brand-logo{
+    width:155px;
+    height:55px;
+  }
+
+
+  /* HERO */
+
+  .hero{
+    min-height:600px;
+  }
+
+  .slide h1{
+    font-size:39px;
+  }
+
+
+  /* EXPERTISE */
+
+  .specialisation{
+    padding-top:58px;
+  }
+
+  .specialisation-item{
+    min-height:92px;
+
+    font-size:23px;
+
+    padding:20px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section{
+    padding:58px 0 62px;
+  }
+
+  .about-article{
+    font-size:15px;
+  }
+
+  .about-video-frame{
+    max-width:100%;
+  }
+
+
+  /* SERVICES */
+
+  .services-preview{
+    padding:58px 0 65px;
+  }
+
+  .preview-card{
+    min-height:116px;
+
+    padding:20px 18px;
+
+    gap:16px;
+
+    border-radius:16px;
+  }
+
+  .preview-icon{
+    width:55px;
+    height:55px;
+
+    min-width:55px;
+
+    border-radius:14px;
+  }
+
+  .preview-icon svg{
+    width:27px;
+    height:27px;
+  }
+
+  .preview-card h3{
+    font-size:18px;
+  }
+
+  .preview-card p{
+    font-size:13px;
+
+    line-height:1.45;
+  }
+
+
+  /* ACADEMY */
+
+  .academy-banner{
+    padding:58px 0;
+  }
+
+  .academy-video{
+    max-width:100%;
+  }
+
+
+  /* TESTIMONIALS */
+
+  .testimonial-slide{
+    width:86vw;
+
+    min-height:205px;
+
+    padding:23px 21px;
+  }
+
+  .testimonial-text{
+    font-size:13.5px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-heading{
+    font-size:25px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .slide{
+    transition:none;
+  }
+
+  .testimonial-track{
+    animation:none;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     TOP BAR
+======================================================= -->
+
+<div class="top-bar">
+  Imperial Beauty Salon & Academy • Patna
+</div>
+
+
+<!-- =======================================================
+     HEADER
+=================
