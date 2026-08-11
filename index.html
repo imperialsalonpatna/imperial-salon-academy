@@ -115,7 +115,9 @@ header{
 }
 
 
-/* Main logo file */
+/* IMPORTANT:
+   Main logo file is images/logo.png
+*/
 
 .brand{
   display:flex;
@@ -591,7 +593,7 @@ header{
 }
 
 
-/* Highlight cards */
+/* Highlight cards are visually different from heading */
 
 .highlights-grid{
   display:grid;
@@ -685,35 +687,24 @@ header{
 
 
 /* =========================================================
-   OUR SERVICES
-   NEW REFERENCE-STYLE DESIGN
+   SERVICES
 ========================================================= */
 
 .services-preview{
-  background:
-    linear-gradient(
-      135deg,
-      #fffaf5,
-      #fbefef
-    );
+  background:#fff;
 
-  padding:72px 0 82px;
-
-  overflow:hidden;
+  padding:72px 0 78px;
 }
 
-
-/* Services heading */
-
-.services-preview .section-heading{
+.section-heading{
   text-align:center;
 
-  max-width:760px;
+  max-width:720px;
 
-  margin:0 auto 40px;
+  margin:0 auto 42px;
 }
 
-.services-preview .section-heading h2{
+.section-heading h2{
   font-family:Georgia,serif;
 
   color:var(--sage-dark);
@@ -725,272 +716,70 @@ header{
   line-height:1.15;
 }
 
-.services-preview .section-heading p{
+.section-heading p{
   color:#686862;
-
-  font-size:16px;
-
-  line-height:1.7;
 }
-
-
-/* Services list */
 
 .preview-grid{
-  max-width:1050px;
-
-  margin:auto;
-
   display:grid;
 
-  grid-template-columns:1fr;
+  grid-template-columns:repeat(4,1fr);
 
-  gap:16px;
+  gap:18px;
 }
 
-
-/* Main service card */
-
 .preview-card{
-  width:100%;
-
-  min-height:135px;
-
-  padding:20px 22px;
-
-  display:grid;
-
-  grid-template-columns:76px 1fr 48px;
-
-  align-items:center;
-
-  gap:22px;
-
-  border-radius:20px;
-
   border:1px solid var(--line);
 
-  background:#fff;
+  border-radius:15px;
 
-  box-shadow:
-    0 7px 22px rgba(80,90,75,.06);
+  background:var(--cream);
 
-  text-align:left;
+  padding:27px 20px;
 
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
+  text-align:center;
+
+  transition:.25s;
 }
 
 .preview-card:hover{
-  transform:translateY(-4px);
+  transform:translateY(-5px);
 
   box-shadow:
-    0 15px 34px rgba(80,90,75,.12);
-
-  border-color:rgba(181,138,69,.35);
+    0 12px 30px rgba(80,90,75,.12);
 }
 
-
-/* Related icon area */
-
 .preview-icon{
-  width:68px;
-  height:68px;
+  width:58px;
+  height:58px;
+
+  margin:0 auto 15px;
 
   border-radius:50%;
 
+  background:var(--blush);
+
+  color:var(--sage-dark);
+
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
-  flex-shrink:0;
+  font-family:Georgia,serif;
 
-  position:relative;
-
-  margin:0;
-
-  font-size:0;
-}
-
-
-/* SVG icons */
-
-.preview-icon svg{
-  width:38px;
-  height:38px;
-
-  display:block;
-
-  fill:none;
-
-  stroke:currentColor;
-
-  stroke-width:1.7;
-
-  stroke-linecap:round;
-
-  stroke-linejoin:round;
-}
-
-
-/* Beauty services */
-
-.preview-card:nth-child(1){
-  background:
-    linear-gradient(
-      100deg,
-      #fff1f1,
-      #fffaf7
-    );
-}
-
-.preview-card:nth-child(1) .preview-icon{
-  background:#c98591;
-  color:#fff;
-}
-
-.preview-card:nth-child(1) h3{
-  color:#8e5c68;
-}
-
-
-/* Skin */
-
-.preview-card:nth-child(2){
-  background:
-    linear-gradient(
-      100deg,
-      #f0f6ee,
-      #fffdf9
-    );
-}
-
-.preview-card:nth-child(2) .preview-icon{
-  background:#809678;
-  color:#fff;
-}
-
-.preview-card:nth-child(2) h3{
-  color:#536653;
-}
-
-
-/* Hair treatment */
-
-.preview-card:nth-child(3){
-  background:
-    linear-gradient(
-      100deg,
-      #fbf4e5,
-      #fffdf9
-    );
-}
-
-.preview-card:nth-child(3) .preview-icon{
-  background:#b58a45;
-  color:#fff;
-}
-
-.preview-card:nth-child(3) h3{
-  color:#8d6740;
-}
-
-
-/* Makeup */
-
-.preview-card:nth-child(4){
-  background:
-    linear-gradient(
-      100deg,
-      #f7eff8,
-      #fffdfb
-    );
-}
-
-.preview-card:nth-child(4) .preview-icon{
-  background:#947994;
-  color:#fff;
-}
-
-.preview-card:nth-child(4) h3{
-  color:#725f72;
-}
-
-
-/* Service content */
-
-.preview-content{
-  min-width:0;
+  font-size:23px;
 }
 
 .preview-card h3{
   font-family:Georgia,serif;
 
-  font-size:clamp(19px,2.2vw,25px);
+  color:var(--sage-dark);
 
-  line-height:1.2;
-
-  margin-bottom:7px;
+  margin-bottom:8px;
 }
 
 .preview-card p{
   font-size:14px;
-
-  line-height:1.55;
-
-  color:#666861;
-
-  max-width:650px;
-}
-
-
-/* Right arrow */
-
-.preview-arrow{
-  width:46px;
-  height:46px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-size:23px;
-
-  font-weight:400;
-
-  transition:.25s ease;
-}
-
-.preview-card:nth-child(1) .preview-arrow{
-  background:#f2d7dc;
-  color:#8e5c68;
-}
-
-.preview-card:nth-child(2) .preview-arrow{
-  background:#dce8d8;
-  color:#536653;
-}
-
-.preview-card:nth-child(3) .preview-arrow{
-  background:#f0dfba;
-  color:#8d6740;
-}
-
-.preview-card:nth-child(4) .preview-arrow{
-  background:#e7d8e9;
-  color:#725f72;
-}
-
-.preview-card:hover .preview-arrow{
-  transform:translateX(4px);
 }
 
 
@@ -1161,6 +950,8 @@ header{
 
 /*
    HORIZONTAL TESTIMONIALS
+
+   Wide cards instead of vertical/tall cards.
 */
 
 .testimonial-slide{
@@ -1521,25 +1312,7 @@ header{
   /* SERVICES */
 
   .preview-grid{
-    grid-template-columns:1fr;
-  }
-
-  .preview-card{
-    grid-template-columns:68px 1fr 46px;
-
-    gap:18px;
-
-    min-height:125px;
-  }
-
-  .preview-icon{
-    width:62px;
-    height:62px;
-  }
-
-  .preview-icon svg{
-    width:35px;
-    height:35px;
+    grid-template-columns:1fr 1fr;
   }
 
 
@@ -1590,4 +1363,209 @@ header{
 
   /* HERO */
 
-  .
+  .hero{
+    min-height:600px;
+  }
+
+  .slide h1{
+    font-size:39px;
+  }
+
+
+  /* EXPERTISE */
+
+  .specialisation{
+    padding-top:58px;
+  }
+
+  .specialisation-item{
+    min-height:92px;
+
+    font-size:23px;
+
+    padding:20px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section{
+    padding:58px 0 62px;
+  }
+
+  .about-article{
+    font-size:15px;
+  }
+
+  .about-video-frame{
+    max-width:100%;
+  }
+
+
+  /* SERVICES */
+
+  .preview-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  /* ACADEMY */
+
+  .academy-banner{
+    padding:58px 0;
+  }
+
+  .academy-video{
+    max-width:100%;
+  }
+
+
+  /* TESTIMONIALS */
+
+  .testimonial-slide{
+    width:86vw;
+
+    min-height:205px;
+
+    padding:23px 21px;
+  }
+
+  .testimonial-text{
+    font-size:13.5px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-heading{
+    font-size:25px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .slide{
+    transition:none;
+  }
+
+  .testimonial-track{
+    animation:none;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     TOP BAR
+======================================================= -->
+
+<div class="top-bar">
+  Imperial Beauty Salon & Academy • Patna
+</div>
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header>
+
+  <div class="navbar">
+
+    <a href="index.html" class="brand">
+
+      <!-- FINAL LOGO FILE -->
+      <img
+        class="brand-logo"
+        src="images/logo.png"
+        alt="Imperial Beauty Salon & Academy"
+      >
+
+    </a>
+
+
+    <button
+      class="mobile-menu"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+
+    <nav class="nav-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="services.html">
+        Our Services
+      </a>
+
+      <a href="makeup-services.html">
+        Makeup Services
+      </a>
+
+      <a href="academy.html">
+        Our Academy
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a href="contact.html">
+        Contact Us
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =======================================================
+     HERO SLIDER
+======================================================= -->
+
+<section
+  class="hero"
+  aria-label="Imperial Beauty services"
+>
+
+
+  <!-- SLIDE 1 : MAKEUP -->
+
+  <div class="slide active">
+
+    <video
+      class="slide-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+
+      <source
+        src="
