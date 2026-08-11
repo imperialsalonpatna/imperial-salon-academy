@@ -522,130 +522,8 @@ header{
 }
 
 /* =========================
-   TESTIMONIALS
-========================= */
-
-.testimonials-section{
-  background:#fff;
-  padding:62px 0 68px;
-  overflow:hidden;
-}
-
-.testimonials-heading{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 34px;
-}
-
-.testimonials-heading h2{
-  font-family:Georgia,serif;
-  color:var(--sage-dark);
-  font-size:clamp(30px,4.5vw,44px);
-  line-height:1.15;
-  margin-top:8px;
-}
-
-.testimonial-viewport{
-  width:100%;
-  overflow:hidden;
-  position:relative;
-  mask-image:linear-gradient(
-    to right,
-    transparent,
-    black 7%,
-    black 93%,
-    transparent
-  );
-  -webkit-mask-image:linear-gradient(
-    to right,
-    transparent,
-    black 7%,
-    black 93%,
-    transparent
-  );
-}
-
-.testimonial-track{
-  display:flex;
-  width:max-content;
-  animation:testimonialMove 75s linear infinite;
-}
-
-.testimonial-track:hover{
-  animation-play-state:paused;
-}
-
-.testimonial-slide{
-  width:min(520px,82vw);
-  margin:0 12px;
-  padding:30px 30px 26px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:linear-gradient(
-    145deg,
-    #fffdf9,
-    #fbf5ee
-  );
-  box-shadow:0 8px 25px rgba(80,90,75,.07);
-  flex-shrink:0;
-}
-
-.quote-mark{
-  font-family:Georgia,serif;
-  font-size:45px;
-  line-height:.7;
-  color:var(--gold);
-  margin-bottom:15px;
-}
-
-.testimonial-stars{
-  color:#d49b2e;
-  letter-spacing:2px;
-  font-size:14px;
-  margin-bottom:13px;
-}
-
-.testimonial-text{
-  font-size:15px;
-  line-height:1.65;
-  color:#50534f;
-  margin-bottom:17px;
-}
-
-.testimonial-author{
-  color:var(--sage-dark);
-  font-weight:bold;
-  font-size:14px;
-}
-
-.google-cta{
-  text-align:center;
-  margin-top:34px;
-}
-
-.google-cta .btn{
-  border:1px solid var(--gold);
-}
-
-/* Continuous right-to-left movement */
-@keyframes testimonialMove{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-50%);
-  }
-}
-
-/* =========================
    CORE SERVICES
 ========================= */
-
-.core-cta{
-  text-align:center;
-  padding:8px 0 54px;
-  background:#fff;
-}
 
 .services-preview{
   background:#fff;
@@ -760,6 +638,120 @@ header{
   min-height:330px;
   object-fit:cover;
   display:block;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials-section{
+  background:linear-gradient(
+    135deg,
+    var(--blush-light),
+    #eef2eb
+  );
+  padding:54px 0 60px;
+  overflow:hidden;
+}
+
+.testimonials-heading{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 28px;
+}
+
+.testimonials-heading h2{
+  font-family:Georgia,serif;
+  color:var(--sage-dark);
+  font-size:clamp(28px,4vw,38px);
+  line-height:1.2;
+  margin-top:8px;
+}
+
+.testimonial-viewport{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+
+  mask-image:linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+
+  -webkit-mask-image:linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+.testimonial-track{
+  display:flex;
+  width:max-content;
+  animation:testimonialMove 75s linear infinite;
+}
+
+.testimonial-track:hover{
+  animation-play-state:paused;
+}
+
+.testimonial-slide{
+  width:min(430px,78vw);
+  margin:0 10px;
+  padding:25px 26px 22px;
+
+  flex-shrink:0;
+
+  background:rgba(255,255,255,.55);
+
+  border:1px solid rgba(83,102,83,.12);
+  border-radius:14px;
+
+  box-shadow:
+    0 5px 18px rgba(80,90,75,.05);
+}
+
+.quote-mark{
+  font-family:Georgia,serif;
+  font-size:38px;
+  line-height:.7;
+  color:var(--gold);
+  margin-bottom:12px;
+}
+
+.testimonial-stars{
+  color:#d49b2e;
+  letter-spacing:2px;
+  font-size:13px;
+  margin-bottom:10px;
+}
+
+.testimonial-text{
+  font-size:14px;
+  line-height:1.6;
+  color:#50534f;
+  margin-bottom:14px;
+}
+
+.testimonial-author{
+  color:var(--sage-dark);
+  font-weight:bold;
+  font-size:13px;
+}
+
+@keyframes testimonialMove{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
 }
 
 /* =========================
@@ -996,13 +988,17 @@ header{
     object-fit:cover;
   }
 
+  .testimonials-section{
+    padding:48px 0 52px;
+  }
+
   .testimonial-slide{
     width:84vw;
-    padding:25px 22px;
+    padding:22px 20px;
   }
 
   .testimonial-text{
-    font-size:14px;
+    font-size:13.5px;
   }
 
   .contact-heading{
@@ -1590,6 +1586,186 @@ header{
 
 
 <!-- =========================
+     CORE SERVICES
+========================= -->
+
+<section class="section services-preview">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        Explore
+      </div>
+
+      <h2>
+        Our Services
+      </h2>
+
+      <p>
+        Explore our core beauty services, designed
+        around your needs and occasion.
+      </p>
+
+    </div>
+
+
+    <div class="preview-grid">
+
+
+      <a
+        href="services.html#essential"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ✦
+        </div>
+
+        <h3>
+          Beauty Essential Services
+        </h3>
+
+        <p>
+          Everyday grooming and beauty essentials.
+        </p>
+
+      </a>
+
+
+      <a
+        href="services.html#skin"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ✧
+        </div>
+
+        <h3>
+          Skin Rituals & Facials
+        </h3>
+
+        <p>
+          Facials and skin care for a healthy glow.
+        </p>
+
+      </a>
+
+
+      <a
+        href="services.html#hair-treatments"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ♢
+        </div>
+
+        <h3>
+          Hair Treatments
+        </h3>
+
+        <p>
+          Professional care for beautiful,
+          healthy hair.
+        </p>
+
+      </a>
+
+
+      <a
+        href="makeup-services.html"
+        class="preview-card"
+      >
+
+        <div class="preview-icon">
+          ♡
+        </div>
+
+        <h3>
+          Makeup Services
+        </h3>
+
+        <p>
+          Makeup for your most memorable occasions.
+        </p>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MINI ACADEMY
+========================= -->
+
+<section class="academy-banner">
+
+  <div class="container">
+
+    <div class="academy-grid">
+
+
+      <div class="academy-content">
+
+        <div class="eyebrow">
+          Imperial Beauty Academy
+        </div>
+
+        <h2>
+          Turn Your Passion for Beauty Into a Skill.
+        </h2>
+
+        <p>
+          Explore our professional beauty courses and
+          learn practical techniques with hands-on training.
+        </p>
+
+        <br>
+
+        <a
+          href="academy.html"
+          class="btn btn-gold"
+        >
+          Explore Our Academy
+        </a>
+
+      </div>
+
+
+      <div class="academy-video">
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="videos/academy-training.mp4"
+            type="video/mp4"
+          >
+        </video>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
      TESTIMONIALS
 ========================= -->
 
@@ -1604,7 +1780,7 @@ header{
       </div>
 
       <h2>
-        What Our Clients Say About Their Imperial Experience
+        What Our Clients Say About Us
       </h2>
 
     </div>
@@ -1775,7 +1951,6 @@ header{
 
       <!-- DUPLICATE SET FOR CONTINUOUS LOOP -->
 
-
       <article class="testimonial-slide">
 
         <div class="quote-mark">“</div>
@@ -1918,211 +2093,6 @@ header{
         </div>
 
       </article>
-
-    </div>
-
-  </div>
-
-
-  <div class="google-cta">
-
-    <a
-      href="https://maps.app.goo.gl/DVqceEvLo6ozHAay7"
-      target="_blank"
-      rel="noopener"
-      class="btn btn-gold"
-    >
-      Explore Our Google Profile →
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CORE SERVICES
-========================= -->
-
-<section class="core-cta">
-
-  <a
-    href="services.html"
-    class="btn btn-gold"
-  >
-    Explore Our Core Beauty Services →
-  </a>
-
-</section>
-
-
-<section class="section services-preview">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        Explore
-      </div>
-
-      <h2>
-        Our Services
-      </h2>
-
-      <p>
-        Explore our core beauty services, designed
-        around your needs and occasion.
-      </p>
-
-    </div>
-
-
-    <div class="preview-grid">
-
-
-      <a
-        href="services.html#essential"
-        class="preview-card"
-      >
-
-        <div class="preview-icon">
-          ✦
-        </div>
-
-        <h3>
-          Beauty Essential Services
-        </h3>
-
-        <p>
-          Everyday grooming and beauty essentials.
-        </p>
-
-      </a>
-
-
-      <a
-        href="services.html#skin"
-        class="preview-card"
-      >
-
-        <div class="preview-icon">
-          ✧
-        </div>
-
-        <h3>
-          Skin Rituals & Facials
-        </h3>
-
-        <p>
-          Facials and skin care for a healthy glow.
-        </p>
-
-      </a>
-
-
-      <a
-        href="services.html#hair-treatments"
-        class="preview-card"
-      >
-
-        <div class="preview-icon">
-          ♢
-        </div>
-
-        <h3>
-          Hair Treatments
-        </h3>
-
-        <p>
-          Professional care for beautiful,
-          healthy hair.
-        </p>
-
-      </a>
-
-
-      <a
-        href="makeup-services.html"
-        class="preview-card"
-      >
-
-        <div class="preview-icon">
-          ♡
-        </div>
-
-        <h3>
-          Makeup Services
-        </h3>
-
-        <p>
-          Makeup for your most memorable occasions.
-        </p>
-
-      </a>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     MINI ACADEMY
-========================= -->
-
-<section class="academy-banner">
-
-  <div class="container">
-
-    <div class="academy-grid">
-
-
-      <div class="academy-content">
-
-        <div class="eyebrow">
-          Imperial Beauty Academy
-        </div>
-
-        <h2>
-          Turn Your Passion for Beauty Into a Skill.
-        </h2>
-
-        <p>
-          Explore our professional beauty courses and
-          learn practical techniques with hands-on training.
-        </p>
-
-        <br>
-
-        <a
-          href="academy.html"
-          class="btn btn-gold"
-        >
-          Explore Our Academy
-        </a>
-
-      </div>
-
-
-      <div class="academy-video">
-
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-        >
-          <source
-            src="videos/academy-training.mp4"
-            type="video/mp4"
-          >
-        </video>
-
-      </div>
 
 
     </div>
