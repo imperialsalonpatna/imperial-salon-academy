@@ -114,11 +114,6 @@ header{
   position:relative;
 }
 
-
-/* IMPORTANT:
-   Main logo file is images/logo.png
-*/
-
 .brand{
   display:flex;
   align-items:center;
@@ -134,7 +129,6 @@ header{
 
   display:block;
 }
-
 
 .nav-links{
   display:flex;
@@ -154,7 +148,6 @@ header{
 .nav-links a:hover{
   color:var(--gold);
 }
-
 
 .mobile-menu{
   display:none;
@@ -378,9 +371,6 @@ header{
   line-height:1.7;
 }
 
-
-/* Expertise cards */
-
 .specialisation-list{
   max-width:1050px;
 
@@ -427,9 +417,6 @@ header{
   box-shadow:
     0 15px 32px rgba(80,90,75,.13);
 }
-
-
-/* Four different colours */
 
 .specialisation-item:nth-child(1){
   color:#536653;
@@ -497,9 +484,6 @@ header{
   line-height:1.15;
 }
 
-
-/* About layout */
-
 .about-layout{
   max-width:1050px;
 
@@ -513,9 +497,6 @@ header{
 
   align-items:center;
 }
-
-
-/* About video */
 
 .about-video-frame{
   width:100%;
@@ -543,9 +524,6 @@ header{
 
   display:block;
 }
-
-
-/* About article */
 
 .about-article{
   font-size:16px;
@@ -591,9 +569,6 @@ header{
 
   font-size:clamp(30px,4.5vw,42px);
 }
-
-
-/* Highlight cards are visually different from heading */
 
 .highlights-grid{
   display:grid;
@@ -687,99 +662,338 @@ header{
 
 
 /* =========================================================
-   SERVICES
+   OUR SERVICES
+   NEW PREMIUM STYLE
 ========================================================= */
 
 .services-preview{
-  background:#fff;
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf5 0%,
+      #f8f1e9 100%
+    );
 
-  padding:72px 0 78px;
+  padding:78px 0 82px;
+
+  border-top:1px solid #eee3d8;
 }
 
-.section-heading{
+.services-preview .section-heading{
   text-align:center;
 
   max-width:720px;
 
-  margin:0 auto 42px;
+  margin:0 auto 45px;
 }
 
-.section-heading h2{
+.services-preview .section-heading h2{
   font-family:Georgia,serif;
 
   color:var(--sage-dark);
 
   font-size:clamp(35px,5vw,50px);
 
-  margin:0 0 15px;
-
   line-height:1.15;
+
+  margin:0 0 15px;
 }
 
-.section-heading p{
+.services-preview .section-heading p{
   color:#686862;
+
+  font-size:16px;
+
+  line-height:1.7;
 }
+
+
+/* =========================================================
+   SERVICE GRID
+========================================================= */
 
 .preview-grid{
   display:grid;
 
   grid-template-columns:repeat(4,1fr);
 
-  gap:18px;
+  gap:20px;
+
+  max-width:1080px;
+
+  margin:auto;
 }
 
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
 .preview-card{
-  border:1px solid var(--line);
+  position:relative;
 
-  border-radius:15px;
+  min-height:285px;
 
-  background:var(--cream);
+  padding:34px 23px 30px;
 
-  padding:27px 20px;
+  border-radius:22px;
+
+  background:#fff;
+
+  border:1px solid #eadfd3;
 
   text-align:center;
 
-  transition:.25s;
-}
+  display:flex;
 
-.preview-card:hover{
-  transform:translateY(-5px);
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:flex-start;
+
+  overflow:hidden;
+
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
 
   box-shadow:
-    0 12px 30px rgba(80,90,75,.12);
+    0 8px 24px rgba(80,90,75,.06);
 }
 
-.preview-icon{
-  width:58px;
-  height:58px;
 
-  margin:0 auto 15px;
+/* Elegant top accent */
+
+.preview-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:18%;
+
+  width:64%;
+  height:3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold-light),
+      transparent
+    );
+
+  opacity:.85;
+}
+
+
+/* Decorative soft circle */
+
+.preview-card::after{
+  content:"";
+
+  position:absolute;
+
+  width:145px;
+  height:145px;
 
   border-radius:50%;
 
-  background:var(--blush);
+  right:-72px;
+  bottom:-72px;
 
-  color:var(--sage-dark);
+  background:rgba(243,216,216,.25);
+
+  pointer-events:none;
+}
+
+
+.preview-card:hover{
+  transform:translateY(-7px);
+
+  border-color:
+    rgba(181,138,69,.38);
+
+  box-shadow:
+    0 18px 38px rgba(80,90,75,.13);
+}
+
+
+/* =========================================================
+   RELATED SERVICE ICONS
+========================================================= */
+
+.preview-icon{
+  position:relative;
+
+  width:76px;
+  height:76px;
+
+  margin:0 auto 21px;
+
+  border-radius:50%;
 
   display:flex;
+
   align-items:center;
   justify-content:center;
 
-  font-family:Georgia,serif;
+  color:var(--sage-dark);
 
-  font-size:23px;
+  border:1px solid rgba(181,138,69,.3);
+
+  box-shadow:
+    0 7px 18px rgba(80,90,75,.08);
+
+  z-index:1;
+
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
 }
 
+.preview-icon svg{
+  width:37px;
+  height:37px;
+
+  stroke:currentColor;
+
+  fill:none;
+
+  stroke-width:1.6;
+
+  stroke-linecap:round;
+
+  stroke-linejoin:round;
+}
+
+.preview-card:hover .preview-icon{
+  transform:scale(1.08);
+
+  box-shadow:
+    0 10px 24px rgba(80,90,75,.13);
+}
+
+
+/* Individual icon backgrounds */
+
+.preview-card:nth-child(1) .preview-icon{
+  background:#f5e8dd;
+
+  color:#9a7044;
+}
+
+.preview-card:nth-child(2) .preview-icon{
+  background:#f7e8ed;
+
+  color:#8c6173;
+}
+
+.preview-card:nth-child(3) .preview-icon{
+  background:#eaf1e8;
+
+  color:#536653;
+}
+
+.preview-card:nth-child(4) .preview-icon{
+  background:#eee8f3;
+
+  color:#74627e;
+}
+
+
+/* =========================================================
+   SERVICE CARD TEXT
+========================================================= */
+
 .preview-card h3{
+  position:relative;
+
+  z-index:1;
+
   font-family:Georgia,serif;
 
   color:var(--sage-dark);
 
-  margin-bottom:8px;
+  font-size:20px;
+
+  line-height:1.3;
+
+  margin-bottom:11px;
 }
 
 .preview-card p{
+  position:relative;
+
+  z-index:1;
+
+  max-width:220px;
+
+  margin:auto;
+
   font-size:14px;
+
+  line-height:1.6;
+
+  color:#686862;
+}
+
+
+/* =========================================================
+   SERVICE CARD RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+  .preview-grid{
+    grid-template-columns:repeat(2,1fr);
+
+    max-width:720px;
+  }
+
+}
+
+
+@media(max-width:520px){
+
+  .services-preview{
+    padding:60px 0 65px;
+  }
+
+  .services-preview .section-heading{
+    margin-bottom:32px;
+  }
+
+  .preview-grid{
+    grid-template-columns:1fr;
+
+    gap:16px;
+  }
+
+  .preview-card{
+    min-height:245px;
+
+    padding:30px 22px 27px;
+  }
+
+  .preview-icon{
+    width:68px;
+    height:68px;
+
+    margin-bottom:18px;
+  }
+
+  .preview-icon svg{
+    width:34px;
+    height:34px;
+  }
+
+  .preview-card h3{
+    font-size:19px;
+  }
+
 }
 
 
@@ -838,9 +1052,6 @@ header{
 
   margin-bottom:25px;
 }
-
-
-/* Academy video 4:5 */
 
 .academy-video{
   width:100%;
@@ -905,9 +1116,6 @@ header{
   line-height:1.15;
 }
 
-
-/* Moving reviews */
-
 .testimonial-viewport{
   width:100%;
 
@@ -946,13 +1154,6 @@ header{
 .testimonial-track:hover{
   animation-play-state:paused;
 }
-
-
-/*
-   HORIZONTAL TESTIMONIALS
-
-   Wide cards instead of vertical/tall cards.
-*/
 
 .testimonial-slide{
   width:min(650px,82vw);
@@ -1026,9 +1227,6 @@ header{
   font-size:13px;
 }
 
-
-/* Continuous movement */
-
 @keyframes testimonialMove{
 
   from{
@@ -1040,9 +1238,6 @@ header{
   }
 
 }
-
-
-/* Google CTA */
 
 .google-cta{
   text-align:center;
@@ -1225,7 +1420,6 @@ header{
     height:60px;
   }
 
-
   .nav-links{
     display:none;
 
@@ -1337,235 +1531,3 @@ header{
 
   .contact-item + .contact-item{
     border-left:0;
-
-    border-top:1px solid rgba(255,255,255,.18);
-  }
-
-
-  /* TESTIMONIALS */
-
-  .testimonial-slide{
-    width:82vw;
-
-    min-height:190px;
-  }
-
-}
-
-
-@media(max-width:520px){
-
-  .brand-logo{
-    width:155px;
-    height:55px;
-  }
-
-
-  /* HERO */
-
-  .hero{
-    min-height:600px;
-  }
-
-  .slide h1{
-    font-size:39px;
-  }
-
-
-  /* EXPERTISE */
-
-  .specialisation{
-    padding-top:58px;
-  }
-
-  .specialisation-item{
-    min-height:92px;
-
-    font-size:23px;
-
-    padding:20px;
-  }
-
-
-  /* ABOUT */
-
-  .about-section{
-    padding:58px 0 62px;
-  }
-
-  .about-article{
-    font-size:15px;
-  }
-
-  .about-video-frame{
-    max-width:100%;
-  }
-
-
-  /* SERVICES */
-
-  .preview-grid{
-    grid-template-columns:1fr;
-  }
-
-
-  /* ACADEMY */
-
-  .academy-banner{
-    padding:58px 0;
-  }
-
-  .academy-video{
-    max-width:100%;
-  }
-
-
-  /* TESTIMONIALS */
-
-  .testimonial-slide{
-    width:86vw;
-
-    min-height:205px;
-
-    padding:23px 21px;
-  }
-
-  .testimonial-text{
-    font-size:13.5px;
-  }
-
-
-  /* CONTACT */
-
-  .contact-heading{
-    font-size:25px;
-  }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  .slide{
-    transition:none;
-  }
-
-  .testimonial-track{
-    animation:none;
-  }
-
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- =======================================================
-     TOP BAR
-======================================================= -->
-
-<div class="top-bar">
-  Imperial Beauty Salon & Academy • Patna
-</div>
-
-
-<!-- =======================================================
-     HEADER
-======================================================= -->
-
-<header>
-
-  <div class="navbar">
-
-    <a href="index.html" class="brand">
-
-      <!-- FINAL LOGO FILE -->
-      <img
-        class="brand-logo"
-        src="images/logo.png"
-        alt="Imperial Beauty Salon & Academy"
-      >
-
-    </a>
-
-
-    <button
-      class="mobile-menu"
-      type="button"
-      aria-label="Open menu"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
-
-
-    <nav class="nav-links">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="services.html">
-        Our Services
-      </a>
-
-      <a href="makeup-services.html">
-        Makeup Services
-      </a>
-
-      <a href="academy.html">
-        Our Academy
-      </a>
-
-      <a href="gallery.html">
-        Gallery
-      </a>
-
-      <a href="contact.html">
-        Contact Us
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-
-<!-- =======================================================
-     HERO SLIDER
-======================================================= -->
-
-<section
-  class="hero"
-  aria-label="Imperial Beauty services"
->
-
-
-  <!-- SLIDE 1 : MAKEUP -->
-
-  <div class="slide active">
-
-    <video
-      class="slide-video"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-    >
-
-      <source
-        src="
