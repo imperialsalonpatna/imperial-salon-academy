@@ -114,6 +114,11 @@ header{
   position:relative;
 }
 
+
+/* IMPORTANT:
+   Main logo file is images/logo.png
+*/
+
 .brand{
   display:flex;
   align-items:center;
@@ -129,6 +134,7 @@ header{
 
   display:block;
 }
+
 
 .nav-links{
   display:flex;
@@ -148,6 +154,7 @@ header{
 .nav-links a:hover{
   color:var(--gold);
 }
+
 
 .mobile-menu{
   display:none;
@@ -371,6 +378,9 @@ header{
   line-height:1.7;
 }
 
+
+/* Expertise cards */
+
 .specialisation-list{
   max-width:1050px;
 
@@ -417,6 +427,9 @@ header{
   box-shadow:
     0 15px 32px rgba(80,90,75,.13);
 }
+
+
+/* Four different colours */
 
 .specialisation-item:nth-child(1){
   color:#536653;
@@ -484,6 +497,9 @@ header{
   line-height:1.15;
 }
 
+
+/* About layout */
+
 .about-layout{
   max-width:1050px;
 
@@ -497,6 +513,9 @@ header{
 
   align-items:center;
 }
+
+
+/* About video */
 
 .about-video-frame{
   width:100%;
@@ -524,6 +543,9 @@ header{
 
   display:block;
 }
+
+
+/* About article */
 
 .about-article{
   font-size:16px;
@@ -569,6 +591,9 @@ header{
 
   font-size:clamp(30px,4.5vw,42px);
 }
+
+
+/* Highlight cards are visually different from heading */
 
 .highlights-grid{
   display:grid;
@@ -662,200 +687,99 @@ header{
 
 
 /* =========================================================
-   OUR SERVICES (NEW UPDATED STYLE)
+   SERVICES
 ========================================================= */
 
-.services-preview-v3 {
-  background: var(--cream);
-  padding: 72px 0 80px;
+.services-preview{
+  background:#fff;
+
+  padding:72px 0 78px;
 }
 
-.services-preview-v3 .section-heading {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
+.section-heading{
+  text-align:center;
+
+  max-width:720px;
+
+  margin:0 auto 42px;
 }
 
-.services-sub-tag {
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--sage-dark);
-  font-weight: 600;
-  display: block;
-  margin-bottom: 8px;
+.section-heading h2{
+  font-family:Georgia,serif;
+
+  color:var(--sage-dark);
+
+  font-size:clamp(35px,5vw,50px);
+
+  margin:0 0 15px;
+
+  line-height:1.15;
 }
 
-.services-preview-v3 .section-heading h2 {
-  font-family: Georgia, serif;
-  color: var(--sage-dark);
-  font-size: clamp(38px, 5vw, 54px);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-  line-height: 1.1;
+.section-heading p{
+  color:#686862;
 }
 
-.heading-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  color: var(--gold);
+.preview-grid{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:18px;
 }
 
-.heading-divider::before,
-.heading-divider::after {
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: var(--gold-light);
+.preview-card{
+  border:1px solid var(--line);
+
+  border-radius:15px;
+
+  background:var(--cream);
+
+  padding:27px 20px;
+
+  text-align:center;
+
+  transition:.25s;
 }
 
-.services-preview-v3 .section-heading p {
-  color: var(--text);
-  font-size: 16px;
-  line-height: 1.7;
+.preview-card:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(80,90,75,.12);
 }
 
-.services-list-v3 {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.preview-icon{
+  width:58px;
+  height:58px;
+
+  margin:0 auto 15px;
+
+  border-radius:50%;
+
+  background:var(--blush);
+
+  color:var(--sage-dark);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-family:Georgia,serif;
+
+  font-size:23px;
 }
 
-.service-card-v3 {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 22px 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(80, 90, 75, 0.06);
-  border: 1px solid rgba(229, 217, 204, 0.6);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  text-decoration: none;
+.preview-card h3{
+  font-family:Georgia,serif;
+
+  color:var(--sage-dark);
+
+  margin-bottom:8px;
 }
 
-.service-card-v3:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(80, 90, 75, 0.12);
-}
-
-.service-card-v3:nth-child(1) {
-  background: linear-gradient(135deg, #fdf4f4 0%, #fae8e8 100%);
-}
-
-.service-card-v3:nth-child(2) {
-  background: linear-gradient(135deg, #f7f9f4 0%, #ebf0e6 100%);
-}
-
-.service-card-v3:nth-child(3) {
-  background: linear-gradient(135deg, #fdf8f0 0%, #f6ebe0 100%);
-}
-
-.service-card-v3:nth-child(4) {
-  background: linear-gradient(135deg, #f8f2f6 0%, #ebe2e8 100%);
-}
-
-.service-badge {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 4px solid var(--white);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.service-badge svg {
-  width: 42px;
-  height: 42px;
-  fill: none;
-  stroke: var(--white);
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.service-card-v3:nth-child(1) .service-badge {
-  background-color: #c27d7f;
-}
-
-.service-card-v3:nth-child(2) .service-badge {
-  background-color: #7b8e6a;
-}
-
-.service-card-v3:nth-child(3) .service-badge {
-  background-color: #c99c5c;
-}
-
-.service-card-v3:nth-child(4) .service-badge {
-  background-color: #9a6d7f;
-}
-
-.service-body {
-  flex-grow: 1;
-}
-
-.service-body h3 {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.service-card-v3:nth-child(1) .service-body h3 { color: #a25255; }
-.service-card-v3:nth-child(2) .service-body h3 { color: #4b5e3c; }
-.service-card-v3:nth-child(3) .service-body h3 { color: #9a6b29; }
-.service-card-v3:nth-child(4) .service-body h3 { color: #78485c; }
-
-.service-body p {
-  font-size: 15px;
-  color: #555853;
-  line-height: 1.5;
-}
-
-.service-arrow {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.service-arrow svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.service-card-v3:nth-child(1) .service-arrow { background-color: #f2d2d2; }
-.service-card-v3:nth-child(1) .service-arrow svg { stroke: #a25255; }
-
-.service-card-v3:nth-child(2) .service-arrow { background-color: #d6e2cf; }
-.service-card-v3:nth-child(2) .service-arrow svg { stroke: #4b5e3c; }
-
-.service-card-v3:nth-child(3) .service-arrow { background-color: #f1dfc7; }
-.service-card-v3:nth-child(3) .service-arrow svg { stroke: #9a6b29; }
-
-.service-card-v3:nth-child(4) .service-arrow { background-color: #e3d3df; }
-.service-card-v3:nth-child(4) .service-arrow svg { stroke: #78485c; }
-
-.service-card-v3:hover .service-arrow {
-  transform: translateX(4px);
+.preview-card p{
+  font-size:14px;
 }
 
 
@@ -914,6 +838,9 @@ header{
 
   margin-bottom:25px;
 }
+
+
+/* Academy video 4:5 */
 
 .academy-video{
   width:100%;
@@ -978,6 +905,9 @@ header{
   line-height:1.15;
 }
 
+
+/* Moving reviews */
+
 .testimonial-viewport{
   width:100%;
 
@@ -1016,6 +946,13 @@ header{
 .testimonial-track:hover{
   animation-play-state:paused;
 }
+
+
+/*
+   HORIZONTAL TESTIMONIALS
+
+   Wide cards instead of vertical/tall cards.
+*/
 
 .testimonial-slide{
   width:min(650px,82vw);
@@ -1089,6 +1026,9 @@ header{
   font-size:13px;
 }
 
+
+/* Continuous movement */
+
 @keyframes testimonialMove{
 
   from{
@@ -1100,6 +1040,9 @@ header{
   }
 
 }
+
+
+/* Google CTA */
 
 .google-cta{
   text-align:center;
@@ -1282,6 +1225,7 @@ header{
     height:60px;
   }
 
+
   .nav-links{
     display:none;
 
@@ -1314,6 +1258,9 @@ header{
     display:block;
   }
 
+
+  /* HERO */
+
   .hero{
     min-height:620px;
 
@@ -1334,9 +1281,15 @@ header{
     font-size:16px;
   }
 
+
+  /* EXPERTISE */
+
   .specialisation-list{
     grid-template-columns:1fr;
   }
+
+
+  /* ABOUT */
 
   .about-layout{
     grid-template-columns:1fr;
@@ -1348,9 +1301,22 @@ header{
     max-width:390px;
   }
 
+
+  /* HIGHLIGHTS */
+
   .highlights-grid{
     grid-template-columns:1fr;
   }
+
+
+  /* SERVICES */
+
+  .preview-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+
+  /* ACADEMY */
 
   .academy-grid{
     grid-template-columns:1fr;
@@ -1362,6 +1328,9 @@ header{
     max-width:390px;
   }
 
+
+  /* CONTACT */
+
   .contact-grid{
     grid-template-columns:1fr;
   }
@@ -1372,6 +1341,9 @@ header{
     border-top:1px solid rgba(255,255,255,.18);
   }
 
+
+  /* TESTIMONIALS */
+
   .testimonial-slide{
     width:82vw;
 
@@ -1381,26 +1353,219 @@ header{
 }
 
 
-@media(max-width:650px){
+@media(max-width:520px){
 
-  .service-card-v3 {
-    padding: 20px 22px;
-    gap: 16px;
+  .brand-logo{
+    width:155px;
+    height:55px;
   }
 
-  .service-badge {
-    width: 64px;
-    height: 64px;
+
+  /* HERO */
+
+  .hero{
+    min-height:600px;
   }
 
-  .service-badge svg {
-    width: 32px;
-    height: 32px;
+  .slide h1{
+    font-size:39px;
   }
 
-  .service-body h3 {
-    font-size: 18px;
+
+  /* EXPERTISE */
+
+  .specialisation{
+    padding-top:58px;
   }
 
-  .service-body p {
-    fo
+  .specialisation-item{
+    min-height:92px;
+
+    font-size:23px;
+
+    padding:20px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section{
+    padding:58px 0 62px;
+  }
+
+  .about-article{
+    font-size:15px;
+  }
+
+  .about-video-frame{
+    max-width:100%;
+  }
+
+
+  /* SERVICES */
+
+  .preview-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  /* ACADEMY */
+
+  .academy-banner{
+    padding:58px 0;
+  }
+
+  .academy-video{
+    max-width:100%;
+  }
+
+
+  /* TESTIMONIALS */
+
+  .testimonial-slide{
+    width:86vw;
+
+    min-height:205px;
+
+    padding:23px 21px;
+  }
+
+  .testimonial-text{
+    font-size:13.5px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-heading{
+    font-size:25px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .slide{
+    transition:none;
+  }
+
+  .testimonial-track{
+    animation:none;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     TOP BAR
+======================================================= -->
+
+<div class="top-bar">
+  Imperial Beauty Salon & Academy • Patna
+</div>
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header>
+
+  <div class="navbar">
+
+    <a href="index.html" class="brand">
+
+      <!-- FINAL LOGO FILE -->
+      <img
+        class="brand-logo"
+        src="images/logo.png"
+        alt="Imperial Beauty Salon & Academy"
+      >
+
+    </a>
+
+
+    <button
+      class="mobile-menu"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+
+    <nav class="nav-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="services.html">
+        Our Services
+      </a>
+
+      <a href="makeup-services.html">
+        Makeup Services
+      </a>
+
+      <a href="academy.html">
+        Our Academy
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a href="contact.html">
+        Contact Us
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =======================================================
+     HERO SLIDER
+======================================================= -->
+
+<section
+  class="hero"
+  aria-label="Imperial Beauty services"
+>
+
+
+  <!-- SLIDE 1 : MAKEUP -->
+
+  <div class="slide active">
+
+    <video
+      class="slide-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+
+      <source
+        src="
