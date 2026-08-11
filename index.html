@@ -114,6 +114,9 @@ header{
   position:relative;
 }
 
+
+/* Main logo file */
+
 .brand{
   display:flex;
   align-items:center;
@@ -129,6 +132,7 @@ header{
 
   display:block;
 }
+
 
 .nav-links{
   display:flex;
@@ -148,6 +152,7 @@ header{
 .nav-links a:hover{
   color:var(--gold);
 }
+
 
 .mobile-menu{
   display:none;
@@ -325,7 +330,7 @@ header{
 
 
 /* =========================================================
-   OUR AREAS OF EXPERTISE
+   AREAS OF EXPERTISE
 ========================================================= */
 
 .specialisation{
@@ -370,6 +375,9 @@ header{
 
   line-height:1.7;
 }
+
+
+/* Expertise cards */
 
 .specialisation-list{
   max-width:1050px;
@@ -417,6 +425,9 @@ header{
   box-shadow:
     0 15px 32px rgba(80,90,75,.13);
 }
+
+
+/* Four different colours */
 
 .specialisation-item:nth-child(1){
   color:#536653;
@@ -484,6 +495,9 @@ header{
   line-height:1.15;
 }
 
+
+/* About layout */
+
 .about-layout{
   max-width:1050px;
 
@@ -497,6 +511,9 @@ header{
 
   align-items:center;
 }
+
+
+/* About video */
 
 .about-video-frame{
   width:100%;
@@ -524,6 +541,9 @@ header{
 
   display:block;
 }
+
+
+/* About article */
 
 .about-article{
   font-size:16px;
@@ -569,6 +589,9 @@ header{
 
   font-size:clamp(30px,4.5vw,42px);
 }
+
+
+/* Highlight cards */
 
 .highlights-grid{
   display:grid;
@@ -662,99 +685,97 @@ header{
 
 
 /* =========================================================
-   OUR SERVICES — NEW REFERENCE STYLE
+   OUR SERVICES
+   NEW REFERENCE-STYLE DESIGN
 ========================================================= */
 
 .services-preview{
   background:
     linear-gradient(
-      180deg,
-      #fffaf5 0%,
-      #f8f2eb 100%
+      135deg,
+      #fffaf5,
+      #fbefef
     );
 
-  padding:78px 0 84px;
+  padding:72px 0 82px;
+
+  overflow:hidden;
 }
 
-.services-heading{
+
+/* Services heading */
+
+.services-preview .section-heading{
+  text-align:center;
+
   max-width:760px;
 
-  margin:0 auto 42px;
-
-  text-align:center;
+  margin:0 auto 40px;
 }
 
-.services-heading h2{
+.services-preview .section-heading h2{
   font-family:Georgia,serif;
 
   color:var(--sage-dark);
 
   font-size:clamp(35px,5vw,50px);
 
-  line-height:1.15;
+  margin:0 0 15px;
 
-  margin-bottom:14px;
+  line-height:1.15;
 }
 
-.services-heading p{
+.services-preview .section-heading p{
   color:#686862;
 
   font-size:16px;
 
   line-height:1.7;
-
-  max-width:650px;
-
-  margin:auto;
 }
 
 
-/*
-   Horizontal service list
-*/
+/* Services list */
 
-.services-list{
-  width:min(1000px,100%);
+.preview-grid{
+  max-width:1050px;
 
   margin:auto;
 
-  display:flex;
+  display:grid;
 
-  flex-direction:column;
+  grid-template-columns:1fr;
 
   gap:16px;
 }
 
 
-/*
-   Individual horizontal service card
-*/
+/* Main service card */
 
-.service-row{
+.preview-card{
+  width:100%;
+
+  min-height:135px;
+
+  padding:20px 22px;
+
   display:grid;
 
-  grid-template-columns:86px 1fr auto;
+  grid-template-columns:76px 1fr 48px;
 
   align-items:center;
 
-  gap:24px;
+  gap:22px;
 
-  min-height:125px;
+  border-radius:20px;
 
-  padding:22px 27px;
+  border:1px solid var(--line);
 
-  background:rgba(255,255,255,.82);
-
-  border:1px solid #e6dcd1;
-
-  border-radius:18px;
+  background:#fff;
 
   box-shadow:
-    0 6px 20px rgba(80,90,75,.055);
+    0 7px 22px rgba(80,90,75,.06);
 
-  position:relative;
-
-  overflow:hidden;
+  text-align:left;
 
   transition:
     transform .25s ease,
@@ -762,177 +783,214 @@ header{
     border-color .25s ease;
 }
 
-
-/*
-   Soft accent line
-*/
-
-.service-row::before{
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  top:0;
-  bottom:0;
-
-  width:4px;
-
-  background:var(--gold);
-
-  opacity:.75;
-}
-
-
-/*
-   Hover
-*/
-
-.service-row:hover{
-  transform:translateY(-3px);
-
-  border-color:#d9c9b6;
+.preview-card:hover{
+  transform:translateY(-4px);
 
   box-shadow:
-    0 14px 30px rgba(80,90,75,.10);
+    0 15px 34px rgba(80,90,75,.12);
+
+  border-color:rgba(181,138,69,.35);
 }
 
 
-/*
-   Service icon area
-*/
+/* Related icon area */
 
-.service-icon{
-  width:72px;
-  height:72px;
+.preview-icon{
+  width:68px;
+  height:68px;
 
   border-radius:50%;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
-
-  background:
-    linear-gradient(
-      145deg,
-      #f7e2e1,
-      #f2d1cf
-    );
-
-  border:1px solid rgba(181,138,69,.28);
-
-  color:var(--sage-dark);
-
-  font-size:29px;
 
   flex-shrink:0;
 
-  transition:.25s ease;
+  position:relative;
+
+  margin:0;
+
+  font-size:0;
 }
 
-.service-row:hover .service-icon{
-  transform:scale(1.05);
 
+/* SVG icons */
+
+.preview-icon svg{
+  width:38px;
+  height:38px;
+
+  display:block;
+
+  fill:none;
+
+  stroke:currentColor;
+
+  stroke-width:1.7;
+
+  stroke-linecap:round;
+
+  stroke-linejoin:round;
+}
+
+
+/* Beauty services */
+
+.preview-card:nth-child(1){
   background:
     linear-gradient(
-      145deg,
-      #ead0cf,
-      #f5e0de
+      100deg,
+      #fff1f1,
+      #fffaf7
     );
 }
 
+.preview-card:nth-child(1) .preview-icon{
+  background:#c98591;
+  color:#fff;
+}
 
-/*
-   Text area
-*/
+.preview-card:nth-child(1) h3{
+  color:#8e5c68;
+}
 
-.service-info{
+
+/* Skin */
+
+.preview-card:nth-child(2){
+  background:
+    linear-gradient(
+      100deg,
+      #f0f6ee,
+      #fffdf9
+    );
+}
+
+.preview-card:nth-child(2) .preview-icon{
+  background:#809678;
+  color:#fff;
+}
+
+.preview-card:nth-child(2) h3{
+  color:#536653;
+}
+
+
+/* Hair treatment */
+
+.preview-card:nth-child(3){
+  background:
+    linear-gradient(
+      100deg,
+      #fbf4e5,
+      #fffdf9
+    );
+}
+
+.preview-card:nth-child(3) .preview-icon{
+  background:#b58a45;
+  color:#fff;
+}
+
+.preview-card:nth-child(3) h3{
+  color:#8d6740;
+}
+
+
+/* Makeup */
+
+.preview-card:nth-child(4){
+  background:
+    linear-gradient(
+      100deg,
+      #f7eff8,
+      #fffdfb
+    );
+}
+
+.preview-card:nth-child(4) .preview-icon{
+  background:#947994;
+  color:#fff;
+}
+
+.preview-card:nth-child(4) h3{
+  color:#725f72;
+}
+
+
+/* Service content */
+
+.preview-content{
   min-width:0;
 }
 
-.service-info h3{
+.preview-card h3{
   font-family:Georgia,serif;
 
-  color:var(--sage-dark);
+  font-size:clamp(19px,2.2vw,25px);
 
-  font-size:23px;
-
-  line-height:1.25;
+  line-height:1.2;
 
   margin-bottom:7px;
 }
 
-.service-info p{
-  color:#686862;
-
+.preview-card p{
   font-size:14px;
 
-  line-height:1.6;
+  line-height:1.55;
 
-  max-width:620px;
+  color:#666861;
+
+  max-width:650px;
 }
 
 
-/*
-   Arrow / action indicator
-*/
+/* Right arrow */
 
-.service-arrow{
-  width:40px;
-  height:40px;
+.preview-arrow{
+  width:46px;
+  height:46px;
 
   border-radius:50%;
-
-  border:1px solid #d9c9b6;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
-  color:var(--gold);
+  font-size:23px;
 
-  font-size:19px;
-
-  flex-shrink:0;
+  font-weight:400;
 
   transition:.25s ease;
 }
 
-.service-row:hover .service-arrow{
-  background:var(--gold);
-
-  color:#fff;
-
-  border-color:var(--gold);
-
-  transform:translateX(3px);
+.preview-card:nth-child(1) .preview-arrow{
+  background:#f2d7dc;
+  color:#8e5c68;
 }
 
-
-/*
-   Four service icon variations
-*/
-
-.service-row:nth-child(1) .service-icon{
-  background:#f5dddd;
-  color:#7b5b5b;
-}
-
-.service-row:nth-child(2) .service-icon{
-  background:#edf2e9;
+.preview-card:nth-child(2) .preview-arrow{
+  background:#dce8d8;
   color:#536653;
 }
 
-.service-row:nth-child(3) .service-icon{
-  background:#f5eddf;
+.preview-card:nth-child(3) .preview-arrow{
+  background:#f0dfba;
   color:#8d6740;
 }
 
-.service-row:nth-child(4) .service-icon{
-  background:#eee7f1;
+.preview-card:nth-child(4) .preview-arrow{
+  background:#e7d8e9;
   color:#725f72;
+}
+
+.preview-card:hover .preview-arrow{
+  transform:translateX(4px);
 }
 
 
@@ -991,6 +1049,9 @@ header{
 
   margin-bottom:25px;
 }
+
+
+/* Academy video 4:5 */
 
 .academy-video{
   width:100%;
@@ -1055,6 +1116,9 @@ header{
   line-height:1.15;
 }
 
+
+/* Moving reviews */
+
 .testimonial-viewport{
   width:100%;
 
@@ -1093,6 +1157,11 @@ header{
 .testimonial-track:hover{
   animation-play-state:paused;
 }
+
+
+/*
+   HORIZONTAL TESTIMONIALS
+*/
 
 .testimonial-slide{
   width:min(650px,82vw);
@@ -1166,6 +1235,9 @@ header{
   font-size:13px;
 }
 
+
+/* Continuous movement */
+
 @keyframes testimonialMove{
 
   from{
@@ -1177,6 +1249,9 @@ header{
   }
 
 }
+
+
+/* Google CTA */
 
 .google-cta{
   text-align:center;
@@ -1359,6 +1434,7 @@ header{
     height:60px;
   }
 
+
   .nav-links{
     display:none;
 
@@ -1444,37 +1520,26 @@ header{
 
   /* SERVICES */
 
-  .services-preview{
-    padding:65px 0 70px;
+  .preview-grid{
+    grid-template-columns:1fr;
   }
 
-  .services-list{
-    gap:14px;
-  }
-
-  .service-row{
-    grid-template-columns:72px 1fr auto;
+  .preview-card{
+    grid-template-columns:68px 1fr 46px;
 
     gap:18px;
 
-    min-height:115px;
-
-    padding:20px 21px;
+    min-height:125px;
   }
 
-  .service-icon{
+  .preview-icon{
     width:62px;
     height:62px;
-
-    font-size:25px;
   }
 
-  .service-info h3{
-    font-size:20px;
-  }
-
-  .service-info p{
-    font-size:13.5px;
+  .preview-icon svg{
+    width:35px;
+    height:35px;
   }
 
 
@@ -1525,77 +1590,4 @@ header{
 
   /* HERO */
 
-  .hero{
-    min-height:600px;
-  }
-
-  .slide h1{
-    font-size:39px;
-  }
-
-
-  /* EXPERTISE */
-
-  .specialisation{
-    padding-top:58px;
-  }
-
-  .specialisation-item{
-    min-height:92px;
-
-    font-size:23px;
-
-    padding:20px;
-  }
-
-
-  /* ABOUT */
-
-  .about-section{
-    padding:58px 0 62px;
-  }
-
-  .about-article{
-    font-size:15px;
-  }
-
-  .about-video-frame{
-    max-width:100%;
-  }
-
-
-  /* SERVICES */
-
-  .services-preview{
-    padding:58px 0 65px;
-  }
-
-  .services-heading{
-    margin-bottom:30px;
-  }
-
-  .services-heading h2{
-    font-size:36px;
-  }
-
-  .services-heading p{
-    font-size:14px;
-  }
-
-  .services-list{
-    gap:13px;
-  }
-
-  .service-row{
-    grid-template-columns:58px 1fr auto;
-
-    gap:14px;
-
-    min-height:110px;
-
-    padding:18px 15px;
-  }
-
-  .service-row::before{
-    width:3px;
-  }
+  .
