@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Salon Services | Imperial Beauty Salon & Academy Patna</title>
+<meta name="description" content="Explore complete salon service menu at Imperial Beauty Salon & Academy Patna. Hair treatments, skin rituals, hair color, waxing, bridal care and manicure pedicure.">
+<meta name="keywords" content="Salon Services Patna, Hair Treatment Patna, Skin Facial Patna, Hair Color Salon Patna City, Hair Spa Patna, Manicure Pedicure Patna">
+<link rel="canonical" href="https://imperialsalonacademy.in/services.html">
+
+<style>
+:root{
+  --blush:#f3d8d8;
+  --blush-light:#fbefef;
+  --sage:#a9b9a3;
+  --sage-dark:#536653;
+  --sage-deep:#35483a;
+  --gold:#b58a45;
+  --gold-light:#d8b56d;
+  --cream:#fffaf5;
+  --white:#ffffff;
+  --dark:#28352c;
+  --text:#4c504b;
+  --line:#eadfd3;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html, body {width:100%;max-width:100%;overflow-x:hidden;}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--text);line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+button{font:inherit;}
+.container {width:min(1150px,90%);margin:auto;}
+
+/* TOP BAR & HEADER */
+.top-bar{background:var(--sage-dark);color:#fff;text-align:center;padding:7px 15px;font-size:12px;letter-spacing:.5px;}
+header{background:rgba(255,250,245,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1000;backdrop-filter:blur(8px);}
+.navbar{width:min(1150px,90%);margin:auto;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.brand-logo{width:205px;height:64px;object-fit:contain;display:block;}
+.nav-links{display:flex;align-items:center;gap:23px;font-size:14px;font-weight:600;color:var(--dark);}
+.nav-links a:hover{color:var(--gold);}
+.mobile-menu{display:none;border:0;background:none;font-size:27px;color:var(--sage-dark);cursor:pointer;}
+
+/* PAGE HERO */
+.services-hero {
+  background: linear-gradient(135deg, var(--sage-dark), var(--sage-deep));
+  color: #fff;
+  text-align: center;
+  padding: 55px 20px;
+}
+.services-hero .eyebrow { color: var(--gold-light); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.services-hero h1 { font-family: Georgia, serif; font-size: clamp(28px, 4vw, 46px); margin: 6px 0 10px; }
+.services-hero p { max-width: 650px; margin: auto; font-size: 15.5px; color: #e6eee6; }
+
+/* SERVICES GRID */
+.services-section { padding: 50px 0; }
+.services-grid { display: flex; flex-direction: column; gap: 40px; }
+
+.service-block {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(60,70,55,0.06);
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+}
+
+.service-block.reverse {
+  grid-template-columns: 1.3fr 1fr;
+}
+.service-block.reverse .service-img-wrap {
+  order: 2;
+}
+.service-block.reverse .service-content {
+  order: 1;
+}
+
+.service-img-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  position: relative;
+}
+
+.service-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-cat-tag { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; }
+.service-content h2 { font-family: Georgia, serif; color: var(--sage-dark); font-size: clamp(22px, 3vw, 28px); margin-bottom: 12px; }
+.service-content p { font-size: 14.5px; color: #62655f; margin-bottom: 20px; }
+
+.btn-book-service {
+  align-self: flex-start;
+  display: inline-block;
+  background: var(--sage-dark);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.btn-book-service:hover {
+  background: var(--sage-deep);
+  color: var(--gold-light);
+}
+
+/* CONTACT FOOTER */
+#home-contact-area .contact-footer{ background:var(--sage-dark); color:#fff; padding:40px 0 25px; }
+#home-contact-area .contact-title{ display:flex; align-items:center; justify-content:center; gap:15px; margin-bottom:30px; }
+#home-contact-area .contact-title:before, #home-contact-area .contact-title:after{ content:""; height:1px; width:min(200px,18vw); background:rgba(216,181,109,.75); }
+#home-contact-area .contact-title h2{ color:var(--gold-light); font-family:Georgia,serif; letter-spacing:2px; font-size:26px; white-space:nowrap; }
+#home-contact-area .contact-columns{ display:grid; grid-template-columns:1fr 1fr 1fr; align-items:stretch; }
+#home-contact-area .contact-column{ padding:10px 20px; text-align:center; min-height:130px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+#home-contact-area .contact-column+.contact-column{ border-left:1px solid rgba(255,255,255,.20); }
+#home-contact-area .contact-icon{ width:52px; height:52px; border-radius:50%; background:#fffaf5; color:var(--gold); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:8px; }
+#home-contact-area .contact-label{ color:var(--gold-light); font-size:12px; letter-spacing:1.5px; font-weight:bold; margin-bottom:5px; }
+#home-contact-area .contact-info{ font-family:Georgia,serif; font-size:15.5px; line-height:1.5; }
+#home-contact-area .connect-title{ color:var(--gold-light); font-family:cursive; font-size:28px; margin-bottom:10px; }
+#home-contact-area .social-links{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+#home-contact-area .social-link{ width:44px; height:44px; border-radius:50%; border:1px solid var(--gold-light); background:rgba(255,250,245,.08); display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:15px; }
+#home-contact-area .copyright{ background:var(--sage-dark); border-top:1px solid rgba(255,255,255,.15); text-align:center; padding:15px 15px; color:#c7c7c7; font-size:11.5px; }
+
+.whatsapp-float { position: fixed; width: 56px; height: 52px; bottom: 25px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 2px 4px 15px rgba(0,0,0,0.25); z-index: 1000; display: flex; align-items: center; justify-content: center; }
+.whatsapp-float img { width: 32px; height: 32px; }
+
+@media(max-width:850px){
+  .mobile-menu{display:block}
+  .nav-links{
+    display:none;position:absolute;top:78px;left:0;right:0;background:var(--cream);padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line);box-shadow:0 10px 20px rgba(0,0,0,.08);text-align:center;
+  }
+  .nav-links.open{display:flex}
+  .service-block, .service-block.reverse { grid-template-columns: 1fr; }
+  .service-block.reverse .service-img-wrap { order: 1; }
+  .service-block.reverse .service-content { order: 2; }
+  .service-img-wrap { height: 220px; min-height: auto; }
+  .service-content { padding: 22px 18px; }
+  #home-contact-area .contact-columns{grid-template-columns:1fr}
+  #home-contact-area .contact-column{padding:20px 15px;min-height:auto}
+  #home-contact-area .contact-column+.contact-column{border-left:0;border-top:1px solid rgba(255,255,255,.2)}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  Imperial Beauty Salon & Academy • Tamtam Paraw, Sadikpur, Patna City
+</div>
+
+<header>
+  <div class="navbar">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="images/logo.png" alt="Imperial Beauty Salon & Academy Patna">
+    </a>
+    <button class="mobile-menu" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="makeup-services.html">Makeup Services</a>
+      <a href="academy.html">Our Academy</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="services-hero">
+  <div class="container">
+    <span class="eyebrow">Luxury Salon Menu</span>
+    <h1>OUR SERVICES</h1>
+    <p>Experience personalized beauty, haircare, and skin rituals designed for radiant results and total relaxation.</p>
+  </div>
+</section>
+
+<section class="services-section">
+  <div class="container">
+    <div class="services-grid">
+
+      <!-- 1. HAIR TREATMENTS -->
+      <article class="service-block">
+        <div class="service-img-wrap">
+          <img src="images/hair-treatment.jpg" alt="Hair Treatments at Imperial Salon Patna">
+        </div>
+        <div class="service-content">
+          <span class="service-cat-tag">Transform & Restore</span>
+          <h2>Hair Treatments</h2>
+          <p>Advanced Keratin, Botox, Hair Smoothening, and Nanoplastia rituals crafted to give you silky, frizz-free, and healthy hair with long-lasting shine.</p>
+          <a href="https://wa.me/916299942455?text=Hello%20Imperial%20Salon%2C%20I%20want%20to%20enquire%20about%20Hair%20Treatments." class="btn-book-service">Enquire on WhatsApp →</a>
+        </div>
+      </article>
+
+      <!-- 2. SKIN RITUALS & FACIALS -->
+      <article class="service-block reverse">
+        <div class="service-img-wrap">
+          <img src="images/skin-rituals.jpg" alt="Skin Rituals and Facials at Imperial Salon Patna">
+        </div>
+        <div class="service-content">
+          <span class="service-cat-tag">Radiance & Glow</span>
+          <h2>Skin Rituals & Facials</h2>
+          <p>Custom facial therapies featuring O3+ Bridal Glow, Aroma Magic, Lotus Herbals, HydraFacials, and organic D-Tan packs tailored to your skin type.</p>
+          <a href="https://wa.me/916299942455?text=Hello%20Imperial%20Salon%2C%20I%20want%20to%20enquire%20about%20Skin%20Rituals." class="btn-book-service">Enquire on WhatsApp →</a>
+        </div>
+      </article>
+
+      <!-- 3. HAIR COLOR & STYLING -->
+      <article class="service-block">
+        <div class="service-img-wrap">
+          <img src="images/hair-color.jpg" alt="Hair Colour and Balayage at Imperial Salon Patna">
+        </div>
+        <div class="service-content">
+          <span class="service-cat-tag">Vibrant Artistry</span>
+          <h2>Hair Colour & Global Highlights</h2>
+          <p>From global hair coloring to trendy Balayage, Ombre, and precision streaks using premium ammonia-free international color brands like L'Oréal and Matrix.</p>
+          <a href="https://wa.me/916299942455?text=Hello%20Imperial%20Salon%2C%20I%20want%20to%20enquire%20about%20Hair%20Colour%20Services." class="btn-book-service">Enquire on WhatsApp →</a>
+        </div>
+      </article>
+
+      <!-- 4. HAIR CARE & SPA -->
+      <article class="service-block reverse">
+        <div class="service-img-wrap">
+          <img src="images/hair-care.jpg" alt="Hair Spa and Scalp Care at Imperial Salon Patna">
+        </div>
+        <div class="service-content">
+          <span class="service-cat-tag">Deep Nourishment</span>
+          <h2>Hair Spa & Scalp Therapy</h2>
+          <p>Revitalize dry, damaged hair and calm your senses with deeply relaxing scalp massages, steam therapy, and intense nourishing hair masks.</p>
+          <a href="https://wa.me/916299942455?text=Hello%20Imperial%20Salon%2C%20I%20want%20to%20enquire%20about%20Hair%20Spa%20Services." class="btn-book-service">Enquire on WhatsApp →</a>
+        </div>
+      </article>
+
+      <!-- 5. ESSENTIAL SERVICES & GROOMING -->
+      <article class="service-block">
+        <div class="service-img-wrap">
+          <img src="images/essential-services.jpg" alt="Waxing, Manicure and Pedicure at Imperial Salon Patna">
+        </div>
+        <div class="service-content">
+          <span class="service-cat-tag">Everyday Care</span>
+          <h2>Essential Grooming & Body Care</h2>
+          <p>Painless RICA waxing, Deluxe Pedicures, Hydrating Manicures, Body Polishing rituals, and precision full-face threading for complete grooming.</p>
+          <a href="https://wa.me/916299942455?text=Hello%20Imperial%20Salon%2C%20I%20want%20to%20enquire%20about%20Essential%20Services." class="btn-book-service">Enquire on WhatsApp →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FOOTER -->
+<div id="home-contact-area">
+  <section class="contact-footer">
+    <div class="container">
+      <div class="contact-title">
+        <h2>CONTACT US</h2>
+      </div>
+      <div class="contact-columns">
+        <div class="contact-column">
+          <div class="contact-icon">☎</div>
+          <div class="contact-label">PHONE NUMBER</div>
+          <div class="contact-info">
+            <a href="tel:+916299942455" style="color:#fff;">+91 62999 42455</a>
+          </div>
+        </div>
+        <div class="contact-column">
+          <div class="contact-icon">●</div>
+          <div class="contact-label">ADDRESS</div>
+          <div class="contact-info">
+            Tamtam Paraw, Sadikpur,<br>
+            Patna City – 800008
+          </div>
+        </div>
+        <div class="contact-column">
+          <div class="connect-title">Let's Connect</div>
+          <div class="social-links">
+            <a class="social-link" href="https://www.instagram.com/imperialsalonpatna/" target="_blank" rel="noopener">IG</a>
+            <a class="social-link" href="https://www.facebook.com/share/1FQazRDXDj/" target="_blank" rel="noopener">f</a>
+            <a class="social-link" href="https://youtube.com/@imperialsalonpatna" target="_blank" rel="noopener">▶</a>
+            <a class="social-link" href="https://maps.app.goo.gl/DVqceEvLo6ozHAay7" target="_blank" rel="noopener">G</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="copyright">
+    © Imperial Beauty Salon & Academy Patna City. All rights reserved.
+  </div>
+</div>
+
+<a href="https://wa.me/916299942455?text=Hello%20Imperial%20Beauty%20Salon%2C%20I%20want%20to%20book%20a%20salon%20service." target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script>
+const menuButton = document.querySelector('.mobile-menu');
+const navigation = document.querySelector('.nav-links');
+if(menuButton && navigation){
+  menuButton.addEventListener('click', () => {
+    navigation.classList.toggle('open');
+  });
+}
+</script>
+
+</body>
+</html>
